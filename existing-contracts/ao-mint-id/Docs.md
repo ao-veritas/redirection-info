@@ -18,3 +18,20 @@
 - Just sends the total supply to asker
 ### Burn
 - Same
+
+# Funtion _loaded_mod_dal_prices()
+## var/table prices.data
+- gives the data of all tokens, ie price, in currency and timestamp. WRT ticker
+## func prices.update
+### args
+- token: ticker
+- info.Price = new price
+- info.Currency = in which fiat  (?)
+### flow
+- make sure args came
+- update in the prices.data table
+## func prices.get
+### args
+- token: ticker
+### flow
+- return prices.data table
