@@ -35,3 +35,21 @@
 - token: ticker
 ### flow
 - return prices.data table
+
+# Function _loaded_mod_dal_yields()
+## var/table yields.data
+- gives yields of all tokens, ie yiels, timestamp WRT token ticker 
+(?) : what do i need the timestamp for 
+## func yields.update
+### args
+- token: ticker
+- info.Yield = new yield (?): what format
+- info.Timestamp = (?) : again why timestamp what time stamp
+### flow
+- make sure args came
+- update in the yields.data table
+## func yields.get
+### args
+- token: ticker
+### flow
+- return yields.data table
