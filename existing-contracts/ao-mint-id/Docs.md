@@ -53,3 +53,43 @@
 - token: ticker
 ### flow
 - return yields.data table
+
+# Function _loaded_mod_dal_sources()
+## metatable Sources.__index
+- metatable so dbadmin can be used
+## func Sources.new
+- to create new table
+### args
+- dbAdmin
+### flow
+- setmetatables makes sources a metatable for itself
+- self.dbAdmit sets metamethod on it as dbAdmin
+- create table SQL query (?) : what do all the fields tell
+- returns this instance
+## func Sources:upsert
+- to update if exists or insert record
+### args
+- record of type table
+### flow
+- make sure record arg is a table
+- make sure has oracle prop
+- find all oracles that are same as record ke oracles
+- (i think will return only one so store that as sources)
+- if source, then update this oracle to the local table, if record then that ELSE the existing entry 
+- else no sources (no matching oracle) then add this new one to local oracles
+## func Sources:getById
+- get oracle 
+### args
+- oracle for oracle field text
+### flow
+- select all SQL query
+- return the result[1] cause only one will be there
+## func Sources:getByToken
+- get oracle from token ticker
+### args
+- token for token field text
+### flow
+- select all SQL query
+- return all since more than one possible
+## func Sources:getBridgeOracles
+- gves all oracles which are not for AR
