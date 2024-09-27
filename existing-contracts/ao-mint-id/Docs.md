@@ -93,3 +93,58 @@
 - return all since more than one possible
 ## func Sources:getBridgeOracles
 - gves all oracles which are not for AR
+
+
+# Function _loaded_mod_dal_deposits()
+## metatable Deposits.__index
+- metatable so dbadmin can be used
+## vars
+- SQL queries to get deposits based on key, token, token+user
+- NOTE: rewards table used here even tho calling it deposits
+## func Deposits.new
+- to create new table
+### args
+- dbAdmin
+### flow
+- setmetatables makes Deposits a metatable for itself
+- self.dbAdmit sets metamethod on it as dbAdmin
+- create table SQL query (?) : what do all the fields tell
+- returns this instance
+## func Deposits:getBridgeDeposits
+- gives all deposits which are not for AR
+## func Deposits:getByTokenAndUser
+- get deposits from token and user
+### args
+- token for token field text
+- user
+### flow
+- make sure args there
+- select all SQL query from variable
+- return all since more than one possible
+## func Deposits:getByToken
+- get deposits from token
+### args
+- token for token field text
+### flow
+- make sure args there
+- select all SQL query from variable
+- return all since more than one possible
+## func Deposits:getByKey
+- get deposits from key
+### args
+- key for key field text
+### flow
+- make sure args there
+- select all SQL query from variable
+- return results[1], only one possible
+## func Deposits:upsert
+- to update if exists or insert record
+### args
+- record of type table
+### flow
+- make sure record arg is a table
+- make sure record has the fields, Recipient, Token and User
+- get result by the key, ie the above fields
+- ill return only one so store that as deposit
+- if deposit, then update this reward to the local table, if record then that ELSE the existing entry 
+- else no deposit (no matching reward) then add this new one to local rewards
