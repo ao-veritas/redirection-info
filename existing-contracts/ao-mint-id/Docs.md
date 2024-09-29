@@ -94,7 +94,6 @@
 ## func Sources:getBridgeOracles
 - gves all oracles which are not for AR
 
-
 # Function _loaded_mod_dal_deposits()
 ## metatable Deposits.__index
 - metatable so dbadmin can be used
@@ -148,3 +147,17 @@
 - ill return only one so store that as deposit
 - if deposit, then update this reward to the local table, if record then that ELSE the existing entry 
 - else no deposit (no matching reward) then add this new one to local rewards
+
+# Function _loaded_mod_allocator_calcvalue()
+- this function calculates the value of units given price with an optional yield, if no yield is provided it calculates the total cost, if yield is provide it calculates the total yield of a given item.
+## var of func calculateValue
+### args
+- amount, price, yield
+    -- @param amount the amount in units of a priced item
+    -- @param price the unit price of an item denominated by 4
+    -- @param yield the percent gain of a given item based on a specific price over time
+### flow
+- make sure amount and price
+- if yield not given then 1
+- return amount * (price * 10^14) * yield
+
