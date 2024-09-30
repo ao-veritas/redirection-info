@@ -1,9 +1,10 @@
 import './App.css'
+import UserDashboard from './components/UserDashboard'
 
 function App() {
   return (
     <main>
-      init
+      <UserDashboard/>
     </main>
   )
 }
