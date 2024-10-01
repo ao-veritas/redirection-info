@@ -289,6 +289,27 @@
   acct[rewardProp] = acct[scoreProp]/ scoreRewardUnit
   Calcs the reward (?)
 
+# Funtion _loaded_mod_aloocator_helpers()
+## func helpers.sum
+- finds sum of some prop in any table
+## func take
+- gives the first n tables ki list (?): why would we need this
+
+# Function _loaded_mod_allocator_main()
+## use calcValue, distribute, and helpers modules
+## func allocate.compute
+### args
+- deposits: table of table objects w/t amount, token
+- reward: bint compatable number or string to distribute
+- prices: lookup table of prices denominated by 4 by token
+- yields lookup table of yields denominated by 4 by token
+- returns: a table of items with a score and reward property 
+### flow
+- func calcScore
+  args: deposit w/t .Token and .Amount
+  make sure deposit, deposit.Token.price, deposit.Token.yield available
+  calc deposit.Score = calcValue, ie calculates the yield
+
 
 ## Contract Ids
 stEth: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84',
