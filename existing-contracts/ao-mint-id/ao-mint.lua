@@ -1332,7 +1332,8 @@ local function _loaded_mod_mint()
       
       if hash ~= "DEPOSIT" then
         EventHashes[hash] = true
-      end
+      end 
+      --(?) WHAT
     end
     
     function ProcessEventQueueWithdraw(user, remaining_amount, recipient, oracle)

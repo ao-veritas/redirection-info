@@ -367,6 +367,36 @@
 - if AR something about if hash is done ro not idk
 (?)
 
+# Function _loaded_mod_mint()
+- load everything
+- using dbadmin and sql open_memory
+- ar ratio 1/3 and bridge ratio 2/3
+- Utils :add, sub
+- time funcs to check if millisecs and cnvert to millisecs
+## func insertDeposits
+### Args
+- hash, recipient, oracle, user, token, amount, timestamp, tx
+### flow
+- if NOT AR, insert in EventQueue
+- gets CURRENT total deposited amount by (recipient, token, user) as key
+- add current to new and update
+## func ProcessEventQueueWithdraw
+### Args
+- user, remaining_amount, recipient, oracle
+### Flow
+- find event in event queue using orcle and user
+- make sure withdraw amount < available amount
+- subtract
+- return the amount withdrawed
+## func updateWithdraw
+### Args
+- hash, user, amount, timestamp, token, recipient, oracle
+### Flow
+- find deposits using Token and User as key
+- if no result from that process the eventqueuefor withdraw
+ Basically menas that deposit not done yet so withdraw cant either
+Parse the deposits 
+- now the amount to be withdrawn (remaining amount) if greater than current deposit amount, current deposut us made zero, remaining amount is reduced accordingly and rest is put in ProcessEventQueueWithdraw (?)( why put in that maybe kinda processing this)
 
 
 
