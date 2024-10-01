@@ -270,13 +270,7 @@
 - if yield not given then 1
 - return amount _ (price _ 10^14) \* yield
 
-## Contract Ids
 
-stEth: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84',
-stEthBridge: '0xfE08D40Eee53d64936D3128838867c867602665c',
-dai: '0x6b175474e89094c44da98b954eedeac495271d0f',
-daiBridge: '0x6A1B588B0684dACE1f53C5820111F400B3dbfeBf'
-AO Mint Contract is 1OEAToQGhSKV76oa1MFIGZ9bYxCJoxpXqtksApDdcu8
 # Function _loaded_mod_allocator_distribute()
 - distribute a reward using weighted distribution 
 ## var of func distribute
@@ -289,4 +283,16 @@ AO Mint Contract is 1OEAToQGhSKV76oa1MFIGZ9bYxCJoxpXqtksApDdcu8
 ### flow
 - make sure reward and scoreTotal given
 - set defaults for scoreProp and rewardProp if not given
-- 
+- var scoreRewardUnit = scoreTotal/reward
+- funtion (param acct - table containing a score property)
+  make sure acct is table, act has [scoreProp]
+  acct[rewardProp] = acct[scoreProp]/ scoreRewardUnit
+  Calcs the reward (?)
+
+
+## Contract Ids
+stEth: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84',
+stEthBridge: '0xfE08D40Eee53d64936D3128838867c867602665c',
+dai: '0x6b175474e89094c44da98b954eedeac495271d0f',
+daiBridge: '0x6A1B588B0684dACE1f53C5820111F400B3dbfeBf'
+AO Mint Contract is 1OEAToQGhSKV76oa1MFIGZ9bYxCJoxpXqtksApDdcu8
