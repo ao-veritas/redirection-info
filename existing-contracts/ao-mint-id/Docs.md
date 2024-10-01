@@ -289,7 +289,7 @@
   acct[rewardProp] = acct[scoreProp]/ scoreRewardUnit
   Calcs the reward (?)
 
-# Funtion _loaded_mod_aloocator_helpers()
+# Funtion _loaded_mod_allocator_helpers()
 ## func helpers.sum
 - finds sum of some prop in any table
 ## func take
@@ -325,6 +325,47 @@
 ### flow
 - check against regex for valid unit or not
 - pass and get seconds return
+
+# Function _loaded_mod_either()
+- Either algebraic data type (ADT)
+- handle operations that can succeed or fail
+- Left: Typically represents failure or an error case.
+- Right: Typically represents success or a valid result.
+- basically an err handler will check later if needed
+
+# Function _loaded_mod_helpers()
+## func utils.isValid(event)
+- checks validity based on type sand the params it should have
+### args 
+- an event
+### flow
+- func for if string returns is string
+- func for if nil returns is nil
+- some either stuff
+- (?) can be usefull later to implement similar
+## func addTransactionKey(event)
+### args
+- event
+### flow
+- has create key functions
+- for AR: string of hash .. - .. -D or -W (deposit or withdraw)
+- for new stEth: hash .. - .. LofIndex of event
+- for old steth: hash .. - .. -D or -W
+## func addUniqueIdentifier(event)
+### args
+- event
+### flow
+- AR: transaction hash
+- stEth: BlockNumber (its ~ ar so same for dai?) (?)
+## func utils.isDuplicate()
+### args
+- event
+### flow
+- make sure not string, Price-Update or Yield-Update type event
+- addTransactionkey and addUniqueIdentifier to event
+- if not AR, check for duplicates, update record if is duplicate
+- if AR something about if hash is done ro not idk
+(?)
 
 
 
