@@ -718,14 +718,12 @@ local function _loaded_mod_allocator_calcvalue()
       if not yield then yield = 1 end
       return bint(amount) * (bint(price) * bint.ipow(10, 14)) * bint(yield)
     end
+  return calculateValue
+end 
+_G.package.loaded["allocator.calcvalue"] = _loaded_mod_allocator_calcvalue()
     
-    return calculateValue
-    end
-    
-    _G.package.loaded["allocator.calcvalue"] = _loaded_mod_allocator_calcvalue()
-    
-    -- module: "allocator.distribute"
-    local function _loaded_mod_allocator_distribute()
+-- module: "allocator.distribute"
+local function _loaded_mod_allocator_distribute()
     local bint = require('.bint')(256)
     
     -- distribute a reward using weighted distribution 

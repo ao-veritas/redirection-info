@@ -161,3 +161,16 @@
 - if yield not given then 1
 - return amount * (price * 10^14) * yield
 
+# Function _loaded_mod_allocator_distribute()
+- distribute a reward using weighted distribution 
+## var of func distribute
+### args
+- reward, scoreTotal, scoreProp, rewardProp
+    -- @param reward Amount of Units you want to distribute
+    -- @param scoreTotal The total score of the accounts in the list
+    -- @param scoreProp The name of the property to read the score from
+    -- @param rewardProp The name of the property to set the reward to
+### flow
+- make sure reward and scoreTotal given
+- set defaults for scoreProp and rewardProp if not given
+- 
