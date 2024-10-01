@@ -309,6 +309,24 @@
   args: deposit w/t .Token and .Amount
   make sure deposit, deposit.Token.price, deposit.Token.yield available
   calc deposit.Score = calcValue, ie calculates the yield
+  returns: deposit object
+- make sure deposit is table, reward is bint-able, prices is table and yields is table
+- local var scores, ie tabke of calcScore from deposits
+- local var totalScores = sums the above table
+- returns call to distribute function with rewards, the score table and finally scores
+(?) lets excali this
+
+# Function _loaded_mod_ntime()
+## local table time_units_in_seconds
+- maps time units to values in seconds
+## func ntime.toseconds
+### args
+- time_format
+### flow
+- check against regex for valid unit or not
+- pass and get seconds return
+
+
 
 
 ## Contract Ids
