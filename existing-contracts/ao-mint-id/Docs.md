@@ -397,6 +397,13 @@
  Basically menas that deposit not done yet so withdraw cant either
 Parse the deposits 
 - now the amount to be withdrawn (remaining amount) if greater than current deposit amount, current deposut us made zero, remaining amount is reduced accordingly and rest is put in ProcessEventQueueWithdraw (?)( why put in that maybe kinda processing this)
+## func ProcessDelayedDeposits()
+### Args
+- oracle, timestamp
+### Flow
+- mke sure something in event queue
+- get the source oracle by id, make sure oracle exists
+- 
 
 
 
