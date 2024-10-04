@@ -8,6 +8,7 @@ import User from './_pages/User';
 import About from './_pages/About';
 import Dashboard from './_pages/Dashboard';
 import ProjectRoute from './_pages/ProjectRoute';
+import UserDashboard from './components/UserDashboard';
 
 const AppRouter: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const AppRouter: React.FC = () => {
         <Route path="/saturn" element={<Saturn />} />
         <Route path="/about" element={<About />} />
         <Route path="/faucet" element={<Faucet />} />
-        <Route path="/user" element={<User />} />
+        <Route path="/user" element={<UserDashboard />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/project/:processID" element={<ProjectRoute />} />
       </Routes>

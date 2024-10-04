@@ -2,7 +2,7 @@ import { ConnectButton, useActiveAddress } from "arweave-wallet-kit";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { brandLightText, brandSecondaryBg, brandSecondaryText } from "../../_utils/colors";
-import { connected } from '@/store/atoms/connected'
+import { connected } from '../../store/atoms/connected'
 import { useSetRecoilState } from "recoil";
 import { Link } from "react-router-dom";
 
