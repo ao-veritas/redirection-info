@@ -5,7 +5,7 @@ import { BackgroundBeams } from "../ui/background-beams";
 const Hero = () => {
   return (
     <>
-    <section className="z-30 w-full text-[#eeeeee] flex flex-col justify-center items-center pb-[180px] max-w-[1800px]
+    <section className="z-30 w-full text-[#eeeeee] flex flex-col justify-center items-center pb-[120px] max-w-[1800px]
     xl:px-[105px] lg:px-[90px] sm:px-[60px] px-[21px]
     lg:mt-[180px] mt-[120px]">
       <div className="relative flex flex-row justify-between items-start w-full">
