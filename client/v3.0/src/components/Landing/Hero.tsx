@@ -10,13 +10,13 @@ const Hero = () => {
         <div className="w-fit ltrAnim">
           <img
             src={"https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/HeroCircle.svg"}
-            className="lg:w-[390px] lg:h-[390px] md:w-[270px] md:h-[270px] w-[180px] h-[180px]"
+            className="lg:w-[900px] lg:h-[900px] md:w-[270px] md:h-[270px] w-[180px] h-[180px]"
           />
         </div>
         <div className="w-fit absolute inset-0 mx-auto rotate-[-90deg] z-10">
           <img
             src={"https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/HeroCircle.svg"}
-            className="lg:w-[390px] lg:h-[390px] md:w-[270px] md:h-[270px] w-[180px] h-[180px]"
+            className="lg:w-[900px] lg:h-[900px] md:w-[270px] md:h-[270px] w-[180px] h-[180px]"
           />
         </div>
         <h1 className="lg:text-[36px] md:text-[27px] text-[24px]
@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="w-fit rtlAnim">
           <img
             src={"https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/HeroCircle.svg"}
-            className="lg:w-[390px] lg:h-[390px] md:w-[270px] md:h-[270px] w-[180px] h-[180px] rotate-180"
+            className="lg:w-[900px] lg:h-[900px] md:w-[270px] md:h-[270px] w-[180px] h-[180px] rotate-180"
           />
         </div>
       </div>

@@ -32,9 +32,9 @@ export default function Navbar() {
   }, [connected])
   return (
     <>
-      <nav className="md:flex hidden justify-between items-center px-[30px] py-[21px] fadeIn fixed w-full z-50 bg-[#40959d00] backdrop-blur-[9px]">
+      <nav className="md:flex hidden justify-between items-center px-[15px] py-[21px] fadeIn fixed w-full z-50 bg-[#40959d00] backdrop-blur-[9px]">
         <Link to="/">
-          <img alt="Home" src={"/logos/LogoDarkMode.svg"} className="lg:h-[48px] lg:w-[120px] h-[21px] w-[45px]" />
+          <img alt="Home" src={"/logos/RecLogoDark.svg"} className="lg:h-[48px] lg:w-[300px] h-[21px] w-[45px]" />
         </Link>
         <div className="flex flex-row gap-[90px] justify-end items-center">
           <div className="flex flex-row lg:gap-[45px] gap-[24px] text-[#eeeeee] lg:text-[16.5px] text-[12px] tracking-wider">
@@ -74,11 +74,13 @@ export default function Navbar() {
               Analysis Dashboards
             </Link>{" "}
           </div>
-          <div className="md:block hidden">
+          <div className="md:flex hidden bg-white flex-row justify-between items-center rounded-[10px]">
+            <a href="/" className="px-[21px] hover:underline underline-offset-[3px] hover:opacity-75">Your Profile</a>
             <ConnectButton accent="rgb(14, 156, 156)" />
           </div>
         </div>
       </nav>
+      {/* PHONE */}
       <nav
         className={`flex md:hidden justify-between items-start px-[30px] py-[36px] fadeIn fixed w-full z-50 
         ${isOpen ? "h-[100vh] bg-[#40959d7e] backdrop-blur-[3px]" : "h-[11vh] bg-[#40959d00] backdrop-blur-[9px]"}`}
