@@ -69,3 +69,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-gradient {
+  color: #46B1BC; 
+  background-image: linear-gradient(180deg, #46B1BC 21%, #102123 100%); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+ }
