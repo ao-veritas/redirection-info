@@ -1,4 +1,4 @@
-import { ConnectButton, useActiveAddress } from "arweave-wallet-kit";
+import { ConnectButton, useActiveAddress, useConnection } from "arweave-wallet-kit";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { brandLightText, brandSecondaryBg, brandSecondaryText } from "../../_utils/colors";
@@ -12,6 +12,7 @@ export default function Navbar() {
   // let path = window.location.hash.split("#");
   const path = location.pathname.split("/");
   const address = useActiveAddress();
+  const {connected} = useConnection();
   // console.log(path[1])
   // const validPaths = ["about", "profile", "faucet", "project", "addProject", ""];
   // let pageTitle = validPaths.includes(path[1]?.toLowerCase()) ? path[1] : "Home";
@@ -24,19 +25,13 @@ export default function Navbar() {
   //   //   value: isOpen ? 'Close' : 'Open',
   //   // });
   // };
-  const setConnected = useSetRecoilState(connected)
-  useEffect(() => {
-    if(address) {
-      setConnected(true)
-    }
-  }, [connected])
   return (
     <>
-      <nav className="md:flex hidden justify-between items-center px-[15px] py-[21px] fadeIn fixed w-full z-50 bg-[#40959d00] backdrop-blur-[9px]">
+      <nav className="lg:flex hidden justify-between items-center px-[15px] py-[21px] fadeIn fixed w-full z-50 bg-[#40959d00] backdrop-blur-[9px]">
         <Link to="/">
           <img alt="Home" src={"/logos/RecLogoDark.svg"} className="lg:h-[48px] lg:w-[300px] h-[21px] w-[45px]" />
         </Link>
-        <div className="flex flex-row gap-[90px] justify-end items-center">
+        <div className="flex flex-row gap-[45px] justify-end items-center">
           <div className="flex flex-row lg:gap-[45px] gap-[24px] text-[#eeeeee] lg:text-[16.5px] text-[12px] tracking-wider">
             <Link
               to="/"
@@ -59,13 +54,13 @@ export default function Navbar() {
             >
               Your Profile
             </Link>{" "}
-            <Link
+            {/* <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
           ${path[1] == "faucet" ? `${brandSecondaryText} underline` : brandLightText}`}
               to="/faucet"
             >
               Faucet
-            </Link>{" "}
+            </Link>{" "} */}
             <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
           ${path[1] == "dashboard" ? `${brandSecondaryText} underline` : brandLightText}`}
@@ -74,7 +69,7 @@ export default function Navbar() {
               Analysis Dashboards
             </Link>{" "}
           </div>
-          <div className="md:flex hidden bg-white flex-row justify-between items-center rounded-[10px]">
+          <div className="lg:flex hidden bg-white flex-row justify-between items-center rounded-[10px]">
             <a href="/" className="px-[21px] hover:underline underline-offset-[3px] hover:opacity-75">Your Profile</a>
             <ConnectButton accent="rgb(14, 156, 156)" />
           </div>
@@ -88,7 +83,7 @@ export default function Navbar() {
         <Link to="/">
           <img
             alt="Home"
-            src={"/logos/LogoDarkMode.svg"}
+            src={"/logos/RecLogoDark.svg"}
             className="h-[30px] w-[90px]"
           />
         </Link>
