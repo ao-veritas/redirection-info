@@ -20,7 +20,7 @@ const Hero = () => {
           />
         </div>
         <div className="text-center z-10 w-fit mx-[-120px] 
-        flex flex-col gap-3 justify-start items-center">
+        flex flex-col gap-[9px] justify-start items-center">
         <h1 className="lg:text-[69px] leading-[78px]
          md:text-[27px] text-[24px] font-semibold
         ttbAnim ">
@@ -35,16 +35,15 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="flex flex-row gap-6 fadeIn pt-9">
-        <Link to="/register">
-          <button className="hover:bg-[#40959d36] hover:tracking-wider rounded-[9px] md:w-[180px] w-[120px] md:text-[16.5px] text-[12px] py-[9px] border-[1px] border-[#40959D]">Add your project</button>
+      <div className="flex flex-row gap-[39px] fadeIn pt-[60px]">
+      <Link to="/" target="_blank">
+          <button className="hover:bg-[#40959da0] hover:tracking-wider rounded-[9px] md:w-[210px] w-[120px] md:text-[18px] tracking-wider text-[12px] py-[10.5px] bg-[#40959D]">Explore Projects</button>
         </Link>
-        <Link to="https://github.com/fundars/platform2.0" target="_blank">
-          <button className="hover:bg-[#40959ddf] hover:tracking-wider rounded-[9px] md:w-[180px] w-[120px] md:text-[16.5px] text-[12px] py-[9px] bg-[#40959D]">Explore</button>
+        <Link to="/register">
+          <button className="hover:bg-[#40959d36] hover:tracking-wider rounded-[9px] md:w-[210px] w-[120px] md:text-[18px] tracking-wider text-[12px] py-[9.5px] border-[1.5px] border-[#40959D] text-[#40959D]">Add your project</button>
         </Link>
       </div>
     </section>
-    <BackgroundBeams/>
     </>
   );
 };
