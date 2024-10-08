@@ -77,17 +77,17 @@ export default function Navbar() {
       </nav>
       {/* PHONE */}
       <nav
-        className={`flex md:hidden justify-between items-start px-[30px] py-[36px] fadeIn fixed w-full z-50 
+        className={`flex flex-row lg:hidden justify-between items-start px-[21px] py-[21px] fadeIn fixed w-full z-50 
         ${isOpen ? "h-[100vh] bg-[#40959d7e] backdrop-blur-[3px]" : "h-[11vh] bg-[#40959d00] backdrop-blur-[9px]"}`}
       >
         <Link to="/">
           <img
             alt="Home"
             src={"/logos/RecLogoDark.svg"}
-            className="h-[30px] w-[90px]"
+            className="h-[30px] w-[180px]"
           />
         </Link>
-        <div className="flex flex-col justify-start gap-6 items-end">
+        <div className="flex flex-col justify-start gap-6 items-end pt-[6px]">
           <div
             onClick={() => {
               console.log("clicked");
@@ -100,7 +100,7 @@ export default function Navbar() {
             <div className={`w-[30px] py-[1.5px] rounded-3xl ${brandSecondaryBg} ${isOpen ? " -rotate-45" : ""}`}></div>
           </div>
           <div
-            className={`flex md:flex-row flex-col justify-start items-end gap-[30px] text-[#eeeeee] mt-9 text-[16.5px] tracking-wider
+            className={`flex flex-col justify-start items-end gap-[30px] text-[#eeeeee] mt-9 text-[16.5px] tracking-wider text-right
         ${isOpen ? " translate-x-0" : " translate-x-52"}`}
           >
             <Link
@@ -124,13 +124,13 @@ export default function Navbar() {
             >
               Your Profile
             </Link>{" "}
-            <Link
+            {/* <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
         ${path[1] == "faucet" ? `${brandSecondaryText} underline` : "text-[#ffffff]"}`}
               to="/faucet"
             >
               Faucet
-            </Link>{" "}
+            </Link>{" "} */}
             <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
         ${path[1] == "dashboard" ? `${brandSecondaryText} underline` : "text-[#ffffff]"}`}

@@ -9,7 +9,7 @@ const HomePage = () => {
         <Arch/>
         <ProjectsDisplay/> */}
       </main>
-      <Footer/>
+      {/* <Footer/> */}
 
     </>
   )
