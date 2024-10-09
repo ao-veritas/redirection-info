@@ -1,12 +1,10 @@
-import React from 'react'
-
-const FeatureCard = ({heading, text, flow}:any) => {
+const FeatureCard = ({heading, text, flow, imag}:any) => {
   return (
     <div className={`flex ${flow} justify-between items-center h-full text-[#212121]`}>
-        <img src="/logos/RecLogoDark.svg" className='opacity-55 w-full max-h-[120px]'/>
+        <img src={`/feat/${imag}.svg`} className='w-full h-full'/>
         <div>
-            <h3 className='text-[24px] font-semibold'>{heading}</h3>
-            <p>{text}</p>
+            <h3 className='text-[21px] font-semibold tracking-tighter'>{heading}</h3>
+            <p className='text-[18px] tracking-wider leading-[20px] pt-[6px]'>{text}</p>
         </div>
     </div>
   )

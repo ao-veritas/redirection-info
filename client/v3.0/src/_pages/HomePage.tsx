@@ -10,7 +10,7 @@ const HomePage = () => {
         <Hero/>
         <ScreenshotDisplay/>
         <Features/>
-
+        <h1>When coeheb</h1>
         {/* <Arch/>
         <ProjectsDisplay/> */}
       </main>
