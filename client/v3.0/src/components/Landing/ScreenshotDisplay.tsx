@@ -4,7 +4,7 @@ import { StepstoCreate } from "./ScrollSs";
 const ScreenshotDisplay = () => {
     const words = ["$AOEth", "$AODai", "$AOSol"];
   return (
-    <section>
+    <section className="w-full px-20 flex flex-col gap-9">
         <h1 className="text-[39px] text-center leading-[42px] tracking-wider text-[#eeeeee]">Stake<FlipWords words={words} duration={1000} className="text-[#40959D]"/>at projects built on <span className="block">arweave and recieve their <span className="text-[#40959D]">$tokens</span></span></h1>
         {/* <div className="relative w-full top-40 mt-4 md:mt-28">
           <h2
@@ -15,6 +15,10 @@ const ScreenshotDisplay = () => {
           </h2>
           <StepstoCreate />
         </div> */}
+        <div className="flex flex-row gap-6">
+          <img src="/ss/1.png" alt="" />
+          <img src="/ss/2.png" alt="" />
+        </div>
     </section>
   )
 }
