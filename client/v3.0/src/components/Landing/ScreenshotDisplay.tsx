@@ -4,7 +4,7 @@ import { FlipWords } from "../ui/flip-words"
 const ScreenshotDisplay = () => {
     const words = ["$AOEth", "$AODai", "$AOSol"];
   return (
-    <section className="w-full px-20 flex flex-col gap-9">
+    <section className="w-full px-20 py-20 flex flex-col gap-9">
         <h1 className="text-[39px] text-center leading-[42px] tracking-wider text-[#eeeeee]">Stake<FlipWords words={words} duration={1000} className="text-[#40959D]"/>at projects built on <span className="block">arweave and recieve their <span className="text-[#40959D]">$tokens</span></span></h1>
         {/* <div className="relative w-full top-40 mt-4 md:mt-28">
           <h2

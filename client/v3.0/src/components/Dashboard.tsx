@@ -2,7 +2,7 @@ import { brandDarkBg } from "../_utils/colors";
 import Navbar from "./Layout/Navbar";
 
 import OnChain0rbit from "./Dashboard/OnChain0rbit";
-import { Tabs } from "./ui/tabs";
+import { Tabs } from "./ui/tabsAceternity";
 
 // Sample project data
 
