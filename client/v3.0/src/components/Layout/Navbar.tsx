@@ -1,9 +1,9 @@
-import { ConnectButton, useActiveAddress, useConnection } from "arweave-wallet-kit";
-import { useEffect, useState } from "react";
+import { ConnectButton, useConnection } from "arweave-wallet-kit";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { brandLightText, brandSecondaryBg, brandSecondaryText } from "../../_utils/colors";
-import { connected } from '../../store/atoms/connected'
-import { useSetRecoilState } from "recoil";
+// import { connected } from '../../store/atoms/connected'
+// import { useSetRecoilState } from "recoil";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   // let path = window.location.hash.split("#");
   const path = location.pathname.split("/");
-  const address = useActiveAddress();
+  // const address = useActiveAddress();
   const {connected} = useConnection();
   // console.log(path[1])
   // const validPaths = ["about", "profile", "faucet", "project", "addProject", ""];

@@ -21,8 +21,8 @@ export const StepsToCreateCard: React.FC<CardProps> = ({
   step,
   title,
   description,
-  imageAlt,
-  image,
+  // imageAlt,
+  // image,
 }) => {
   return (
     <Card

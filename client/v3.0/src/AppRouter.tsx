@@ -4,7 +4,7 @@ import HomePage from './_pages/HomePage';
 import RegisterProject from './_pages/RegisterProject';
 import Saturn from './_pages/Saturn';
 import Faucet from './_pages/Faucet';
-import User from './_pages/User';
+// import User from './_pages/User';
 import About from './_pages/About';
 import Dashboard from './_pages/Dashboard';
 import ProjectRoute from './_pages/ProjectRoute';

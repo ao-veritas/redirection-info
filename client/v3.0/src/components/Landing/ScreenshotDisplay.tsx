@@ -1,5 +1,5 @@
 import { FlipWords } from "../ui/flip-words"
-import { StepstoCreate } from "./ScrollSs";
+// import { StepstoCreate } from "./ScrollSs";
 
 const ScreenshotDisplay = () => {
     const words = ["$AOEth", "$AODai", "$AOSol"];

@@ -1,6 +1,4 @@
-import React from 'react'
 import { WobbleCard } from '../ui/wobble-card'
-import { secondsInDay } from 'date-fns/constants'
 import FeatureCard from './FeatureCard'
 
 const Features = () => {

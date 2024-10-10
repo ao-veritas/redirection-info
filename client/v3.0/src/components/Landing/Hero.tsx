@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { BackgroundBeams } from "../ui/background-beams";
+
 
 const Hero = () => {
   return (

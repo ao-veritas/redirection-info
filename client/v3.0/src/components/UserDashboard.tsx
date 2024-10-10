@@ -133,7 +133,7 @@ export default function UserDashboard() {
   )
 }
 
-function TokenCard({ title, held, staked, isDarkMode }) {
+function TokenCard({ title, held, staked, isDarkMode }:any) {
   const total = held + staked
   const stakedPercentage = (staked / total) * 100
 
@@ -156,7 +156,7 @@ function TokenCard({ title, held, staked, isDarkMode }) {
   )
 }
 
-function ProjectCard({ project, isDarkMode }) {
+function ProjectCard({ project, isDarkMode }:any) {
   const [isStakeModalOpen, setIsStakeModalOpen] = useState(false)
   const [isUnstakeModalOpen, setIsUnstakeModalOpen] = useState(false)
 
@@ -202,7 +202,7 @@ function ProjectCard({ project, isDarkMode }) {
   )
 }
 
-function YieldInfo({ token, value, isDarkMode }) {
+function YieldInfo({ token, value, isDarkMode }:any) {
   return (
     <div className={`flex items-center text-xs ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
       <TrendingUpIcon className={`w-3 h-3 mr-1 ${isDarkMode ? 'text-[#40959D]' : 'text-[#3a8a91]'}`} />
@@ -211,7 +211,7 @@ function YieldInfo({ token, value, isDarkMode }) {
   )
 }
 
-function StakedInfo({ token, value, isDarkMode }) {
+function StakedInfo({ token, value, isDarkMode }:any) {
   return (
     <div className={`flex items-center text-xs ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
       <LockIcon className={`w-3 h-3 mr-1 ${isDarkMode ? 'text-[#40959D]' : 'text-[#3a8a91]'}`} />
@@ -220,12 +220,12 @@ function StakedInfo({ token, value, isDarkMode }) {
   )
 }
 
-function StakeModal({ isOpen, onClose, project, isDarkMode }) {
+function StakeModal({ isOpen, onClose, project, isDarkMode }:any) {
   const [selectedToken, setSelectedToken] = useState('tAoEth')
   const [amount, setAmount] = useState('')
   const [stakeStep, setStakeStep] = useState(0)
 
-  const availableTokens = {
+  const availableTokens:any = {
     tAoEth: 500,
     tAoDai: 1000,
     tAoSol: 750
@@ -333,7 +333,7 @@ function StakeModal({ isOpen, onClose, project, isDarkMode }) {
   )
 }
 
-function UnstakeModal({ isOpen, onClose, project, isDarkMode }) {
+function UnstakeModal({ isOpen, onClose, project, isDarkMode }:any) {
   const [selectedToken, setSelectedToken] = useState('tAoEth')
   const [amount, setAmount] = useState('')
   const [unstakeStep, setUnstakeStep] = useState(0)
