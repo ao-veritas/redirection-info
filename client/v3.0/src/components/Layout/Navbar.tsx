@@ -2,8 +2,6 @@ import { ConnectButton, useConnection } from "arweave-wallet-kit";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { brandLightText, brandSecondaryBg, brandSecondaryText } from "../../_utils/colors";
-// import { connected } from '../../store/atoms/connected'
-// import { useSetRecoilState } from "recoil";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
