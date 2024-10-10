@@ -1,0 +1,12 @@
+IDS:
+- TSJxmHr9ewGjgEhAPy_1vt11ot_7klZGX13lUGLGlm4
+    dry run {name: "Action", value: "Broadcasts"}
+- Dgs1OEsExsPRVcbe_3buCGf0suVKUFwMJFddqMhywbY
+   WALLET INTERACTS WITH THIS
+   BET sends Action = Buy
+- GCpCoN1OIzyDHUr7xlqgBYgrqehmh8LGIMVYI6-s1kU
+    {name: "Action", value: "UI-Market"}
+
+
+buying or betting calls a message like below
+https://www.ao.link/#/message/WeZyIUPkBTG_nHkwPm7VMdmahuPn-Xe9wfhN-TO4XCQ

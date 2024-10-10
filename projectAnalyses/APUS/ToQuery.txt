@@ -1,0 +1,10 @@
+Message Tags to Query:
+- Action = Get-Pools
+- Action = Leaderboard
+- Action = Join-Pool
+- ['X-Allocation'] = 'ArithmeticDecrease'
+- ['X-Dataset'] = <your dataset process id>,
+
+IDS:
+- XUw5NtwUzk7hf_dE4ifEFD2rHfXffMLb8s2QfnZEvg4
+- DLJoP8Xtdat6SKz3kqYGZPaa7DJBG6etF1jRLQCwquo
