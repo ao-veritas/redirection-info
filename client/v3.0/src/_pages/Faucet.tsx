@@ -34,7 +34,10 @@ export default function Faucet() {
       message: res,
     });
 
-    console.log({ postResult });
+    console.log(postResult);
+    if (postResult.Output.data == "\u001b[31mError\u001b[90m handling message with Action = tAoETH-Airdrop\u001b[0m\n\u001b[32m[string \".handlers\"]:345: [string \"aos\"]:19: Please wait for some time before requesting airdrop again!\u001b[0m\n\n\u001b[90mstack traceback:\n\t[string \".process\"]:535: in function '.process.handle'\u001b[0m"){
+      alert("To early wait sometime before requesting again")
+    }
     if (postResult.Error || postResult.Messages.length === 0) {
       console.log(postResult.Error);
       throw new Error(postResult.Error);
