@@ -34,6 +34,24 @@ box-sizing: border-box;
   background: linear-gradient(135deg, rgba(17,17,17,1) 0%, rgba(12,28,30,1) 100%);
 }
 
+.CTABg{
+  background: rgb(17,17,17);
+  background: linear-gradient(180deg, rgba(17,17,17,1) 0%, rgba(23,23,23,1) 100%);
+}
+
+.CTABorder{
+  background: radial-gradient(circle at 100% 100%, #111111 0, #111111 21.9px, transparent 21.9px) 0% 0%/24px 24px no-repeat,
+  radial-gradient(circle at 0 100%, #111111 0, #111111 21.9px, transparent 21.9px) 100% 0%/24px 24px no-repeat,
+  radial-gradient(circle at 100% 0, #111111 0, #111111 21.9px, transparent 21.9px) 0% 100%/24px 24px no-repeat,
+  radial-gradient(circle at 0 0, #111111 0, #111111 21.9px, transparent 21.9px) 100% 100%/24px 24px no-repeat,
+  linear-gradient(#111111, #111111) 50% 50%/calc(100% - 4.2px) calc(100% - 48px) no-repeat,
+  linear-gradient(#111111, #111111) 50% 50%/calc(100% - 48px) calc(100% - 4.2px) no-repeat,
+  linear-gradient(192deg, #121212 0%, rgba(70,177,188,0.36) 100%);
+border-radius: 24px;
+padding: 1.5px;
+box-sizing: border-box;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

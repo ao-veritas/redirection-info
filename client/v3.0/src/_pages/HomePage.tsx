@@ -1,4 +1,5 @@
 import { Footer, Hero, Navbar } from "../components"
+import Cta from "../components/Landing/Cta";
 import Faq from "../components/Landing/Faq";
 import Features from "../components/Landing/Features"
 import ScreenshotDisplay from "../components/Landing/ScreenshotDisplay"
@@ -19,6 +20,7 @@ const HomePage = () => {
         </section>
         <TabsSection/>
        <Faq/>
+       <Cta/>
         {/* <Arch/>
         <ProjectsDisplay/> */}
       </main>
