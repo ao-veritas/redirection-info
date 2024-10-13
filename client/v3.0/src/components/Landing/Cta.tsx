@@ -1,10 +1,10 @@
 const Cta = () => {
   return (
-    <section className='my-[30px] CTABorder w-[60%]'>
+    <section className='my-[30px] CTABorder lg:w-[60%] w-[87%] max-w-[1800px]'>
         <div className="flex flex-col items-center justify-between gap-[12px] px-[21px] py-[21px] rounded-[21px] CTABg">
-        <h1 className="text-[45px] tracking-wide text-[#D9D9D9]">Got more <span className="text-[#46B1BC]">Questions?</span></h1>
+        <h1 className="md:text-[45px] md:leading-[51px] text-[30px] text-center leading-[33px] tracking-wide text-[#D9D9D9]">Got more <span className="text-[#46B1BC]">Questions?</span></h1>
         <h6 className="text-[18px] font-thin font-sans tracking-[1.5px] opacity-75">Connect with us now !</h6>
-        <div className="flex flex-row gap-[36px] items-center justify-between pt-[9px]">
+        <div className="flex flex-row md:gap-[36px] gap-[18px] items-center justify-between pt-[9px]">
             <img src="/socials/gradient/discordCTA.svg" alt="" className="w-[27px] h-[27px]"/>
             <img src="/socials/gradient/twitterCTA.svg" alt="" className="w-[27px] h-[27px]"/>
             <img src="/socials/gradient/githubCTA.svg" alt="" className="w-[27px] h-[27px]"/>
