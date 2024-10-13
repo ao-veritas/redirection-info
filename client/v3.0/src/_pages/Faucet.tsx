@@ -59,15 +59,15 @@ export default function Faucet() {
         <>
         <div className="flex flex-col justify-start items-start bg-[#243939] px-[45px] py-[15px] rounded-[9px] text-[18px]">
           <h4 className="text-[#46B1BC]">Wallet Address: <span className="text-[#f1f1f1]">adoS8VxhDBWDi0OWHiDAnHMjj4F7CmTy7IM16xwPY0I</span></h4>
-          <h4 className="text-[#46B1BC]">$TAoEth Balance: <span className="text-[#f1f1f1]">13.134</span></h4>
-        {/* <h2 className="text-[#40959D] text-[27px] tracking-widest">$tAoEth Balance:</h2>
-        {aoethBalance == null ? (
+          <h4 className="text-[#46B1BC]">$TAoEth Balance: <span className="text-[#f1f1f1]">{aoethBalance == null ? (
           <div className="animate-pulse space-y-2">
             <div className="bg-gray-300 h-6 w-48 rounded"></div>
           </div>
         ) : (
           <h3 className="text-[#f1f1f1] text-[24px] font-[Rale-Medium]">{aoethBalance.toFixed(2)} $tAoEth</h3>
-        )} */}
+        )}</span></h4>
+        {/* <h2 className="text-[#40959D] text-[27px] tracking-widest">$tAoEth Balance:</h2>
+         */}
       </div>
       <h4 className="text-[18px]">Get 10 $TAoEth every xx Hours!</h4>
       <button
