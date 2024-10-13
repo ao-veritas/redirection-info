@@ -50,7 +50,7 @@ export default function Faucet() {
     <Navbar/>
     <main className={`flex flex-col items-center justify-start gap-12 px-20 pt-[120px] ${brandDarkBg} min-h-[100vh] w-full`}>
       <section className="flex flex-col gap-[18px] items-center justify-between 
-      rounded-[18px] px-[105px] py-[45px] mt-[60px]
+      rounded-[21px] px-[105px] py-[45px] mt-[60px]
       text-[#f1f1f1] faucetBg z-10 backdrop-blur-[1.8px] border-[1px] border-[#205156]
       w-fit">
         <h1 className="text-[60px] font-medium tracking-wider leading-[63px]"><span className="text-[#40959D]">$TAoEth</span> Faucet</h1>
@@ -69,7 +69,7 @@ export default function Faucet() {
           <h3 className="text-[#f1f1f1] text-[24px] font-[Rale-Medium]">{aoethBalance.toFixed(2)} $tAoEth</h3>
         )} */}
       </div>
-      <h4>Get 10 $TAoEth every xx Hours!</h4>
+      <h4 className="text-[18px]">Get 10 $TAoEth every xx Hours!</h4>
       <button
         onClick={() => {
           const promise = airdropTokens();
