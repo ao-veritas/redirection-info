@@ -52,6 +52,11 @@ padding: 1.5px;
 box-sizing: border-box;
 }
 
+.faucetBg{
+  background: rgb(32,81,86);
+  background: linear-gradient(180deg, rgba(32,81,86,0.18) 0%, rgba(17,17,17,0.18) 100%);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
