@@ -44,23 +44,32 @@ export default function Faucet() {
     }
     await refreshAoethBalance();
   };
-if(connected){
+
   return (
     <>
     <Navbar/>
-    <main className={` flex flex-col gap-12  px-20 pt-[120px] ${brandDarkBg} min-h-[100vh] w-full`}>
-      <div className="flex flex-col justify-start items-start">
-        <h2 className="text-[#40959D] text-[27px] tracking-widest">$tAoEth Balance:</h2>
-        {aoethBalance == null ? (
+    <main className={`flex flex-col items-center justify-start gap-12 px-20 pt-[120px] ${brandDarkBg} min-h-[100vh] w-full`}>
+      <section className="flex flex-col gap-[18px] items-center justify-between 
+      rounded-[21px] px-[105px] py-[45px] mt-[60px]
+      text-[#f1f1f1] faucetBg z-10 backdrop-blur-[1.8px] border-[1px] border-[#205156]
+      w-fit">
+        <h1 className="text-[60px] font-medium tracking-wider leading-[63px]"><span className="text-[#40959D]">$TAoEth</span> Faucet</h1>
+        <h6 className="text-[21px] font-extralight font-sans text-center tracking-widest">Get $TAoEth and test out the flow for staking, earning and <span className="block">Permissionless ecosystem funding!</span></h6>
+        {connected?
+        <>
+        <div className="flex flex-col justify-start items-start bg-[#243939] px-[45px] py-[15px] rounded-[9px] text-[18px]">
+          <h4 className="text-[#46B1BC]">Wallet Address: <span className="text-[#f1f1f1]">adoS8VxhDBWDi0OWHiDAnHMjj4F7CmTy7IM16xwPY0I</span></h4>
+          <h4 className="text-[#46B1BC]">$TAoEth Balance: <span className="text-[#f1f1f1]">{aoethBalance == null ? (
           <div className="animate-pulse space-y-2">
             <div className="bg-gray-300 h-6 w-48 rounded"></div>
           </div>
         ) : (
           <h3 className="text-[#f1f1f1] text-[24px] font-[Rale-Medium]">{aoethBalance.toFixed(2)} $tAoEth</h3>
-        )}
+        )}</span></h4>
+        {/* <h2 className="text-[#40959D] text-[27px] tracking-widest">$tAoEth Balance:</h2>
+         */}
       </div>
-      <h2 className="text-[#40959D] text-[27px] tracking-widest">Need tAoETH to explore Permissionless Ecosystem Funding?</h2>
-
+      <h4 className="text-[18px]">Get 10 $TAoEth every xx Hours!</h4>
       <button
         onClick={() => {
           const promise = airdropTokens();
@@ -74,22 +83,26 @@ if(connected){
           promise.finally(() => setLoading(false));
         }}
         disabled={loading}
-        className={`z-50 flex gap-4 w-fit ${loading ? "bg-gray-400" : "bg-[#205156]"} text-[#f1f1f1] py-[6px] px-[18px] rounded`}
+        className={`z-50 flex gap-4 w-fit ${loading ? "bg-gray-400" : "bg-[#0E9C9C]"} 
+        text-[#f1f1f1] py-[6px] px-[27px] rounded-[6px] tracking-[1px] text-[18px] font-medium
+        hover:opacity-75 hover:tracking-[3px] hover:px-[20px]`}
       >
         {loading ? <Loader /> : ""}
         Get $tAoEth
-      </button>
+      </button> 
+      </>
+        :
+        <>
+      <ConnectButton accent="rgb(14, 156, 156)"/> 
+      <h2 className={`text-[27px] leading-[30px] ${brandSecondaryText} font-medium `}>Please connect wallet to get $tAoETH Tokens</h2>
+      </>
+      }
+      </section>
+     
+      {/* */}
     </main>
     <Footer/>
     <BackgroundBeams />
     </>
-  );}else{
-    return (
-      <>
-      <Navbar/>
-      <main className={` flex flex-col gap-12  px-20 pt-[120px] ${brandDarkBg} min-h-[100vh] w-[100vw]`}>
-    <h2 className={`text-[27px] leading-[30px] ${brandSecondaryText} font-medium `}>Please connect wallet to get $tAoETH Tokens</h2>
-    <ConnectButton accent="rgb(14, 156, 156)"/>
-  </main>      <BackgroundBeams /></>);
-  }
+  )
 }
