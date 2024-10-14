@@ -1,0 +1,63 @@
+Action - 'Get-Pools'
+
+{
+   Id = "bYGVeBbk8NlLawFZImJG2zhJSkYjGAGU8PYkpyEbigo",
+   Signature = "jHUbfgiiYlvJ3UaDGC04TEoRljG3OOOouE93Sbr0WeNoVyW9H30V1eodSRpfbakyJ_nkytd3hGTqpI49TbmOVIScD7axq3_3JeRzJJyU2OJAFdX8dB-Sal3OgOnhkr7MBleoOQeVGv95COiu1ZxwlpuH7ci6JVK2cJglsjWeF2qKji5qTkgOG1_vXtllremWMyVo3_gjJhegI2g1yd3Vw72PPipC-aORHxH2FG6JXZYEXO5Zhlb-ndyqbnytjtob8ncP5FXEJuFPjoyEbDAkAF7WWJVd_T-kt0ai1ggv0n__G59P8tjGjlXslw0dGuRu5YngQ-vRRdteHd2aqMboacTh40oEuQrEtm25b9l3vfNiU_WYrtdufSq1m5pJjuqFg6TRf-UX0UxdRC8W0fapdfHuFfWKIz_eYpao9UkxU_KI40yPD0gaH4C6on9t2UFqExh5hqkEkjasHUipZOvoui7zHbvbbDzDuanhIhe33NzzUuRQqAKlu609dP1_Zlk1ibHJ0OQ0reKe1y6uH6sq6_apttsbIfwuBgakiGZstGmjtKxIMi1gvtT4ykRZfbOMZXAv-eXAgXdQd6ArxYDG1HgFy2210CbmaZ2518tKTE1fcp_nK29HYFWhLmU4SE5kOBRsHkg6pMcVn8h6zWK6XxQ21lBOHfNv7n0dRtujTi0",
+   forward = function: 0x417f760,
+   Timestamp = 1728669074100,
+   Epoch = 0,
+   Anchor = "00000000000000000000000000000020",
+   Data = "[{"funder":"lpJ5Edz_8DbNnVDL0XdbsY9vCOs45NACzfI4jvo4Ba8","allocation":"ArithmeticDecrease","models":0,"funds":100,"dataset":"XUw5NtwUzk7hf_dE4ifEFD2rHfXffMLb8s2QfnZEvg4"}]",
+   Hash-Chain = "f8yRFkZptS8OuyvEah3FSciyFaAacIVIWa84qWWhbrw",
+   Owner = "fcoN_xJeisVsPXA-trzVAuIiqO3ydLQxM-L4XbrQKzY",
+   TagArray = {
+    {
+       name = "Ref_",
+       value = "20"
+    },
+    {
+       name = "Data-Protocol",
+       value = "ao"
+    },
+    {
+       name = "Type",
+       value = "Message"
+    },
+    {
+       name = "Variant",
+       value = "ao.TN.1"
+    },
+    {
+       name = "From-Process",
+       value = "DLJoP8Xtdat6SKz3kqYGZPaa7DJBG6etF1jRLQCwquo"
+    },
+    {
+       name = "From-Module",
+       value = "Pq2Zftrqut0hdisH_MC2pDOT6S4eQFoxGsFUzR6r350"
+    },
+    {
+       name = "Pushed-For",
+       value = "tlyQjZa1Ej5ilLfT4AaLyQevGBfwaZFc3rE5jYHESE8"
+    }
+   },
+   Target = "or33dLK8YMOx5ukZNFIrYGi5x7E93CWSSW6e0VsfKDA",
+   From = "DLJoP8Xtdat6SKz3kqYGZPaa7DJBG6etF1jRLQCwquo",
+   Block-Height = 1524902,
+   reply = function: 0x417f720,
+   Pushed-For = "tlyQjZa1Ej5ilLfT4AaLyQevGBfwaZFc3rE5jYHESE8",
+   Read-Only = false,
+   Ref_ = "20",
+   Forwarded-By = "fcoN_xJeisVsPXA-trzVAuIiqO3ydLQxM-L4XbrQKzY",
+   Cron = false,
+   Nonce = 11,
+   Tags = {
+     Type = "Message",
+     From-Process = "DLJoP8Xtdat6SKz3kqYGZPaa7DJBG6etF1jRLQCwquo",
+     Ref_ = "20",
+     Pushed-For = "tlyQjZa1Ej5ilLfT4AaLyQevGBfwaZFc3rE5jYHESE8",
+     Variant = "ao.TN.1",
+     From-Module = "Pq2Zftrqut0hdisH_MC2pDOT6S4eQFoxGsFUzR6r350",
+     Data-Protocol = "ao"
+  }
+}
+
