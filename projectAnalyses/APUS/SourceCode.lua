@@ -1,9 +1,6 @@
 -- FOR DLJoP8Xtdat6SKz3kqYGZPaa7DJBG6etF1jRLQCwquo
 
-
-
 local json = require("json")
-local ao = require('ao')
 
 Benchmarks = Benchmarks or {}
 WrappedAR = "xU9zFkq3X2ZQ6olwNVvr1vUWIjc3kXTWr7xKQD6dh10"

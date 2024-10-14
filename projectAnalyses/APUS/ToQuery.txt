@@ -8,3 +8,44 @@ Message Tags to Query:
 IDS:
 - XUw5NtwUzk7hf_dE4ifEFD2rHfXffMLb8s2QfnZEvg4
 - DLJoP8Xtdat6SKz3kqYGZPaa7DJBG6etF1jRLQCwquo
+- jzZzZJ6SpxLKaZv8rx2rmkq-QwKGQliFyWqr-OK9CIo 
+
+# Action - Join-Pool
+query {
+  transactions(
+    recipients: "jzZzZJ6SpxLKaZv8rx2rmkq-QwKGQliFyWqr-OK9CIo",
+		tags: [{name:"Action", values:"Join-Pool"}]
+  ) {
+    count
+  }
+}
+
+# Response for the query
+{
+  "data": {
+    "transactions": {
+      "count": 850
+    }
+  }
+}
+
+# This is a dry run for Leaderboard
+# Action - Get-Rank-Response
+query {
+  transactions(
+    recipients: "jzZzZJ6SpxLKaZv8rx2rmkq-QwKGQliFyWqr-OK9CIo",
+		tags: [{name:"Action", values:"Get-Rank-Response"}]
+  ) {
+    count
+  }
+}
+
+# Response for the query
+{
+  "data": {
+    "transactions": {
+      "count": 114
+    }
+  }
+}
+
