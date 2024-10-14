@@ -52,13 +52,7 @@ export default function Navbar() {
             >
               Your Profile
             </Link>{" "} */}
-            {/* <Link
-              className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
-          ${path[1] == "faucet" ? `${brandSecondaryText} underline` : brandLightText}`}
-              to="/faucet"
-            >
-              Faucet
-            </Link>{" "} */}
+
             <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
           ${path[1] == "dashboard" ? `${brandSecondaryText} underline` : brandLightText}`}
@@ -66,7 +60,15 @@ export default function Navbar() {
             >
               Analysis Dashboards
             </Link>{" "}
+            <Link
+              className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
+          ${path[1] == "faucet" ? `${brandSecondaryText} underline` : brandLightText}`}
+              to="/faucet"
+            >
+              Faucet
+            </Link>{" "}
           </div>
+             
           <div className="lg:flex hidden bg-white flex-row justify-between items-center rounded-[10px] xl:scale-100 scale-75 xl:mx-0 mx-[-39px]">
             {connected && <a href="/" className="px-[21px] hover:underline underline-offset-[3px] hover:opacity-75 text-[16.5]">Your Profile</a>}
             <ConnectButton accent="rgb(14, 156, 156)" />

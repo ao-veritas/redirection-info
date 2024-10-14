@@ -23,9 +23,9 @@ const HomePage = () => {
        <Cta/>
         {/* <Arch/>
         <ProjectsDisplay/> */}
+        <Footer/>
       </main>
-      <Footer/>
-
+      
     </>
   )
 }

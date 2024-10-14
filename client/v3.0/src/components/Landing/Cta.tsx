@@ -1,6 +1,6 @@
 const Cta = () => {
   return (
-    <section className='my-[30px] CTABorder lg:w-[60%] w-[87%] max-w-[1800px]'>
+    <section className='my-[30px] CTABorder lg:w-[60%] w-[87%] max-w-[1800px] mb-[180px]'>
         <div className="flex flex-col items-center justify-between gap-[12px] px-[21px] py-[21px] rounded-[21px] CTABg">
         <h1 className="md:text-[45px] md:leading-[51px] text-[30px] text-center leading-[33px] tracking-wide text-[#D9D9D9]">Got more <span className="text-[#46B1BC]">Questions?</span></h1>
         <h6 className="text-[18px] font-thin font-sans tracking-[1.5px] opacity-75">Connect with us now !</h6>
