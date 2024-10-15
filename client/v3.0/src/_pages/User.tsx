@@ -3,8 +3,8 @@ import { BackgroundBeams } from "../components/ui/background-beams";
 import { ConnectButton, useConnection } from "arweave-wallet-kit";
 import { brandDarkBg } from "../_utils/colors";
 import { Footer, TaoEthBalance, TaoEthStaked } from "../components";
-import ProjectCard from "../components/LandingPage/ProjectCard";
 import Navbar from "../components/Layout/Navbar";
+import ProjectCard from "../components/UserProfile/ProjectCard";
 
 const User = () => {
   const {connected} = useConnection();
