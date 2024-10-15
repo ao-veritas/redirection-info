@@ -6,13 +6,14 @@ import Features from "../components/LandingPage/Features"
 import ScreenshotDisplay from "../components/LandingPage/ScreenshotDisplay"
 // import TabsSection from "../components/Landing/TabsSection";
 import { FlipWords } from "../components/ui/flip-words";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const words = ["Users", "Projects", "You"];
-  const [banner, setBanner] = useState(true)
+  const [banner, setBanner] = useState(false)
 
   useEffect(() => {
-    setBanner(true)
+    setBanner(false)
   }, [])
   
   return (
@@ -30,7 +31,7 @@ const HomePage = () => {
                 </svg>
                 <span className="sr-only">Light bulb</span>
             </span>
-            <span>Analyse new projects and stay informed! <a href="https://flowbite.com" className="inline font-medium text-cyan-600 underline dark:text-cyan-500 underline-offset-2 decoration-600 dark:decoration-500 decoration-solid hover:no-underline">Go to Analysis Page</a></span>
+            <span>Analyse new projects and stay informed! <Link to="/dashboard" className="inline font-medium text-cyan-600 underline dark:text-cyan-500 underline-offset-2 decoration-600 dark:decoration-500 decoration-solid hover:no-underline">Go to Analysis Page</Link></span>
         </p>
     </div>
     <div onClick={()=>{

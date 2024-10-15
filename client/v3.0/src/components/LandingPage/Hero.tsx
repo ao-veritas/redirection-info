@@ -53,14 +53,14 @@ const Hero = () => {
       fadeIn z-[20] 
       xl:mt-[-60px] lg:mt-[-45px] sm:mt-[0px] mt-[21px]
       lg:gap-[39px] gap-[18px]">
-      <Link to="/" target="_blank">
+      <Link to="https://x.com/Veritas_ao" target="_blank">
           <button className="hover:bg-[#40959da0] hover:tracking-wider rounded-[9px] 
           xl:w-[210px] sm:w-[180px] w-[120px]
           xl:text-[18px] sm:text-[15px] text-[13.5px]
           lg:tracking-wider tracking-tight
-          py-[10.5px] bg-[#40959D]">Explore Projects</button>
+          py-[10.5px] bg-[#40959D]">Learn More</button>
         </Link>
-        <Link to="/register">
+        <Link to="https://discord.gg/Ee84m9Cf">
           <button className="hover:bg-[#40959d36] hover:tracking-wider rounded-[9px] 
           xl:w-[210px] sm:w-[180px] w-[120px]
           xl:text-[18px] sm:text-[15px]  text-[13.5px]
