@@ -1,68 +1,23 @@
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { brandDarkBg } from "../_utils/colors";
 import { Footer, Navbar, TeamCard } from "../components";
+import TeamView from "../components/AboutPage/TeamView";
+import TimelineView from "../components/AboutPage/TimelineView";
 
 export default function About() {
   return (
     <>
-     <Navbar/>
-    <main
-      className={`${brandDarkBg} flex flex-col items-center md:justify-start justify-between text-[#f1f1f1] pt-[120px] min-h-[93vh]`}>
-      <h1
-        className="uppercase tracking-wider font-bold leading-[51px]
-      xl:text-[45px] text-[36px] text-[#40959D]"
+      <Navbar />
+      <main
+        className={`${brandDarkBg} flex flex-col items-center md:justify-start justify-between text-[#f1f1f1] pt-[120px] min-h-[93vh]`}
       >
-        Team
-      </h1>
-      <h3
-        className="capitalize pb-6 tracking-wide text-center md:font-normal font-medium
-      xl:text-[30px] md:text-[21px] text-[15px]"
-      >
-        Meet the amazing team behind <span className={` tracking-wide text-[#40959D]`}>Veritas</span>
-      </h3>
-      <div
-        className="
-        z-30 
-          xl:gap-6 
-          md:gap-[18px] flex md:flex-row
-          flex-col gap-3
-          items-center justify-center"
-      >
-        <TeamCard
-          img={"https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/team/manishi.png"}
-          pname="manishi bhatnagar"
-          dribble="https://dribbble.com/0xManishi"
-          twitter="https://x.com/0xManishi"
-          info="UI/UX Designer"
-          last={false}
-        />
-        <TeamCard
-          img={"https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/team/lilith.png"}
-          pname="lilith"
-          github="https://github.com/0xLPircy"
-          twitter="https://x.com/0xLPircy"
-          info="Founder"
-          last={false}
-        />
-        <TeamCard
-          img={"https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/team/parth.png"}
-          pname="parth Shah"
-          github="https://github.com/parthks"
-          twitter="https://x.com/1human_in/"
-          info="Smart Contract Developer"
-          last={false}
-        />
-        <TeamCard
-          img={"/chaitanya.jpg"}
-          pname="Chaitanya Bajpai"
-          github="https://github.com/cb7chaitanya"
-          twitter="https://x.com/cbajpai7"
-          info="Fullstack Developer"
-          last={false}
-        />
+        <TimelineView />
+        <TeamView />
+      </main>
+      <div className="z-30">
+        <Footer />{" "}
       </div>
-      
-    </main>
-    <div className="z-30"><Footer/> </div>  <BackgroundBeams />   </>
+      <BackgroundBeams />{" "}
+    </>
   );
 }
