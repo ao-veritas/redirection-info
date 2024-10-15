@@ -3,7 +3,6 @@ import { ProjectType } from "../../_utils/types";
 import { useEffect, useState } from "react";
 import { getTaoEthStake, pTokenRecieved } from "../../_utils/info";
 import { brandSecondaryText } from "../../_utils/colors";
-import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }: { project: ProjectType }) {
   const [taoEthStaked, setTaoEthStaked] = useState<number>(0);
