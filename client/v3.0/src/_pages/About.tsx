@@ -10,7 +10,7 @@ export default function About() {
       className={`${brandDarkBg} flex flex-col items-center md:justify-start justify-between text-[#f1f1f1] pt-[120px] min-h-[93vh]`}>
       <h1
         className="uppercase tracking-wider font-bold leading-[51px]
-      xl:text-[45px] text-[36px] text-[#4FD2DE]"
+      xl:text-[45px] text-[36px] text-[#40959D]"
       >
         Team
       </h1>
@@ -18,7 +18,7 @@ export default function About() {
         className="capitalize pb-6 tracking-wide text-center md:font-normal font-medium
       xl:text-[30px] md:text-[21px] text-[15px]"
       >
-        Meet the amazing team behind <span className={` tracking-wide text-[#4FD2DE]`}>Veritas</span>
+        Meet the amazing team behind <span className={` tracking-wide text-[#40959D]`}>Veritas</span>
       </h3>
       <div
         className="
@@ -41,7 +41,7 @@ export default function About() {
           pname="lilith"
           github="https://github.com/0xLPircy"
           twitter="https://x.com/0xLPircy"
-          info="Developer"
+          info="Founder"
           last={false}
         />
         <TeamCard
@@ -53,7 +53,8 @@ export default function About() {
           last={false}
         />
       </div>
+      
     </main>
-    <Footer/>      <BackgroundBeams /></>
+    <div className="z-30"><Footer/> </div>  <BackgroundBeams />   </>
   );
 }

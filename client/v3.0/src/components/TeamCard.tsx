@@ -17,7 +17,7 @@ const TeamCard: React.FC<TeamProps> = ({ pname, github, dribble, twitter, info, 
         xl:gap-[6px] lg:gap-[3px] gap-[6px]
         xl:pt-3 xl:pb-[30px] xl:px-3 
         pt-[12px] pb-[21px] px-[12px]
-        bg-[#272727] border-[#4FD2DE] border-[1px]
+        bg-[#272727] border-[#40959D] border-[1px]
         `}
     >
       <img
@@ -33,7 +33,7 @@ const TeamCard: React.FC<TeamProps> = ({ pname, github, dribble, twitter, info, 
       <h2
         className="xl:text-[18px] xl:leading-[18px] 
           text-[18px] leading-[18px]
-         capitalize text-[#4FD2DE]"
+         capitalize text-[#40959D]"
       >
         {pname}
       </h2>

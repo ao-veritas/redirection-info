@@ -3,7 +3,7 @@ import Cta from "../components/Landing/Cta";
 import Faq from "../components/Landing/Faq";
 import Features from "../components/Landing/Features"
 import ScreenshotDisplay from "../components/Landing/ScreenshotDisplay"
-import TabsSection from "../components/Landing/TabsSection";
+// import TabsSection from "../components/Landing/TabsSection";
 import { FlipWords } from "../components/ui/flip-words";
 
 const HomePage = () => {
