@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Footer, Hero, Navbar } from "../components"
 import Cta from "../components/Landing/Cta";
 import Faq from "../components/Landing/Faq";
@@ -8,11 +9,18 @@ import { FlipWords } from "../components/ui/flip-words";
 
 const HomePage = () => {
   const words = ["Users", "Projects", "You"];
+  const [banner, setBanner] = useState(true)
+
+  useEffect(() => {
+    setBanner(true)
+  }, [])
+  
   return (
     <>
       <Navbar/>
       <main className={` bg-[#111111] font-raleway min-h-[100vh] w-full text-[#ffffff] flex flex-col justify-start items-center gap-6 overflow-hidden`}>
-{/* @ts-ignore */}
+{banner &&
+// @ts-ignore
 <div id="sticky-banner" tabIndex="-1" className="fixed top-[90px] start-0 z-50 flex justify-between w-full p-4 bg-[#40959d15] backdrop-blur-[9px] rounded-full">
     <div className="flex items-center mx-auto">
         <p className="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
@@ -25,15 +33,17 @@ const HomePage = () => {
             <span>Analyse new projects and stay informed! <a href="https://flowbite.com" className="inline font-medium text-cyan-600 underline dark:text-cyan-500 underline-offset-2 decoration-600 dark:decoration-500 decoration-solid hover:no-underline">Go to Analysis Page</a></span>
         </p>
     </div>
-    <div className="flex items-center">
-        <button data-dismiss-target="#sticky-banner" type="button" className="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
+    <div onClick={()=>{
+      setBanner(false);
+    }} className="flex items-center">
+        <button data-dismiss-target="#sticky-banner" type="button" className="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:text-gray-900 rounded-lg text-sm p-1.5 hover:bg-gray-600">
             <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
             </svg>
             <span className="sr-only">Close banner</span>
         </button>
     </div>
-</div>
+</div>}
 
 
         <Hero/>
