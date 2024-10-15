@@ -15,10 +15,13 @@ const HomePage = () => {
         <Hero/>
         <ScreenshotDisplay/>
         <Features/>
-        <section className="w-full px-20 py-20">
-        <h1 className="text-[90px] font-medium tracking-wider leading-[96px] pt-6 text-left">Veritas empowers <FlipWords words={words} duration={1000} className="text-[#40959D]"/> <span className="block hero-gradient">to do more with less.</span></h1>
+        <section className="w-full md:px-20 px-10 sm:py-20 py-[45px] max-w-[1800px]">
+        <h1 className="xl:text-[72px] xl:leading-[78px] 
+        sm:text-[45px] sm:leading-[51px]
+        text-[21px] leading-[33px] text-center
+        font-medium tracking-wider pt-6 md:text-left">Veritas empowers <FlipWords words={words} duration={1000} className="text-[#40959D] sm:inline block w-full text-center"/> <span className="block hero-gradient">to do more with less.</span></h1>
         </section>
-        <TabsSection/>
+        {/* <TabsSection/> */}
        <Faq/>
        <Cta/>
         {/* <Arch/>

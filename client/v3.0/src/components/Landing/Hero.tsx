@@ -7,7 +7,7 @@ const Hero = () => {
     <>
     <section className="z-30 w-full text-[#eeeeee] flex flex-col justify-center items-center pb-[120px] max-w-[1800px]
     xl:px-[105px] lg:px-[90px] sm:px-[60px] px-[21px]
-    lg:mt-[180px] mt-[120px]">
+    md:mt-[180px] mt-[180px]">
       <div className="relative flex flex-row justify-between items-start w-full">
         <div className="w-fit ltrAnim mt-[30px] mr-[-60px]">
           <img
