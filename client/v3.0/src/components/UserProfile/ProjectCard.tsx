@@ -3,6 +3,7 @@ import { ProjectType } from "../../_utils/types";
 import { useEffect, useState } from "react";
 import { getTaoEthStake, pTokenRecieved } from "../../_utils/info";
 import { brandSecondaryText } from "../../_utils/colors";
+import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }: { project: ProjectType }) {
   const [taoEthStaked, setTaoEthStaked] = useState<number>(0);
@@ -22,8 +23,8 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
 
   return (
     
-    <a
-        href={"/project/" + project?.processID}
+    <Link
+        to={"/project/" + project?.processID}
         className="bg-[#161616] z-30 rounded-[18px] py-[12px] hover:mb-[24px] hover:mt-[-24px] border-[#46b0bc7c] border-[0.6px]"
       >
     <div
@@ -63,6 +64,6 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
           <button className="border border-teal-700 text-teal-600 hover:border-teal-600 hover:text-teal-600 py-1 px-2 rounded-[9px]">Unstake</button>
         </div></>: <p className={`${brandSecondaryText} text-[10.5px]`}>Mainnet Staking will be live after in Feb 2025. Know more about the project till then!</p>}
       </div>
-    </div></a>
+    </div></Link>
   );
 }
