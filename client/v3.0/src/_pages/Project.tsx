@@ -175,7 +175,7 @@ const project = {
 
 export default function Component() {
   return (
-    <div className="container px-[15px]">
+    <div className="container px-[15px] max-w-[1800px]">
       <Card className="mb-8 bg-[#161616] border-none">
         <CardHeader>
           <div className="flex sm:flex-row flex-col gap-4 items-center space-x-4">
@@ -512,16 +512,16 @@ export default function Component() {
               </h3>
               <ul className="list-disc pl-5 mb-4">
                 {project.useCases.map((useCase, index) => (
-                  <li key={index}>
+                  <li key={index} className="mb-4">
                     <span>
-                      <span>{useCase.name}:</span>{" "}
+                      <span className="text-[#eeeeee]">{useCase.name}:</span>{" "}
                       <span className="block">
                         {useCase.info}{" "}
                         <a
                           href={useCase.liveLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="hover:underline ml-6 border-[#46B1BC] text-[#46B1BC] border-[1px] px-[12px] py-[6px] rounded-md text-[13.5px]"
+                          className="hover:underline sm:ml-6 sm:mt-0 mt-3 border-[#46B1BC] text-[#46B1BC] border-[1px] px-[12px] py-[6px] rounded-md text-[13.5px] sm:inline block w-fit"
                         >
                           Try it
                         </a>
@@ -530,8 +530,8 @@ export default function Component() {
                   </li>
                 ))}
               </ul>
-              <h3 className="font-semibold mb-2 text-[#46B1BC] text-[16.5px]">Collaborations</h3>
-              <div className="list-disc pl-5 grid grid-cols-6">
+              <h3 className="font-semibold mb-2 text-[#46B1BC] text-[16.5px] mt-6">Collaborations</h3>
+              <div className="list-disc pl-5 grid lg:grid-cols-6 sm:grid-cols-3">
                 {project.collaborations.map((collab, index) => (
 
                     <a

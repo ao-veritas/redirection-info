@@ -15,7 +15,7 @@ const ProjectRoute = () => {
   return (
     <>
     <Navbar/>
-    <main className='bg-[#111111] max-w-[1800px] w-full pt-[120px] flex flex-col items-center min-h-[96vh]'>
+    <main className='bg-[#111111]  w-full pt-[120px] flex flex-col items-center min-h-[96vh]'>
     {projects.map((project)=> {
         if(project.processID == processID){
             return <Project/>
