@@ -189,7 +189,7 @@ export default function Component({ pid }: any) {
   if (currentProject) {
     return (
       <>
-        <div className="container px-[15px] max-w-[1800px]">
+        <div className="container md:px-20 px-[15px] max-w-[1800px]">
           <Card className="mb-8 bg-[#161616] border-none">
             <CardHeader>
               <div className="flex sm:flex-row flex-col gap-4 items-center space-x-4">
