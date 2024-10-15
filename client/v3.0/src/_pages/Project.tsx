@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
 import { Badge } from "../components/ui/badge"
 import { Button } from "../components/ui/button"
 import { Globe, FileText, Twitter, Github, ExternalLink, Dribbble, Lock, Unlock } from "lucide-react"
+import { DiscordLogoIcon } from "@radix-ui/react-icons"
 
 // Mock data (replace with actual data)
 const project = {
@@ -28,9 +29,36 @@ const project = {
         github: "https://github.com/cryptoalice",
         twitter: "https://twitter.com/cryptoalice",
         dribble: "",
+        discord:"https://twitter.com/cryptoalice",
         other: []
       }
     },
+    {
+        officialName: "Alice Johnson",
+        pseudoName: "CryptoAlice",
+        role: "Founder & CEO",
+        imgLink: "/placeholder.svg?height=50&width=50",
+        links: {
+          github: "https://github.com/cryptoalice",
+          twitter: "https://twitter.com/cryptoalice",
+          dribble: "",
+          discord:"https://twitter.com/cryptoalice",
+          other: []
+        }
+      },
+      {
+        officialName: "Alice Johnson",
+        pseudoName: "CryptoAlice",
+        role: "Founder & CEO",
+        imgLink: "/placeholder.svg?height=50&width=50",
+        links: {
+          github: "https://github.com/cryptoalice",
+          twitter: "https://twitter.com/cryptoalice",
+          dribble: "",
+          discord:"https://twitter.com/cryptoalice",
+          other: []
+        }
+      },
     // Add more team members...
   ],
   description: "CryptoChain is a revolutionary blockchain platform...",
@@ -102,22 +130,22 @@ export default function Component() {
     <div className="container px-[15px]">
       <Card className="mb-8 bg-[#161616] border-none">
         <CardHeader>
-          <div className="flex items-center space-x-4">
+          <div className="flex sm:flex-row flex-col gap-4 items-center space-x-4">
             <Avatar className="h-20 w-20">
               <AvatarImage src={project.logoImageLink} alt={project.name} />
               <AvatarFallback>{project.name.substring(0, 2)}</AvatarFallback>
             </Avatar>
             <div>
-              <CardTitle className="text-3xl text-[#FFFFFF]">{project.name}</CardTitle>
+              <CardTitle className="text-3xl text-[#FFFFFF] sm:text-start text-center">{project.name}</CardTitle>
               <CardDescription>{project.oneLiner}</CardDescription>
             </div>
           </div>
         </CardHeader>
         
         <CardContent>
-        <div className="flex flex-row gap-6 justify-between items-center">
-            <div>
-          <div className="flex space-x-2 mb-4">
+        <div className="flex md:flex-row flex-col gap-6 justify-between items-center">
+            <div className="flex flex-col sm:items-start items-center">
+          <div className="grid sm:grid-cols-4 grid-cols-2 w-fit gap-2 mb-4">
             <Button variant="outline" size="sm" asChild className="bg-[#242424] text-[#eeeeee] border-none hover:bg-[#303030] hover:text-[#eeeeee]">
               <a href={project.links.website} target="_blank" rel="noopener noreferrer">
                 <Globe className="mr-2 h-4 w-4" />
@@ -145,7 +173,7 @@ export default function Component() {
           </div>
           <p className="text-muted-foreground">{project.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aut quasi facilis aliquam deleniti. Maiores ducimus impedit eos expedita! Alias similique cupiditate facere dolor ipsa labore esse, vitae sequi deserunt!</p>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex md:flex-col flex-row gap-3">
           <Button variant="outline" size="sm" asChild className="bg-[#46B1BC] text-[#eeeeee] border-none hover:bg-[#46b0bc99] hover:text-[#eeeeee]">
               <a href={project.links.website} target="_blank" rel="noopener noreferrer">
                 <Lock className="mr-2 h-4 w-4" />
@@ -165,43 +193,48 @@ export default function Component() {
       </Card>
 
       <Tabs defaultValue="team ">
-        <TabsList className="grid w-full grid-cols-4 gap-6 bg-[#161616] text-[#eeeeee] tracking-wider font-thin">
+        <TabsList className="grid w-full sm:grid-cols-4 grid-cols-2 sm:gap-6 bg-[#161616] text-[#eeeeee] tracking-wider font-thin">
           <TabsTrigger value="team">Team</TabsTrigger>
           <TabsTrigger value="token">Token</TabsTrigger>
           <TabsTrigger value="milestones">Milestones</TabsTrigger>
           <TabsTrigger value="ecosystem">Ecosystem</TabsTrigger>
         </TabsList>
         <TabsContent value="team">
-          <Card>
+          <Card className="mb-8 bg-[#161616] border-none">
             <CardHeader>
-              <CardTitle>Team Members</CardTitle>
+              <CardTitle className="text-[#eeeeee] text-[21px]">Meet the Team</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 {project.team.map((member, index) => (
-                  <Card key={index}>
+                  <Card key={index} className="mb-8 bg-[#242424] border-none">
                     <CardContent className="flex items-center space-x-4 pt-6">
                       <Avatar>
                         <AvatarImage src={member.imgLink} alt={member.officialName} />
                         <AvatarFallback>{member.officialName.substring(0, 2)}</AvatarFallback>
                       </Avatar>
                       <div>
-                        <h3 className="font-semibold">{member.officialName}</h3>
-                        <p className="text-sm text-muted-foreground">{member.role}</p>
-                        <div className="flex space-x-2 mt-2">
+                        <h3 className="font-semibold text-[#eeeeee] text-[18pxx]">{member.officialName}</h3>
+                        <p className="text-[15px] text-muted-foreground">{member.role}</p>
+                        <div className="flex space-x-4 mt-2">
                           {member.links.github && (
                             <a href={member.links.github} target="_blank" rel="noopener noreferrer">
-                              <Github className="h-4 w-4" />
+                              <Github className="h-5 w-5 text-[#eeeeee]" />
                             </a>
                           )}
                           {member.links.twitter && (
                             <a href={member.links.twitter} target="_blank" rel="noopener noreferrer">
-                              <Twitter className="h-4 w-4" />
+                              <Twitter className="h-5 w-5 text-[#eeeeee]" />
                             </a>
                           )}
                           {member.links.dribble && (
                             <a href={member.links.dribble} target="_blank" rel="noopener noreferrer">
-                              <Dribbble className="h-4 w-4" />
+                              <Dribbble className="h-5 w-5 text-[#eeeeee]" />
+                            </a>
+                          )}
+                          {member.links.discord && (
+                            <a href={member.links.discord} target="_blank" rel="noopener noreferrer">
+                              <DiscordLogoIcon className="h-5 w-5 text-[#eeeeee]" />
                             </a>
                           )}
                         </div>
