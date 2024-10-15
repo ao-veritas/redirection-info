@@ -1,211 +1,311 @@
-import { useEffect, useState } from "react";
-import { brandDarkBg, brandDarkBorder, brandSecondaryBg, brandSecondaryText } from "../_utils/colors"
-import { Footer, Navbar,  } from "../components"
-import { projects } from "../_utils/projects";
-import { ProjectType } from "../_utils/types";
-import { Link } from "react-router-dom";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
+import { Badge } from "../components/ui/badge"
+import { Button } from "../components/ui/button"
+import { Globe, FileText, Twitter, Github, ExternalLink, Dribbble, Lock, Unlock } from "lucide-react"
 
-
-const Project = ({pid}:any) => {
-  const [currentProject, setCurrentProject] = useState<ProjectType>()
-  useEffect(() => {
-    projects.map((project)=>{
-      if(project.processID==pid){
-          setCurrentProject(project)
+// Mock data (replace with actual data)
+const project = {
+  name: "CryptoChain",
+  processID: "CC001",
+  logoImageLink: "/placeholder.svg?height=100&width=100",
+  links: {
+    website: "https://cryptochain.com",
+    docs: "https://docs.cryptochain.com",
+    discord: "https://discord.gg/cryptochain",
+    twitter: "https://twitter.com/cryptochain",
+    github: "https://github.com/cryptochain",
+    other: ["https://medium.com/cryptochain"]
+  },
+  team: [
+    {
+      officialName: "Alice Johnson",
+      pseudoName: "CryptoAlice",
+      role: "Founder & CEO",
+      imgLink: "/placeholder.svg?height=50&width=50",
+      links: {
+        github: "https://github.com/cryptoalice",
+        twitter: "https://twitter.com/cryptoalice",
+        dribble: "",
+        other: []
       }
-    }) 
-  }, [])
-  return (
-    <>
-        <Navbar/>
-        {currentProject ?<main className={`${brandDarkBg} w-full mb-10 px-20 pt-[120px] text-[#FCFCFC] font-raleway`}>
-            <section className="">
-                <img src={currentProject.bannerLink?currentProject.bannerLink:dummyProject.bannerLink} alt="" className="rounded-[9px] max-h-[300px]"/>
-                <div className={`mt-[-45px] border-[3px] border-solid ${brandDarkBorder} rounded-[9px] w-fit`}>
-                    <img src={currentProject.logoImageLink?currentProject.logoImageLink:dummyProject.logoImageLink} alt="" className="w-[90px] h-[90px]"/>
-                </div>
-            </section>
-            <section className="flex flex-row justify-between items-center mb-[24px]">
-                <div className="flex flex-col gap-[0px]">
-                    <h1 className="text-[30px] leading-[33px]">{currentProject.name ? currentProject.name : dummyProject.name}</h1>
-                    <div className="flex flex-row gap-[3px] items-center">
-                        <h4 className="text-[18px] font-thin">Process ID: {currentProject.processID ? currentProject.processID : dummyProject.processID} |</h4> 
-                        <img src="/icons/share.svg" alt="" className="w-[24px] h-[24px] hover:opacity-60 cursor-pointer"/>
-                    </div>
-                </div>
-                <button
-
-                className={`${brandSecondaryBg} hover:opacity-60 cursor-pointer rounded-[9px] px-[24px] py-[6px] text-[18px] font-medium`}>
-                    Stake Now
-                </button>
-            </section>
-            <section className="flex flex-row gap-3 w-full mb-[12px]">
-                <section className="w-full flex flex-col gap-6 rounded-[9px] bg-[#1F1E1E] px-[24px] py-[12px]">
-                    <div className="flex flex-col gap-[3px]">
-                        <h3 className={`text-[27px] leading-[30px] ${brandSecondaryText} font-medium`}>Project Info</h3>
-                        <p>{currentProject.description ? currentProject.description : dummyProject.description}</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h5>Project Type</h5>
-                            <h5>Utility</h5>
-                        </div>
-                    </div>
-                    <div className="flex flex-row gap-[24px] items-center justify-start">
-                        {currentProject.links.website ? <Link to={currentProject.links.website} target="_blank" className="bg-[#eeeeee] hover:opacity-30 cursor-pointer rounded-full p-[3px]"><img src="/icons/website.png" className="w-[36px] h-[36px]" alt="" /></Link> : ""}
-                        {currentProject.links.docs ? <Link to={currentProject.links.docs} target="_blank" className="bg-[#eeeeee] hover:opacity-30 cursor-pointer rounded-full p-[3px]"><img src="/icons/docs.svg" className="w-[36px] h-[36px]" alt="" /></Link> : ""}
-                        {currentProject.links.github ? <Link to={currentProject.links.github} target="_blank" className="bg-[#eeeeee] hover:opacity-30 cursor-pointer rounded-full p-[3px]"><img src="/icons/github.svg" className="w-[36px] h-[36px]" alt="" /></Link> : ""}
-                        {currentProject.links.discord ? <Link to={currentProject.links.discord} target="_blank" className="bg-[#eeeeee] hover:opacity-30 cursor-pointer rounded-full p-[3px]"><img src="/icons/discord.svg" className="w-[36px] h-[36px]" alt="" /></Link> : ""}
-                        {currentProject.links.telegram ? <Link to={currentProject.links.telegram} target="_blank" className="bg-[#eeeeee] hover:opacity-30 cursor-pointer rounded-full p-[3px]"><img src="/icons/telegram.svg" className="w-[36px] h-[36px]" alt="" /></Link> : ""}
-                        {currentProject.links.twitter ? <Link to={currentProject.links.twitter} target="_blank" className="bg-[#eeeeee] hover:opacity-30 cursor-pointer rounded-full p-[3px]"><img src="/icons/twitter.svg" className="w-[36px] h-[36px]" alt="" /></Link> : ""}
-                    </div>
-                </section>
-                <section className="flex flex-col gap-3">
-                    {/* <ProjectStakes projectID={projectID}/> */}
-                    <div className="rounded-[9px] bg-[#1F1E1E] px-[24px] py-[12px]">
-                        <div className="flex flex-row items-center justify-between">
-                            <h3 className={`text-[27px] leading-[30px] ${brandSecondaryText} font-medium`}><span className="uppercase">${currentProject.token.name ? currentProject.token.name : dummyProject.token.name}</span> Token</h3>
-                            <h4 className="bg-[#393939] rounded-[6px] px-[6px] py-[2px] text-[12px]">${currentProject.token.ticker ? currentProject.token.ticker : dummyProject.token.ticker}</h4>
-                        </div>
-                        <div>
-                            <h6>Total Supply: {currentProject.token.totalSupply ? currentProject.token.totalSupply : dummyProject.token.totalSupply}</h6>
-                            <h6>Process Id: {currentProject.token.processId ? currentProject.token.processId : dummyProject.token.processId}</h6>
-                            <h6>Denomination: {currentProject.token.denomination ? currentProject.token.denomination : dummyProject.token.denomination}</h6>
-                            {currentProject.token.tokenomics ? <h6>Tokenomics Link: {currentProject.token.tokenomics.linkToBlogorPaper ? currentProject.token.tokenomics.linkToBlogorPaper : dummyProject.token.tokenomics.linkToBlogorPaper}</h6> : ""}
-                        </div>
-                    </div>
-                </section>
-            </section>
-            <section className="rounded-[9px] bg-[#1F1E1E] px-[30px] py-[15px] mb-[12px]">
-                <h2 className={`text-[27px] leading-[30px] ${brandSecondaryText} font-medium pb-3`}>Team</h2>
-                <div className="flex flex-row items-center justify-between">
-                {currentProject.team.map((member, index) => {
-                    return <div className="flex flex-row gap-3" key={index}>
-                        <img src={member.imgLink ? member.imgLink : dummyProject.team[index].imgLink} alt="" className="rounded-full max-w-[90px] max-h-[90px]"/>
-                        <div>
-                            <h6>{member.officialName ? member.officialName : dummyProject.team[index].officialName} {member.pseudoName ? <span>{"("}{member.pseudoName}{")"}</span> : ""}</h6>
-                            <h6>{member.role ? member.role : dummyProject.team[index].role}</h6>
-                            <div className="flex flex-row gap-[6px]">
-                                {member.links.github ? <Link to={member.links.github} target="_blank" className="bg-[#eeeeee] hover:opacity-30 cursor-pointer rounded-full p-[3px]"><img src="/icons/github.svg"  className="w-[27px] h-[27px]" alt="" /></Link> : ""}
-                                {member.links.twitter ? <Link to={member.links.twitter} target="_blank" className="bg-[#eeeeee] hover:opacity-30 cursor-pointer rounded-full p-[3px]"><img src="/icons/twitter.svg" className="w-[27px] h-[27px]"  alt="" /></Link> : ""}
-                                {member.links.dribble ? <Link to={member.links.dribble} target="_blank" className="bg-[#eeeeee] hover:opacity-30 cursor-pointer rounded-full p-[3px]"><img src="/icons/dribble.svg" className="w-[27px] h-[27px]"  alt="" /></Link> : ""}
-                            </div>
-                        </div>
-                    </div>
-                })}
-                </div>
-            </section>
-            <section className="rounded-[9px] bg-[#1F1E1E] px-[30px] py-[15px] flex flex-col gap-6">
-                <div>
-                    <h3 className={`text-[27px] leading-[30px] ${brandSecondaryText} font-medium pb-3`}>Getting Started with {currentProject.name ? currentProject.name : dummyProject.name}</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus iste nulla aut! Minus non tenetur illo, delectus eius porro officiis illum culpa numquam quo dolore ipsa eveniet facilis tempore quasi.</p>
-                </div>
-                <div>
-                    <h3 className={`text-[27px] leading-[30px] ${brandSecondaryText} font-medium pb-3`}>Use Cases</h3>
-                    {currentProject.useCases ? currentProject.useCases.map((usecase, index) => {
-                        return <div key={index}>
-                            <h4>{usecase.name ? usecase.name : dummyProject.useCases[index].name}</h4>
-                            <div>
-                                <p>{usecase.info ? usecase.info : dummyProject.useCases[index].info}</p>
-                                <Link to={usecase.liveLink ? usecase.liveLink : dummyProject.useCases[index].liveLink}>Try It!</Link>
-                            </div>
-                        </div>
-                    }) : ""}
-                </div>
-            </section>
-        </main>:<h1>Project doesnt Exist</h1>}
-        <Footer/>
-    </>
-  )
+    },
+    // Add more team members...
+  ],
+  description: "CryptoChain is a revolutionary blockchain platform...",
+  oneLiner: "Empowering decentralized applications with lightning-fast transactions.",
+  token: {
+    name: "CryptoChain Token",
+    ticker: "CCT",
+    processId: "CCT001",
+    denomination: "cct",
+    totalSupply: "1,000,000,000",
+    tokenomics: {
+      info: "50% public sale, 20% team, 30% ecosystem growth",
+      linkToBlogorPaper: "https://cryptochain.com/tokenomics"
+    }
+  },
+  gettingStartedGuide: "Visit our docs at https://docs.cryptochain.com to get started...",
+  projectOrigin: "CryptoChain was founded in 2023 by a team of blockchain enthusiasts...",
+  useCases: [
+    {
+      name: "Decentralized Exchange",
+      info: "Trade tokens securely and efficiently on our DEX.",
+      liveLink: "https://dex.cryptochain.com",
+      other: []
+    },
+    // Add more use cases...
+  ],
+  advisorsInvestors: [
+    {
+      name: "Blockchain Ventures",
+      role: "Lead Investor",
+      moreInfo: "Provided seed funding and strategic guidance.",
+      amountIfAny: ["$5,000,000"]
+    },
+    // Add more advisors/investors...
+  ],
+  mileStones: [
+    {
+      goal: "Mainnet Launch",
+      date: "2023-12-01",
+      proof: "https://cryptochain.com/blog/mainnet-launch",
+      status: "Completed"
+    },
+    // Add more milestones...
+  ],
+  mediaMentions: [
+    "https://techcrunch.com/2023/11/15/cryptochain-raises-20m-in-series-a",
+    // Add more media mentions...
+  ],
+  collaborations: [
+    {
+      name: "DeFi Alliance",
+      link: "https://defialliance.com",
+      info: "Strategic partnership to advance DeFi adoption"
+    },
+    // Add more collaborations...
+  ],
+  ownershipPercentages: [
+    {
+      name: "Alice Johnson",
+      role: "Founder & CEO",
+      percentage: "30%"
+    },
+    // Add more ownership percentages...
+  ]
 }
 
-export default Project
+export default function Component() {
+  return (
+    <div className="container px-[15px]">
+      <Card className="mb-8 bg-[#161616] border-none">
+        <CardHeader>
+          <div className="flex items-center space-x-4">
+            <Avatar className="h-20 w-20">
+              <AvatarImage src={project.logoImageLink} alt={project.name} />
+              <AvatarFallback>{project.name.substring(0, 2)}</AvatarFallback>
+            </Avatar>
+            <div>
+              <CardTitle className="text-3xl text-[#FFFFFF]">{project.name}</CardTitle>
+              <CardDescription>{project.oneLiner}</CardDescription>
+            </div>
+          </div>
+        </CardHeader>
+        
+        <CardContent>
+        <div className="flex flex-row gap-6 justify-between items-center">
+            <div>
+          <div className="flex space-x-2 mb-4">
+            <Button variant="outline" size="sm" asChild className="bg-[#242424] text-[#eeeeee] border-none hover:bg-[#303030] hover:text-[#eeeeee]">
+              <a href={project.links.website} target="_blank" rel="noopener noreferrer">
+                <Globe className="mr-2 h-4 w-4" />
+                Website
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild className="bg-[#242424] text-[#eeeeee] border-none hover:bg-[#303030] hover:text-[#eeeeee]">
+              <a href={project.links.docs} target="_blank" rel="noopener noreferrer">
+                <FileText className="mr-2 h-4 w-4" />
+                Docs
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild className="bg-[#242424] text-[#eeeeee] border-none hover:bg-[#303030] hover:text-[#eeeeee]">
+              <a href={project.links.twitter} target="_blank" rel="noopener noreferrer">
+                <Twitter className="mr-2 h-4 w-4" />
+                Twitter
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild className="bg-[#242424] text-[#eeeeee] border-none hover:bg-[#303030] hover:text-[#eeeeee]">
+              <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-4 w-4" />
+                GitHub
+              </a>
+            </Button>
+          </div>
+          <p className="text-muted-foreground">{project.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aut quasi facilis aliquam deleniti. Maiores ducimus impedit eos expedita! Alias similique cupiditate facere dolor ipsa labore esse, vitae sequi deserunt!</p>
+          </div>
+          <div className="flex flex-col gap-3">
+          <Button variant="outline" size="sm" asChild className="bg-[#46B1BC] text-[#eeeeee] border-none hover:bg-[#46b0bc99] hover:text-[#eeeeee]">
+              <a href={project.links.website} target="_blank" rel="noopener noreferrer">
+                <Lock className="mr-2 h-4 w-4" />
+                Stake
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild className="bg-[#00000000] text-[#46B1BC] border-[#46B1BC] border-[0.6px] hover:bg-[#303030] hover:text-[#46B1BC]">
+              <a href={project.links.website} target="_blank" rel="noopener noreferrer">
+                <Unlock className="mr-2 h-4 w-4" />
+                Unstake
+              </a>
+            </Button> 
+          </div>
+          </div>
+        </CardContent>
 
-const dummyProject =  {
-  name: "Dummy Name",
-  processID:"NO-ID",
-  logoImageLink:"https://wkypibie7ccprx5ujbbqddvhyotazjdchydxq6w4pd6j7hik5ipa.arweave.net/srD0BQT4hPjftEhDAY6nw6YMpGI-B3h63Hj8n50K6h4",
-  bannerLink:"/saturnBanner.png",
-  links: {
-      website: "/",
-      docs:"/",
-      discord: "https://discord.gg/MTP7BQgr",
-      twitter: "https://x.com/Veritas_ao",
-      github: "https://github.com/fundars/platform2.0",
-      telegram:"",
-      other: ["",""]
-  },
-  team: [{
-      officialName:"Alice Johnson",
-      pseudoName:"JohnDaughter",
-      role:"CEO",
-      imgLink:"https://jh2ukzgb546squzma2zxtkr6ckignjy7c6thm7xhe43aj7q3norq.arweave.net/SfVFZMHvPShTLAazeao-EpBmpx8XpnZ-5yc2BP4ba6M",
-      links:{
-          github:"",
-          twitter:"",
-          dribble:"",
-          other:["",""],
-      },
-  },
-  {
-      officialName:"Bob Smith",
-      pseudoName:"CryptoSmith",
-      role:"Co-Founder",
-      imgLink:"https://3v7icsuojvbggeifpyk6avvv5pz4vueyaj3kmzu65xvf5msqlgaq.arweave.net/3X6BSo5NQmMRBX4V4Fa16_PK0JgCdqZmnu3qXrJQWYE",
-      links:{
-          github:"",
-          twitter:"",
-          dribble:"",
-          other:["",""],
-      },
-  },
- ],
-  exchangeInfo: {
-      cooldownPeriod: 10,
-      aoethRewardRate: 60
-    },
-  description: "The Decentralized Dummy Project Functionality of Veritas. Lorem Ipsum Dolor Sit amet.",
-  oneLiner: "Decentralized Dummy Placeholder Project",
-  token: {
-      name:"Sat",
-      ticker:"SAT",
-      processId:"lrTtKXMhdmMSi8ZfTsdSX24Xpm9FAo47CRHe82HZ7XA",
-      denomination:"",
-      totalSupply:"",
-      tokenomics:{
-          info:"",
-          linkToBlogorPaper:""
-      }
-  },
-  gettingStartedGuide:"",
-  projectOrigin:"",
-  useCases: [{
-      name:"",
-      info:"",
-      liveLink:"",
-      other:[""]
-  }],
-  advisorsInvestors:[{
-      name:"",
-      role:"",
-      moreInfo:"",
-      amountIfAny:[""],
-  }],
-  mileStones:[{
-      goal:"",
-      date:"",
-      proof:"",
-      status:""
-  }],
-  mediaMentions:[""],
-  collaborations:[{
-      name:"",
-      link:"",
-      info:""
-  }],
-  ownershipPercentages:[{
-      name:"",
-      role:"",
-      percentage:""
-  }]
+      </Card>
+
+      <Tabs defaultValue="team">
+        <TabsList className="grid w-full grid-cols-4">
+          <TabsTrigger value="team">Team</TabsTrigger>
+          <TabsTrigger value="token">Token</TabsTrigger>
+          <TabsTrigger value="milestones">Milestones</TabsTrigger>
+          <TabsTrigger value="ecosystem">Ecosystem</TabsTrigger>
+        </TabsList>
+        <TabsContent value="team">
+          <Card>
+            <CardHeader>
+              <CardTitle>Team Members</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {project.team.map((member, index) => (
+                  <Card key={index}>
+                    <CardContent className="flex items-center space-x-4 pt-6">
+                      <Avatar>
+                        <AvatarImage src={member.imgLink} alt={member.officialName} />
+                        <AvatarFallback>{member.officialName.substring(0, 2)}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="font-semibold">{member.officialName}</h3>
+                        <p className="text-sm text-muted-foreground">{member.role}</p>
+                        <div className="flex space-x-2 mt-2">
+                          {member.links.github && (
+                            <a href={member.links.github} target="_blank" rel="noopener noreferrer">
+                              <Github className="h-4 w-4" />
+                            </a>
+                          )}
+                          {member.links.twitter && (
+                            <a href={member.links.twitter} target="_blank" rel="noopener noreferrer">
+                              <Twitter className="h-4 w-4" />
+                            </a>
+                          )}
+                          {member.links.dribble && (
+                            <a href={member.links.dribble} target="_blank" rel="noopener noreferrer">
+                              <Dribbble className="h-4 w-4" />
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="token">
+          <Card>
+            <CardHeader>
+              <CardTitle>Token Information</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h3 className="font-semibold">Name</h3>
+                  <p>{project.token.name}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">Ticker</h3>
+                  <p>{project.token.ticker}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">Process ID</h3>
+                  <p>{project.token.processId}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">Denomination</h3>
+                  <p>{project.token.denomination}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">Total Supply</h3>
+                  <p>{project.token.totalSupply}</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">Tokenomics</h3>
+                  <p>{project.token.tokenomics.info}</p>
+                  <a href={project.token.tokenomics.linkToBlogorPaper} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="milestones">
+          <Card>
+            <CardHeader>
+              <CardTitle>Project Milestones</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-4">
+                {project.mileStones.map((milestone, index) => (
+                  <li key={index} className="flex items-center space-x-4">
+                    <Badge variant={milestone.status === "Completed" ? "default" : "secondary"}>{milestone.status}</Badge>
+                    <div>
+                      <h3 className="font-semibold">{milestone.goal}</h3>
+                      <p className="text-sm text-muted-foreground">{milestone.date}</p>
+                    </div>
+                    <a href={milestone.proof} target="_blank" rel="noopener noreferrer" className="ml-auto">
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="ecosystem">
+          <Card>
+            <CardHeader>
+              <CardTitle>Ecosystem</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <h3 className="font-semibold mb-2">Use Cases</h3>
+              <ul className="list-disc pl-5 mb-4">
+                {project.useCases.map((useCase, index) => (
+                  <li key={index}>
+                    <strong>{useCase.name}:</strong> {useCase.info}{" "}
+                    <a href={useCase.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                      Try it
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <h3 className="font-semibold mb-2">Collaborations</h3>
+              <ul className="list-disc pl-5">
+                {project.collaborations.map((collab, index) => (
+                  <li key={index}>
+                    <a href={collab.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                      {collab.name}
+                    </a>
+                    : {collab.info}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
 }

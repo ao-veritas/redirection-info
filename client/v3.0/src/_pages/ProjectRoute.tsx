@@ -2,6 +2,7 @@ import { projects } from '../_utils/projects';
 import { useParams } from 'react-router-dom';
 import Project from './Project';
 import Saturn from './Saturn';
+import { Footer, Navbar } from '../components';
 
 
 const ProjectRoute = () => {
@@ -13,11 +14,16 @@ const ProjectRoute = () => {
     }
   return (
     <>
+    <Navbar/>
+    <main className='bg-[#111111] max-w-[1800px] w-full pt-[120px] flex flex-col items-center min-h-[96vh]'>
     {projects.map((project)=> {
         if(project.processID == processID){
-            return <Project pid={processID}/>
+            return <Project/>
         }
     })}
+
+    </main>
+    <Footer/>
     </>
   )
 }

@@ -6,6 +6,10 @@
   transition: all 0.6s;
 }
 
+:root{
+  background: #111111;
+}
+
 .featCardBg{
   background: radial-gradient(circle at 100% 100%, rgba(255,255,255,0) 0, rgba(255,255,255,0) 7px, transparent 7px) 0% 0%/8px 8px no-repeat,
   radial-gradient(circle at 0 100%, rgba(255,255,255,0) 0, rgba(255,255,255,0) 7px, transparent 7px) 100% 0%/8px 8px no-repeat,
