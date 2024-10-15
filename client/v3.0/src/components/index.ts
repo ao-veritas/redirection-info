@@ -1,10 +1,8 @@
 
-import TeamCard from "./TeamCard"
+import TeamCard from "./AboutPage/TeamCard"
 import Navbar from "./Layout/Navbar"
 import Footer from "./Layout/Footer"
-import Hero from "./Landing/Hero"
-import Arch from "./Landing/Arch"
-import ProjectsDisplay from "./Landing/ProjectsDisplay"
+import Hero from "./LandingPage/Hero"
 import OwnerForm from "./RegisterProject/OwnerForm"
 import RegisterProjectForm from "./RegisterProject/RegisterProjectForm"
 import TaoEthBalance from "./UserProfile/TaoEthBalance"
@@ -15,8 +13,6 @@ export {
     Navbar,
     Footer,
     Hero,
-    ProjectsDisplay,
-    Arch,
     TeamCard,
     OwnerForm,
     RegisterProjectForm,

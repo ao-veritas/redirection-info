@@ -164,8 +164,8 @@ export default function Component() {
 
       </Card>
 
-      <Tabs defaultValue="team">
-        <TabsList className="grid w-full grid-cols-4">
+      <Tabs defaultValue="team ">
+        <TabsList className="grid w-full grid-cols-4 gap-6 bg-[#161616] text-[#eeeeee] tracking-wider font-thin">
           <TabsTrigger value="team">Team</TabsTrigger>
           <TabsTrigger value="token">Token</TabsTrigger>
           <TabsTrigger value="milestones">Milestones</TabsTrigger>

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Footer, Hero, Navbar } from "../components"
-import Cta from "../components/Landing/Cta";
-import Faq from "../components/Landing/Faq";
-import Features from "../components/Landing/Features"
-import ScreenshotDisplay from "../components/Landing/ScreenshotDisplay"
+import Cta from "../components/LandingPage/Cta";
+import Faq from "../components/LandingPage/Faq";
+import Features from "../components/LandingPage/Features"
+import ScreenshotDisplay from "../components/LandingPage/ScreenshotDisplay"
 // import TabsSection from "../components/Landing/TabsSection";
 import { FlipWords } from "../components/ui/flip-words";
 
