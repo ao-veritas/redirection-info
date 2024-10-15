@@ -30,10 +30,10 @@ export default function About() {
       >
         <TeamCard
           img={"https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/team/manishi.png"}
-          pname="manishi"
+          pname="manishi bhatnagar"
           dribble="https://dribbble.com/0xManishi"
           twitter="https://x.com/0xManishi"
-          info="Designer"
+          info="UI/UX Designer"
           last={false}
         />
         <TeamCard
@@ -46,10 +46,18 @@ export default function About() {
         />
         <TeamCard
           img={"https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/team/parth.png"}
-          pname="parth"
+          pname="parth Shah"
           github="https://github.com/parthks"
           twitter="https://x.com/1human_in/"
           info="Smart Contract Developer"
+          last={false}
+        />
+        <TeamCard
+          img={"/chaitanya.jpg"}
+          pname="Chaitanya Bajpai"
+          github="https://github.com/cb7chaitanya"
+          twitter="https://x.com/cbajpai7"
+          info="Fullstack Developer"
           last={false}
         />
       </div>

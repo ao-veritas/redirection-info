@@ -23,7 +23,7 @@ const ProjectsDisplay = () => {
           </a>
         </div> */}
       </div>
-      <div className="grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-[30px] gap-[0px] w-full">
+      <div className="grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-[30px] gap-[21px] w-full">
         {" "}
         {projects.map((project) => {
           return <ProjectCard project={project} />;

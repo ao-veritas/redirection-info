@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Project from './Project';
 // import Saturn from './Saturn';
 import { Footer, Navbar } from '../components';
+import { Toaster } from 'sonner';
 
 
 const ProjectRoute = () => {
@@ -24,6 +25,15 @@ const ProjectRoute = () => {
 
     </main>
     <Footer/>
+    <Toaster theme='dark' position="top-right" toastOptions={{
+    classNames: {
+      title: 'text-[#40959D] text-[18px]',
+      info: 'bg-[#161616]',
+      
+    },
+    className:"border-[#40959D]",
+    duration: 1500
+  }}/>
     </>
   )
 }

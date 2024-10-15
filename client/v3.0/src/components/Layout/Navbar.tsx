@@ -119,10 +119,10 @@ export default function Navbar() {
             </Link>
             <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
-        ${path[1] == "profile" ? `${brandSecondaryText} underline` : "text-[#ffffff]"}`}
-              to="/user"
+        ${path[1] == "projects" ? `${brandSecondaryText} underline` : "text-[#ffffff]"}`}
+              to="/projects"
             >
-              Your Profile
+              Projects
             </Link>{" "}
             {/* <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
@@ -133,10 +133,10 @@ export default function Navbar() {
             </Link>{" "} */}
             <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
-        ${path[1] == "dashboard" ? `${brandSecondaryText} underline` : "text-[#ffffff]"}`}
-              to="/dashboard"
+        ${path[1] == "faucet" ? `${brandSecondaryText} underline` : "text-[#ffffff]"}`}
+              to="/faucet"
             >
-              Analysis Dashboard
+              Faucet
             </Link>{" "}
           </div>
         </div>
