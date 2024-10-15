@@ -37,6 +37,7 @@ export type ProjectType = {
         github: string;
         twitter: string;
         dribble: string;
+        discord: string;
         other: string[];
       };
     }[];
@@ -79,6 +80,7 @@ export type ProjectType = {
     }[];
     mediaMentions: string[];
     collaborations: {
+      logoImageLink: string;
       name: string;
       link: string;
       info: string;

@@ -45,21 +45,21 @@ export default function Navbar() {
             >
               About Us
             </Link>
-            {/* <Link
-              className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
-          ${path[1] == "profile" ? `${brandSecondaryText} underline` : brandLightText}`}
-              to="/user"
-            >
-              Your Profile
-            </Link>{" "} */}
-
             <Link
+              className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
+          ${path[1] == "projects" ? `${brandSecondaryText} underline` : brandLightText}`}
+              to="/projects"
+            >
+              Projects
+            </Link>{" "}
+
+            {/* <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
           ${path[1] == "dashboard" ? `${brandSecondaryText} underline` : brandLightText}`}
               to="/dashboard"
             >
               Analysis Dashboards
-            </Link>{" "}
+            </Link>{" "} */}
             <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
           ${path[1] == "faucet" ? `${brandSecondaryText} underline` : brandLightText}`}

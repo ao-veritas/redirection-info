@@ -10,6 +10,7 @@ import About from './_pages/About';
 import ProjectRoute from './_pages/ProjectRoute';
 // import UserDashboard from './components/UserDashboard';
 import ComingSoon from './_pages/ComingSoon';
+import ProjectsDisplay from './_pages/ProjectsDisplay';
 
 const AppRouter: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter: React.FC = () => {
         {/* <Route path="/saturn" element={<Saturn />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/faucet" element={<Faucet />} />
+        <Route path="/projects" element={<ProjectsDisplay/>} />
         {/* <Route path="/user" element={<UserDashboard />} /> */}
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route path="/project/:processID" element={<ProjectRoute />} />

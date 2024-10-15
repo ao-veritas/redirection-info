@@ -21,6 +21,7 @@ export const projects:ProjectType[] = [
             role:"CEO",
             imgLink:"https://jh2ukzgb546squzma2zxtkr6ckignjy7c6thm7xhe43aj7q3norq.arweave.net/SfVFZMHvPShTLAazeao-EpBmpx8XpnZ-5yc2BP4ba6M",
             links:{
+                discord:"",
                 github:"",
                 twitter:"",
                 dribble:"",
@@ -33,6 +34,7 @@ export const projects:ProjectType[] = [
             role:"Co-Founder",
             imgLink:"https://3v7icsuojvbggeifpyk6avvv5pz4vueyaj3kmzu65xvf5msqlgaq.arweave.net/3X6BSo5NQmMRBX4V4Fa16_PK0JgCdqZmnu3qXrJQWYE",
             links:{
+                discord:"",
                 github:"",
                 twitter:"",
                 dribble:"",
@@ -59,29 +61,34 @@ export const projects:ProjectType[] = [
         },
         gettingStartedGuide:"",
         projectOrigin:"",
-        useCases: [{
-            name:"",
+        useCases: [
+            {
+            name:"Dummy Staking for Veritas",
             info:"",
             liveLink:"",
             other:[""]
-        }],
+        }
+    ],
         advisorsInvestors:[{
             name:"",
             role:"",
             moreInfo:"",
             amountIfAny:[""],
         }],
-        mileStones:[{
-            goal:"",
-            date:"",
-            proof:"",
-            status:""
-        }],
+        mileStones:[
+        //     {
+        //     goal:"",
+        //     date:"",
+        //     proof:"",
+        //     status:""
+        // }
+    ],
         mediaMentions:[""],
         collaborations:[{
-            name:"",
-            link:"",
-            info:""
+            name:"Veritas",
+            link:"/",
+            info:"",
+            logoImageLink:"/logos/SqLogoDark.svg"
         }],
         ownershipPercentages:[{
             name:"",
@@ -112,6 +119,7 @@ export const projects:ProjectType[] = [
                 github:"https://github.com/megabyte0x",
                 twitter:"https://x.com/megabyte0x?t=WZYKcJAvN-CM7a6yU4lPNQ&s=09",
                 dribble:"",
+                discord:"",
                 other:["",""],
             },
         },
@@ -121,6 +129,7 @@ export const projects:ProjectType[] = [
             role:"Co-Founder",
             imgLink:"https://0rbit.co/team/lucifer.png",
             links:{
+                discord:"",
                 github:"https://github.com/Lucifer0x17",
                 twitter:"https://x.com/Lucifer0x17?t=fH5LRms3xy2hSPLJbNubaA&s=09",
                 dribble:"",
@@ -133,6 +142,7 @@ export const projects:ProjectType[] = [
             role:"UI/ UX Designer",
             imgLink:"https://0rbit.co/team/manishi.png",
             links:{
+                discord:"",
                 github:"",
                 twitter:"https://x.com/0xManishi?t=FKn7XBJwlIXwJR-f4KGkzw&s=09",
                 dribble:"https://dribbble.com/0xManishi",
@@ -145,6 +155,7 @@ export const projects:ProjectType[] = [
             role:"Engineer",
             imgLink:"https://0rbit.co/team/sarthak.png",
             links:{
+                discord:"",
                 github:"https://github.com/Not-Sarthak",
                 twitter:"https://x.com/0xSarthak13?t=nvsUz9hxhq2hQO25wr8Rtw&s=09",
                 dribble:"",
@@ -170,30 +181,36 @@ export const projects:ProjectType[] = [
         },
         gettingStartedGuide:"",
         projectOrigin:"",
-        useCases: [{
-            name:"",
-            info:"",
-            liveLink:"",
-            other:[""]
-        }],
+        useCases: [
+        //     {
+        //     name:"",
+        //     info:"",
+        //     liveLink:"",
+        //     other:[""]
+        // }
+    ],
         advisorsInvestors:[{
             name:"",
             role:"",
             moreInfo:"",
             amountIfAny:[""],
         }],
-        mileStones:[{
-            goal:"",
-            date:"",
-            proof:"",
-            status:""
-        }],
+        mileStones:[
+        //     {
+        //     goal:"",
+        //     date:"",
+        //     proof:"",
+        //     status:""
+        // }
+    ],
         mediaMentions:[""],
-        collaborations:[{
-            name:"",
-            link:"",
-            info:""
-        }],
+        collaborations:[
+        //     {
+        //     name:"",
+        //     link:"",
+        //     info:""
+        // }
+    ],
         ownershipPercentages:[{
             name:"",
             role:"",
@@ -230,6 +247,7 @@ export const projects:ProjectType[] = [
               github: "https://github.com/ankushKun",
               twitter: "https://x.com/ankushKun_",
               dribble: "",
+              discord:"",
               other: [
                 "https://linkedin.com/in/ankushKun",
                 "https://instagram.com/ankushKun_",
@@ -277,20 +295,20 @@ export const projects:ProjectType[] = [
           },
         ],
         advisorsInvestors: [
-          {
-            name: "",
-            role: "",
-            moreInfo: "",
-            amountIfAny: [""],
-          },
+        //   {
+        //     name: "",
+        //     role: "",
+        //     moreInfo: "",
+        //     amountIfAny: [""],
+        //   },
         ],
         mileStones: [
-          {
-            goal: "",
-            date: "",
-            proof: "",
-            status: "",
-          },
+        //   {
+        //     goal: "",
+        //     date: "",
+        //     proof: "",
+        //     status: "",
+        //   },
         ],
         mediaMentions: [""],
         collaborations: [
@@ -298,11 +316,14 @@ export const projects:ProjectType[] = [
             name: "Bazar",
             link: "",
             info: "Created a marketplace for user built code templates",
+            logoImageLink:""
           },
           {
             name: "0rbit",
             link: "https://www.playground.0rbit.co/",
             info: "Live lua codecells for demoing",
+            logoImageLink:""
+
           },
         ],
         ownershipPercentages: [
@@ -313,81 +334,81 @@ export const projects:ProjectType[] = [
           },
         ],
     },
-    {
-        name: "Pixel Gaming",
-        processID:"processID for Pixel Gaming",
-        logoImageLink:"https://drive.google.com/file/d/172Owr-YwsgGZREo3q6tLiNdeE6Xm0hpA/view?usp=sharing",
-        bannerLink:"",
-        links: {
-            website: "https://www.pixelgaming.us/",
-            docs:"",
-            discord: "",
-            twitter: "https://x.com/pixelgamingao",
-            github: "https://github.com/Panther-Lab/arweave",
-            telegram:"",
-            other: ["",""]
-        },
-        team: [{
-            officialName:"Pawan AK",
-            pseudoName:"",
-            role:"Backend Developer , Community Opp",
-            imgLink:"",
-            links:{
-                github:"https://github.com/pawanak",
-                twitter:"https://x.com/pawan__ak",
-                dribble:"",
-                other:["",""],
-            },
-        }],
-        exchangeInfo: {
-            cooldownPeriod: 0,
-            aoethRewardRate: 0,
-          },
-        description: "Gaming platform on AO  Play games to earn real rewards in our Play2Earn ecosystem, and if you're a Unity developer, create games and keep 80% of the revenue. Join us to play, earn, and develop in a secure, decentralized environment!",
-        oneLiner: "Discover the Future of Gaming on Arweave",
-        token: {
-            name:"",
-            ticker:"",
-            processId:"5f9UIOFAKmf8kTmiTg_9ScuE330l6kdmu3zUO7Yv_68",
-            denomination:"",
-            totalSupply:"",
-            tokenomics:{
-                info:"",
-                linkToBlogorPaper:""
-            }
-        },
-        gettingStartedGuide:"",
-        projectOrigin:"",
-        useCases: [{
-            name:"",
-            info:"",
-            liveLink:"",
-            other:[""]
-        }],
-        advisorsInvestors:[{
-            name:"",
-            role:"",
-            moreInfo:"",
-            amountIfAny:[""],
-        }],
-        mileStones:[{
-            goal:"",
-            date:"",
-            proof:"",
-            status:""
-        }],
-        mediaMentions:[""],
-        collaborations:[{
-            name:"",
-            link:"",
-            info:""
-        }],
-        ownershipPercentages:[{
-            name:"",
-            role:"",
-            percentage:""
-        }]
-    },
+    // {
+    //     name: "Pixel Gaming",
+    //     processID:"processID for Pixel Gaming",
+    //     logoImageLink:"https://drive.google.com/file/d/172Owr-YwsgGZREo3q6tLiNdeE6Xm0hpA/view?usp=sharing",
+    //     bannerLink:"",
+    //     links: {
+    //         website: "https://www.pixelgaming.us/",
+    //         docs:"",
+    //         discord: "",
+    //         twitter: "https://x.com/pixelgamingao",
+    //         github: "https://github.com/Panther-Lab/arweave",
+    //         telegram:"",
+    //         other: ["",""]
+    //     },
+    //     team: [{
+    //         officialName:"Pawan AK",
+    //         pseudoName:"",
+    //         role:"Backend Developer , Community Opp",
+    //         imgLink:"",
+    //         links:{
+    //             github:"https://github.com/pawanak",
+    //             twitter:"https://x.com/pawan__ak",
+    //             dribble:"",
+    //             other:["",""],
+    //         },
+    //     }],
+    //     exchangeInfo: {
+    //         cooldownPeriod: 0,
+    //         aoethRewardRate: 0,
+    //       },
+    //     description: "Gaming platform on AO  Play games to earn real rewards in our Play2Earn ecosystem, and if you're a Unity developer, create games and keep 80% of the revenue. Join us to play, earn, and develop in a secure, decentralized environment!",
+    //     oneLiner: "Discover the Future of Gaming on Arweave",
+    //     token: {
+    //         name:"",
+    //         ticker:"",
+    //         processId:"5f9UIOFAKmf8kTmiTg_9ScuE330l6kdmu3zUO7Yv_68",
+    //         denomination:"",
+    //         totalSupply:"",
+    //         tokenomics:{
+    //             info:"",
+    //             linkToBlogorPaper:""
+    //         }
+    //     },
+    //     gettingStartedGuide:"",
+    //     projectOrigin:"",
+    //     useCases: [{
+    //         name:"",
+    //         info:"",
+    //         liveLink:"",
+    //         other:[""]
+    //     }],
+    //     advisorsInvestors:[{
+    //         name:"",
+    //         role:"",
+    //         moreInfo:"",
+    //         amountIfAny:[""],
+    //     }],
+    //     mileStones:[{
+    //         goal:"",
+    //         date:"",
+    //         proof:"",
+    //         status:""
+    //     }],
+    //     mediaMentions:[""],
+    //     collaborations:[{
+    //         name:"",
+    //         link:"",
+    //         info:""
+    //     }],
+    //     ownershipPercentages:[{
+    //         name:"",
+    //         role:"",
+    //         percentage:""
+    //     }]
+    // },
     {
         name: "SENTIO",
         processID: "processID for Sentio",
@@ -408,6 +429,7 @@ export const projects:ProjectType[] = [
             role: "Founder & Developer",
             imgLink: "",
             links: {
+                discord:"",
                 github: "https://github.com/krishvsoni",
                 twitter: "https://twitter.com/krishvsoni",
                 dribble: "",
@@ -419,6 +441,7 @@ export const projects:ProjectType[] = [
                 role: "Founder & Developer",
                 imgLink: "",
                 links: {
+                    discord:"",
                     github: "https://github.com/haard18",
                     twitter: "https://twitter.com/solanki_haard",
                     dribble: "",
@@ -444,18 +467,22 @@ export const projects:ProjectType[] = [
         },
         gettingStartedGuide: "",
         projectOrigin: "",
-        useCases: [{
-            name: "",
-            info: "",
-            liveLink: "",
-            other: [""]
-        }],
-        advisorsInvestors: [{
-            name: "",
-            role: "",
-            moreInfo: "",
-            amountIfAny: [""],
-        }],
+        useCases: [
+        //     {
+        //     name: "",
+        //     info: "",
+        //     liveLink: "",
+        //     other: [""]
+        // }
+    ],
+        advisorsInvestors: [
+        //     {
+        //     name: "",
+        //     role: "",
+        //     moreInfo: "",
+        //     amountIfAny: [""],
+        // }
+    ],
         mileStones: [{
             goal: "To monitor and track messages coming to our Arweave Wallet and give records to respective users who have connected their Arweave Wallet, identify potential threats and suspicious activities in the process, provide CRON reports analyzed by AI for similar threats with easy access via email, and identify vulnerabilities in your LUA code prior to deployment on AO.future scaling to eth bridges and other token bridges",
             date: "",
@@ -463,11 +490,15 @@ export const projects:ProjectType[] = [
             status: "Upcoming"
         }],
         mediaMentions: [""],
-        collaborations: [{
-            name: "",
-            link: "",
-            info: ""
-        }],
+        collaborations: [
+        //     {
+        //     name: "",
+        //     link: "",
+        //     info: "",
+        //     logoImageLink:""
+
+        // }
+    ],
         ownershipPercentages: [{
             name: "",
             role: "",
