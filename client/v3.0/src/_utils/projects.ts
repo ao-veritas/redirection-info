@@ -97,6 +97,134 @@ export const projects:ProjectType[] = [
         }]
     },
     {
+        name: "Veritas",
+        processID: "l13OiZyp7T5YpmOqofjHRGyCbrpllLZp4HOyfa2WLPQ",
+        logoImageLink: "https://redirection-info.vercel.app/logos/SqLogoDark.svg",
+        bannerLink:"",
+        links: {
+            website: "https://redirection-info.vercel.app/",
+            docs: "",
+            discord: "https://discord.gg/Ee84m9Cf",
+            twitter: "https://x.com/Veritas_ao",
+            github: "https://github.com/ao-veritas",
+            telegram:"",
+            other: ["", ""]
+        },
+        team: [{
+            officialName: "Taveesha Agarwal",
+            pseudoName: "0xLilith",
+            role: "Founder",
+            imgLink: "https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/team/lilith.png",
+            links: {
+                discord:"",
+                github: "https://github.com/0xLPircy",
+                twitter: "https://x.com/0xLPircy",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        {
+            officialName: "Manishi Bhatnagar",
+            pseudoName: "",
+            role: "UI/UX Designer",
+            imgLink: "https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/team/manishi.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "https://x.com/0xManishi",
+                dribble: "",
+                other: ["", ""],
+            },
+           },
+            {
+            officialName: "Parth Shah",
+            pseudoName: "",
+            role: "Developer",
+            imgLink: "https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/team/parth.png",
+            links: {
+                discord:"",
+                github: "https://github.com/parthks",
+                twitter: "https://x.com/1human_in/",
+                dribble: "",
+                other: ["", ""],
+            },
+           },
+            {
+            officialName: "Chaitanya Bajpai",
+            pseudoName: "",
+            role: "Developer",
+            imgLink: "",
+            links: {
+                discord:"",
+                github: "https://github.com/cb7chaitanya",
+                twitter: "https://x.com/cbajpai7",
+                dribble: "",
+                other: ["", ""],
+            },
+           },],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "First ever platform on AO and Arweave to enable users to Analyse, Invest and Earnin Projects they can Trust!",
+        oneLiner: "Permissionless Ecosystem Fundingand Project Analysis",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [
+            {
+            name: "Permssionless Ecosystem Funding",
+            info: "Stake bridged tokens and earn project tokens",
+            liveLink: "https://redirection-info.vercel.app/project/rXQaiyznUgDrt7A0Nzl9OQN2QBJ3we1X3qMe2W5DBXU",
+            other: [""]
+        },
+                {
+            name: "Project Analysis",
+            info: "Get On-chain and Off-chain data of project son AO and Arweave",
+            liveLink: "https://redirection-info.vercel.app/dashboards",
+            other: [""]
+        }
+    ],
+        advisorsInvestors: [
+            {
+            name: "Arweave India",
+            role: "Advisors",
+            moreInfo: "",
+            amountIfAny: [""],
+        }
+    ],
+        mileStones: [{
+            goal: "Arweave HH Cohort 2",
+            date: "8-10 Sep 2024",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [
+            {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        }
+    ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    },    
+    {
         name: "0rbit",
         processID:"BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ",
   logoImageLink:"https://www.0rbit.co/logos/sqLightFill.svg",
@@ -504,5 +632,399 @@ export const projects:ProjectType[] = [
             role: "",
             percentage: ""
         }]
-    }
+    },
+    {
+        name: "Astro",
+        processID: "astro",
+        logoImageLink: "https://cdn.prod.website-files.com/665f3be1a0fe5f53c9a67b7b/66606e51c7daecc640734f4f_astro-logo.svg",
+        bannerLink:"",
+        links: {
+            website: " https://www.astrousd.com/ ",
+            docs: "https://docs.astrousd.com/",
+            discord: "https://discord.com/invite/NpNRtNE6PN",
+            twitter: "https://twitter.com/AstroUSD",
+            github: "",
+            telegram:"",
+            other: ["", ""]
+        },
+        team: [{
+                officialName: "",
+                pseudoName: "",
+                role: "",
+                imgLink: "",
+                links: {
+                    discord:"",
+                    github: "",
+                    twitter: "",
+                    dribble: "",
+                    other: ["", ""],
+                },
+        }],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "Astro introduces USDA, an over-collateralized stablecoin developed on AO’s hyper parallel computing environment. ",
+        oneLiner: "Unlock True Liquidity on Arweave and ao with USDA",
+        token: {
+            name: "USDA",
+            ticker: "USDA",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [
+            {
+            name: "Utilising AR",
+            info: "Unlock value without sacrificing your long-term exposure to AR with USDA.",
+            liveLink: "",
+            other: [""]
+        },
+        {
+            name: "Transact",
+            info: "Transact effortlessly and avoid volatility with USDA, a more predictable way to navigate the ecosystem.",
+            liveLink: "",
+            other: [""]
+        },
+        {
+            name: "Trade",
+            info: "Enhance your trading strategies without sacrificing price stability with USDA.",
+            liveLink: "",
+            other: [""]
+        },
+        {
+            name: "Earn",
+            info: "Maximize your returns by leveraging USDA in lending and liquidity pools, ensuring a steady income stream while maintaining stability.",
+            liveLink: "",
+            other: [""]
+        }
+    ],
+        advisorsInvestors: [
+        //     {
+        //     name: "",
+        //     role: "",
+        //     moreInfo: "",
+        //     amountIfAny: [""],
+        // }
+    ],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [
+            {
+            name: "Ar Connect",
+            link: "",
+            info: "",
+            logoImageLink:"https://cdn.prod.website-files.com/665f3be1a0fe5f53c9a67b7b/66608b2facaead683794995f_arconnect-logo.svg"
+        },
+        {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        },
+        {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        },
+        {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        },
+        {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        },
+        {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        },
+        {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        },
+        {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        },
+    ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    },
+    {
+        name: "Permaswap",
+        processID: "permaswap",
+        logoImageLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAABhCAMAAAD8xk/WAAAAP1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////9Du/pqAAAAFHRSTlMAgGAg378Q70AwUJ+Qz6Bwb69/jxRAXm8AAAKRSURBVGje7djLrpswEIDhwR5fMQGSef9nrVylitoJYzxGR13wL87i5PKBHTAyaPJxK/uCVEO3ly1Cs20yJsfkTyPx6YjntgRi9C64M4cVS6Cj8Gklp+OwjCO5+VjihzXHAwWpnbOCwyjD3x1FpX1OB2P9z7v9TqcLq+DIx5UD9bRYyeGjB+9e1Blm5rQn1S7U37PHQVsZJE2v804QmHbzaSczRgG1nZUxCqjtlHrZII30POFgffFBY5m2U38DTxos2JYz1cmh4ZaGg3XdQxpvkh3DRk1bkhxko6bOSY5hvzV9mTnS6ehD5oino88cOpadzkjuyJnPnI7bogXwKT+QGsXqrNM0u4X9X/5wmDx8ik52CnxKZg9/vqQ+EMgf9F2PXMF/fQzcG8MWDLDktZ09EGZ8rztBYBJnGkdWgFV+3yli80bC24VDA95E9Y+8yvIaa6IFXr1PuPZazIutS5UXWkfWOUXlYAgUpyPeEpfeEUgg5Xp+CNJViiBm6CgP31rpoF12bOe0TsJqLxYuckzDwR9y3O1cOz9wqePpaqfz+l4UjuZG6hSO5nZQrnPEB//1SscKa/2VDorPB+NOe3PG9TvRNieHZxQOfv2Qf5GQ7Xf81428tEiMA8X81G+c49/Kg8SMxinv/cacoObT5kgueI1j6BNiOLXNo3Es9WZVDgTFrpXGcYrT0ThFsfGicbJi90Dj+C4nqh1AxahpnIdi1DTOep6xI07s2qrSO14xORoHFgWjcYqC0TjmDLPCsGPbCkYYd9q3bOfhCmcXCL6hpXfW1h7gRU5CjcIzolPL34fOZaaMODWfy9/XK74MQ8acTylvU20zSTT0Du92budqZ/0hZ7qd27md/8VJ00EJtP0CaOyoPUgAnCcAAAAASUVORK5CYII=",
+        bannerLink:"",
+        links: {
+            website: "https://www.permaswap.network/",
+            docs: "https://mirror.xyz/permaswap.eth/ustZcDgavlm4xmYI26thEAj8W2cXlZpRkG5Jqz0iS14",
+            discord: "https://discord.gg/BTs4Zud2vk",
+            twitter: "https://x.com/Permaswap",
+            github: "https://github.com/permadao/permaswap",
+            telegram:"https://t.me/PermaDao_ar/5699",
+            other: ["", ""]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "Permaswap is a cross-chain DEX network with 0 gas fees and having all transactions delivered INSTANTLY. All swaps that are done instantly are powered by everPay! Our goal? Allow you to easily swap different assets from different chains in one place for a quick and easy experience.",
+        oneLiner: "FusionFi Portal, A Unified Financial Protocol on Permaweb",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [
+            {
+            name: "",
+            info: "",
+            liveLink: "",
+            other: [""]
+        }
+    ],
+        advisorsInvestors: [
+            {
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }
+    ],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [
+            {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+    
+        }
+    ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    },
+    {
+        name: "AoClima Option",
+        processID: "",
+        logoImageLink: "https://aoc-rouge.vercel.app/Aco-logo.svg",
+        bannerLink:"",
+        links: {
+            website: "",
+            docs: "",
+            discord: "",
+            twitter: "https://x.com/NotusOptions",
+            github: "https://github.com/BrianMburu/ACO",
+            telegram:"",
+            other: ["", ""]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "It’s unfortunate that Hurricanes Helene and Milton have caused over 200 deaths and tens of billions of dollars in losses. What’s more alarming is that the US has only 4,470 meteorologists, with an average age of 40 years. Only 19% are between 19 and 30 years old.Who’s going to solve this weather problem? This is why we need to inspire more young people to study meteorology. This is what we’re trying to do at AoclimaOptions.",
+        oneLiner: "It's Time to Solve the Weather Problem.",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [
+            {
+            name: "",
+            info: "",
+            liveLink: "",
+            other: [""]
+        }
+    ],
+        advisorsInvestors: [
+            {
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }
+    ],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [
+            {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        }
+    ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    },
+    {
+        name: "AoVest",
+        processID: "",
+        logoImageLink: "",
+        bannerLink:"",
+        links: {
+            website: "https://aovest.stream/",
+            docs: "",
+            discord: "https://discord.gg/SS9vS8e3xr",
+            twitter: "https://x.com/aoveststream",
+            github: "",
+            telegram:"",
+            other: ["", ""]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "",
+        oneLiner: "",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [
+            {
+            name: "",
+            info: "",
+            liveLink: "",
+            other: [""]
+        }
+    ],
+        advisorsInvestors: [
+            {
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }
+    ],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [
+            {
+            name: "",
+            link: "",
+            info: "",
+            logoImageLink:""
+        }
+    ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    },
+    
 ]

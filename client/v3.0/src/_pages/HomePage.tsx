@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Cta, Faq, Features, Footer, Hero, Navbar, ScreenshotDisplay } from "../components"
 import { Link } from "react-router-dom";
 import { FlipWords } from "../components/ui";
+import LogoLoader from "../components/LogoLoader";
 
 const HomePage = () => {
   const words = ["Users", "Projects", "You"];
@@ -43,6 +44,7 @@ const HomePage = () => {
 
 
         <Hero/>
+        {/* <LogoLoader/> */}
         <ScreenshotDisplay/>
         <Features/>
         <section className="w-full md:px-20 px-10 sm:py-20 py-[45px] max-w-[1800px]">

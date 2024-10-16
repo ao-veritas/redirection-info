@@ -16,7 +16,7 @@ const AppRouter: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<><HomePage /></>} />
         {/* <Route path="/register" element={<RegisterProject />} /> */}
         {/* <Route path="/saturn" element={<Saturn />} /> */}
         <Route path="/about" element={<About />} />

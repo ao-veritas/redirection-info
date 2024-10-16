@@ -262,11 +262,7 @@ export default function Component({ pid }: any) {
                     </Button>
                   </div>
                   <p className="text-muted-foreground">
-                    {currentProject?.description} Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Perferendis aut quasi facilis
-                    aliquam deleniti. Maiores ducimus impedit eos expedita!
-                    Alias similique cupiditate facere dolor ipsa labore esse,
-                    vitae sequi deserunt!
+                    {currentProject?.description? currentProject?.description: "Desiption N/A"}
                   </p>
                 </div>
                 <div className="flex md:flex-col flex-row gap-3">
