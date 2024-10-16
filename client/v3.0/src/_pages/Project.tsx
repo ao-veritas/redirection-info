@@ -1,20 +1,4 @@
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../components/ui/card";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "../components/ui/tabs";
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
-import { Badge } from "../components/ui/badge";
-import { Button } from "../components/ui/button";
-import {
   Globe,
   FileText,
   Twitter,
@@ -31,11 +15,12 @@ import { projects } from "../_utils/projects";
 import { getAllTransactions } from "../_utils/info";
 import { useUserAoETH } from "../_utils/useAoEth";
 import { useActiveAddress } from "arweave-wallet-kit";
-import Loader from "../components/Loader";
 import { Link } from "react-router-dom";
 import stake from "../_utils/stake";
 import { humanizeDuration } from "../_utils/helpers";
 import { toast } from "sonner";
+import { Avatar, AvatarFallback, AvatarImage, Badge, Button, Card, CardContent, CardDescription, CardHeader, CardTitle, Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui";
+import { Loader } from "../components";
 
 export default function Component({ pid }: any) {
   const saturnID: string = import.meta.env.VITE_SATURN_ID;

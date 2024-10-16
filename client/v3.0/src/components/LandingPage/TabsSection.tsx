@@ -1,6 +1,7 @@
 import { useState } from "react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs"
+
 import { Check, Zap, Shield } from "lucide-react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui"
 
 const tabData = [
   {

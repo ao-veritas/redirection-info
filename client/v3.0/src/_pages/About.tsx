@@ -1,8 +1,5 @@
-// import { BackgroundBeams } from "../components/ui/background-beams";
 import { brandDarkBg } from "../_utils/colors";
-import { Footer, Navbar } from "../components";
-import TeamView from "../components/AboutPage/TeamView";
-import TimelineView from "../components/AboutPage/TimelineView";
+import { Footer, Navbar, TeamView, TimelineView } from "../components";
 
 export default function About() {
   return (
@@ -17,7 +14,7 @@ export default function About() {
       <div className="z-30">
         <Footer />{" "}
       </div>
-      {/* <BackgroundBeams />{" "} */}
+
     </>
   );
 }

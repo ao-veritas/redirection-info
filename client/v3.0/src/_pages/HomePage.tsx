@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
-import { Footer, Hero, Navbar } from "../components"
-import Cta from "../components/LandingPage/Cta";
-import Faq from "../components/LandingPage/Faq";
-import Features from "../components/LandingPage/Features"
-import ScreenshotDisplay from "../components/LandingPage/ScreenshotDisplay"
-// import TabsSection from "../components/Landing/TabsSection";
-import { FlipWords } from "../components/ui/flip-words";
+import { Cta, Faq, Features, Footer, Hero, Navbar, ScreenshotDisplay } from "../components"
 import { Link } from "react-router-dom";
+import { FlipWords } from "../components/ui";
 
 const HomePage = () => {
   const words = ["Users", "Projects", "You"];

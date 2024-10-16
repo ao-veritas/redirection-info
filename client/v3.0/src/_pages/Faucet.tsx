@@ -8,10 +8,9 @@ import { toast } from "sonner";
 import { createDataItemSigner, message, result } from "@permaweb/aoconnect";
 import { useUserAoETH } from "../_utils/useAoEth";
 import { AOETH_TOKEN_PID } from "../_utils/constants";
-import Loader from "../components/Loader";
-import { Footer, Navbar } from "../components";
+import { Footer, Loader, Navbar } from "../components";
 import { brandDarkBg, brandSecondaryText } from "../_utils/colors";
-import { BackgroundBeams } from "../components/ui/background-beams";
+import { BackgroundBeams } from "../components/ui";
 
 export default function Faucet() {
   const address = useActiveAddress();

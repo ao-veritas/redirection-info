@@ -1,4 +1,5 @@
-import { WobbleCard } from '../ui/wobble-card'
+
+import { WobbleCard } from '../ui'
 import FeatureCard from './FeatureCard'
 
 const Features = () => {

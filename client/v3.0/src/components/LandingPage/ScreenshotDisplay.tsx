@@ -1,4 +1,6 @@
-import { FlipWords } from "../ui/flip-words"
+import { FlipWords } from "../ui";
+
+
 // import { StepstoCreate } from "./ScrollSs";
 
 const ScreenshotDisplay = () => {

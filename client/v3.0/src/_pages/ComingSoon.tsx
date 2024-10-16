@@ -1,6 +1,6 @@
 import { Footer, Navbar } from "../components"
-import { BackgroundBeams } from "../components/ui/background-beams"
-import { TextHoverEffect } from "../components/ui/text-hover-effect"
+import { BackgroundBeams, TextHoverEffect } from "../components/ui"
+
 
 const ComingSoon = () => {
   return (

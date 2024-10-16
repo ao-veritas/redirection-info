@@ -2,8 +2,7 @@ import { projects } from "../_utils/projects";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ConnectButton, useConnection } from "arweave-wallet-kit";
 import { brandDarkBg } from "../_utils/colors";
-import { Footer, TaoEthBalance, TaoEthStaked } from "../components";
-import Navbar from "../components/Layout/Navbar";
+import { Footer, TaoEthBalance, TaoEthStaked, Navbar } from "../components";
 import ProjectCard from "../components/UserProfile/ProjectCard";
 
 const User = () => {

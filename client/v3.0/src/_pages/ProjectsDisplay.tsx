@@ -2,7 +2,7 @@ import { projects } from '../_utils/projects';
 import ProjectCard from '../components/UserProfile/ProjectCard';
 import { Footer, Navbar } from '../components';
 import { brandDarkBg } from '../_utils/colors';
-import { BackgroundBeams } from '../components/ui/background-beams';
+import { BackgroundBeams } from '../components/ui';
 
 const ProjectsDisplay = () => {
   return (
