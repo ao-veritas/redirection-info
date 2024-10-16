@@ -70,7 +70,7 @@ export default function Navbar() {
           </div>
              
           <div className="lg:flex hidden bg-white flex-row justify-between items-center rounded-[10px] xl:scale-100 scale-75 xl:mx-0 mx-[-39px]">
-            {connected && <a href="/" className="px-[21px] hover:underline underline-offset-[3px] hover:opacity-75 text-[16.5]">Your Profile</a>}
+            {connected && <a href="/profile" className="px-[21px] hover:underline underline-offset-[3px] hover:opacity-75 text-[16.5]">Your Profile</a>}
             <ConnectButton accent="rgb(14, 156, 156)" />
           </div>
         </div>

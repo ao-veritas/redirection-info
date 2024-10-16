@@ -10,7 +10,7 @@ const TimelineView = () => {
             <p className="ml-2 text-[#40959D] uppercase tracking-loose">TIMELINE OF EVENTS</p>
             <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Journey of Veritas</p>
             <p className="text-sm md:text-base text-gray-400 mb-4 text-justify">
-              Here’s how we have progressed. 0 to 1! Idea inception to project to product. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ipsum ea explicabo molestias maxime. Totam ratione, possimus hic delectus distinctio debitis quos officia rerum labore optio similique incidunt ipsum a!
+              Here’s how we have progressed. 0 to 1! Idea to inception. Inception to project. and Project to Product. We started with section 7.3 of AO Whitepaper and landed here. Checkout our Journey!
             </p>
             <a href="https://x.com/Veritas_ao"
             className="z-30 bg-transparent mr-auto hover:bg-[#40959D] text-[#40959D] hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-[#40959D] hover:border-transparent">

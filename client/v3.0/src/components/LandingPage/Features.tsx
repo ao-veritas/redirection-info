@@ -17,7 +17,7 @@ const Features = () => {
                 containerClassName="h-full xl:min-h-[300px] featCardBg md:min-h-[150px] min-h-[240px] md:col-span-4 col-span-7 p-0"
                 className="xl:py-[21px] md:py-[18px] py-[15px] innerFeatSlant rounded-[17.4px]"
                 >
-                    <FeatureCard heading="Assets Assets and Assets" text="Earn AO based on streaks and usage!" flow="flex-col" imag="2" imagClasses="mb-[-24px] xl:w-[510px] xl:h-[210px] md:w-[450px] md:h-[120px] place-self-end"/>
+                    <FeatureCard heading="Assets Assets and Assets" text="Score assets for staking and rising in the leaderboard, showcase exclusive project roles with one of a kind assets!" flow="flex-col" imag="2" imagClasses="mb-[-24px] xl:w-[510px] xl:h-[210px] md:w-[450px] md:h-[120px] place-self-end"/>
                 </WobbleCard>
                 
         </div>
