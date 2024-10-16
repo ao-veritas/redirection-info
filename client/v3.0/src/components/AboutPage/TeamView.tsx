@@ -2,7 +2,7 @@ import TeamCard from './TeamCard'
 
 const TeamView = () => {
   return (
-   <section className='z-30'><h1
+   <section className='z-30 flex flex-col gap-6 items-center md:justify-start justify-between'><h1
    className="uppercase tracking-wider font-bold leading-[51px]
  xl:text-[45px] text-[36px] text-[#40959D]"
  >

@@ -22,14 +22,14 @@ const ProjectRoute = () => {
               <>
                 {" "}
                 <nav
-                  className="flex w-full items-center justify-start px-20 max-w-[1800px]"
+                  className="flex w-full items-center justify-start md:px-20 px-[18px] max-w-[1800px]"
                   aria-label="Breadcrumb"
                 >
                   <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li className="inline-flex items-center">
                       <a
                         href="/"
-                        className="inline-flex items-center text-[18px] font-medium text-[#244549] hover:text-[#40959D]"
+                        className="inline-flex items-center md:text-[18px] text-[15px] font-medium text-[#244549] hover:text-[#40959D]"
                       >
                         <svg
                           className="w-3 h-3 me-2.5"
@@ -62,7 +62,7 @@ const ProjectRoute = () => {
                         </svg>
                         <a
                           href="/projects"
-                          className="ms-1 text-[18px] font-medium text-[#244549] hover:text-[#40959D]"
+                          className="ms-1 md:text-[18px] text-[15px] font-medium text-[#244549] hover:text-[#40959D]"
                         >
                           Projects
                         </a>
@@ -85,7 +85,7 @@ const ProjectRoute = () => {
                             d="m1 9 4-4-4-4"
                           />
                         </svg>
-                        <span className="ms-1 text-[18px] font-medium text-[#40959D]">
+                        <span className="ms-1 md:text-[18px] text-[15px] font-medium text-[#40959D]">
                           {project.name}
                         </span>
                       </div>
@@ -109,10 +109,10 @@ const ProjectRoute = () => {
                         </svg>
                         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
                           <div className="group cursor-pointer relative inline-block text-center">
-                            <span className="ms-1 text-[18px] font-medium md:ms-2 text-[#244549]">
+                            <span className="ms-1 md:text-[18px] text-[15px] font-medium md:ms-2 text-[#244549]">
                               OnChain Analysis
                             </span>
-                            <div className="opacity-0 w-28 bg-[#244549] text-[#46B1BC] text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-14 px-[9px] pointer-events-none">
+                            <div className="md:block hidden opacity-0 w-28 bg-[#244549] text-[#46B1BC] text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-14 px-[9px] pointer-events-none">
                               <div className="min-h-[3px] min-w-[3px] rounded-full bg-[#46B1BC] mr-[3px] inline">
                                 ....
                               </div>

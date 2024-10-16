@@ -16,7 +16,7 @@ const TeamCard: React.FC<TeamProps> = ({ pname, github, dribble, twitter, info, 
         w-[100%] sm:rounded-full rounded-b-lg rounded-t-full h-fit min-h-full max-h-fit
         xl:gap-[6px] lg:gap-[3px] gap-[6px]
         xl:pt-3 xl:pb-[30px] xl:px-3 
-        pt-[12px] pb-[21px] px-[12px]
+        pt-[12px] pb-[21px] px-[12px] mb-24
         bg-[#272727] border-[#40959D] border-[1px]
         `}
     >
