@@ -1,6 +1,6 @@
 // import { BackgroundBeams } from "../components/ui/background-beams";
 import { brandDarkBg } from "../_utils/colors";
-import { Footer, Navbar, TeamCard } from "../components";
+import { Footer, Navbar } from "../components";
 import TeamView from "../components/AboutPage/TeamView";
 import TimelineView from "../components/AboutPage/TimelineView";
 
