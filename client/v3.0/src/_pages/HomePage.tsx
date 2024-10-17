@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Cta, Faq, Features, Footer, Hero, Navbar, ScreenshotDisplay } from "../components"
 import { Link } from "react-router-dom";
 import { FlipWords } from "../components/ui";
-import LogoLoader from "../components/LogoLoader";
+// import LogoLoader from "../components/LogoLoader";
 
 const HomePage = () => {
   const words = ["Users", "Projects", "You"];
