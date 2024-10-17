@@ -39,7 +39,7 @@ const Hero = () => {
         text-[15px] leading-[21px] tracking-wider
         font-sans font-light opacity-75 ">First ever platform on AO and Arweave
         <span className="sm:inline block"> to enable users to</span> 
-        <span className="sm:block">Analyse, Invest and Earn
+        <span className="sm:block">Analyse, Invest and Earn{" "}
         <span className="sm:inline block">in Projects they can Trust!</span></span></h6>
         </div>
         <div className="w-fit rtlAnim mt-[30px] ml-[-60px]">
