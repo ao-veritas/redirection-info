@@ -11,7 +11,7 @@ const Footer = () => {
                   <img src="/logos/RecLogoDark.svg" className="h-[45px] me-3" alt="FlowBite Logo" />
               </Link>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3 text-center sm:text-left">
               <div>
                   {/* <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2> */}
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -105,7 +105,6 @@ const Footer = () => {
                       </li>
                   </ul>
               </div>
-
           </div>
         </div>
       <hr className="my-6 border-[#212121] sm:mx-auto lg:my-8" />
