@@ -21,6 +21,7 @@ import { humanizeDuration } from "../_utils/helpers";
 import { toast } from "sonner";
 import { Avatar, AvatarFallback, AvatarImage, Badge, Button, Card, CardContent, CardDescription, CardHeader, CardTitle, Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui";
 import { Loader } from "../components";
+import ConfettiExplosion from 'react-confetti-explosion'
 
 export default function Component({ pid }: any) {
   const saturnID: string = import.meta.env.VITE_SATURN_ID;
@@ -621,7 +622,7 @@ export default function Component({ pid }: any) {
           </Tabs>
         </div>
         {isModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-[#626262] bg-opacity-50 backdrop-blur-sm">
+          <div className="fixed inset-0 z-40 flex items-center justify-center w-full h-full bg-[#626262] bg-opacity-50 backdrop-blur-sm">
             <div className="relative w-fit max-w-[450px] bg-[#111111] p-8 rounded-[9px] ">
               <button
                 onClick={closeModalHandler}
@@ -777,9 +778,12 @@ export default function Component({ pid }: any) {
                     } text-[#f1f1f1]  rounded m-4`}
                   >
                     {rewardsSent ? (
-                      <Link to="/user" className="py-[6px] px-[18px]">
-                        See Your Profile
-                      </Link>
+                      <div>
+                          <Link to="/user" className="py-[6px] px-[18px]">
+                            See Your Profile
+                          </Link>
+                          <ConfettiExplosion zIndex={99} force={0.8} duration={3000} particleCount={250} width={1600}/>
+                      </div>
                     ) : (
                       <div className="flex gap-4 py-[6px] px-[18px]">
                         <Loader />
