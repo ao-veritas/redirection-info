@@ -22,6 +22,7 @@ import { toast } from "sonner";
 import { Avatar, AvatarFallback, AvatarImage, Badge, Button, Card, CardContent, CardDescription, CardHeader, CardTitle, Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui";
 import { Loader } from "../components";
 import ConfettiExplosion from 'react-confetti-explosion'
+import BinaryPredictionModal from "../components/ProjectPage/Predict";
 
 export default function Component({ pid }: any) {
   const saturnID: string = import.meta.env.VITE_SATURN_ID;
@@ -482,6 +483,7 @@ export default function Component({ pid }: any) {
                     {" "}
                     {currentProject?.mileStones.length
                       ? currentProject?.mileStones.map((milestone, index) => (
+                        <div className="flex justify-between">
                           <li key={index} className="mb-10 ms-6">
                             <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-4  ring-gray-900 bg-cyan-900">
                               <svg
@@ -541,6 +543,8 @@ export default function Component({ pid }: any) {
                               "N/A"
                             </p>
                           </li>
+                          <BinaryPredictionModal />
+                        </div>
                         ))
                       : " N/A"}
                   </ol>
