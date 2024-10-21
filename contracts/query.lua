@@ -336,10 +336,10 @@ Handlers.add(
         --     { "Post-Real-Data", "Get-Real-Data" })
         -- print(json.encode(messageActivityData.totalMessageDistribution))
 
-        local userActivityData = parseData.getUserActivityData(data, "tags.Sender", "X-Action",
+        local userActivityData = parseData.getUserActivityData(data, "Tags.Sender", "X-Action",
             { "Post-Real-Data", "Get-Real-Data" })
 
-        print(json.encode(userActivityData.totalUserActivity))
+        print(json.encode(userActivityData.uniqueUsers))
 
         print('TEST_RESPONSE parsed successfully')
     end
