@@ -91,18 +91,18 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
   }, [sortedTokenBalances]);
 
   return (
-    <div className="grid w-[90%] grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+    <div className="flex flex-col justify-center items-center  w-[90%] lg:grid lg:grid-cols-6 gap-4">
       {/* project details */}
-      <Card className="col-span-4 bg-zinc-900 text-zinc-300">
+      <Card className="col-span-4 bg-zinc-900 text-zinc-300 w-full">
         <CardHeader>
           <CardTitle>Project Details</CardTitle>
           <CardDescription>Key information about the project</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="space-y-2">
-            <p>
+          <div className="space-y-2 flex flex-col">
+            <div className="break-words">
               <strong>Process ID:</strong> {project.processID}
-            </p>
+            </div>
             <p>
               <strong>Token ID:</strong> {project.tokenID}
             </p>
@@ -120,7 +120,7 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
         </CardContent>
       </Card>
       {/* user stats */}
-      <Card className="col-span-2 bg-zinc-900 text-zinc-300">
+      <Card className="col-span-2 bg-zinc-900 text-zinc-300 w-full">
         <CardHeader>
           <CardTitle>Unique Users</CardTitle>
           <CardDescription>Current user statistics as of {userMetrics[userMetrics.length - 1].date}</CardDescription>
@@ -148,15 +148,15 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
       </Card>
 
       {/* Token Distribution */}
-      <Card className="col-span-3 bg-zinc-900 text-zinc-300">
+      <Card className="col-span-3 bg-zinc-900 text-zinc-300 w-full">
         <CardHeader>
           <CardTitle>Token Distribution</CardTitle>
           <CardDescription>Pie chart of token distribution (without project token address)</CardDescription>
         </CardHeader>
         <CardContent>
           <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie nameKey="address" data={processedTokenBalances} cx="50%" cy="50%" labelLine={false} outerRadius={80} fill="#0E9C9C" dataKey="quantity">
+            <PieChart className="flex flex-col">
+              <Pie nameKey="address" data={processedTokenBalances} cx="50%" cy="50%" labelLine={false} outerRadius={"80%"} fill="#0E9C9C" dataKey="quantity" innerRadius="50%">
                 {processedTokenBalances.map((_, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
@@ -171,9 +171,9 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
                     payload: { address: string; quantity: number };
                   };
                   return (
-                    <span className="flex items-center justify-between w-full">
+                    <span className="flex items-center justify-between text-sm w-full">
                       <span className="font-medium">{truncateAddress(payload.address)}</span>
-                      <span className="text-gray-600 ml-2">{Number(payload.quantity).toLocaleString()} tokens</span>
+                      {/* <span className="text-gray-600 ml-2">{Number(payload.quantity).toLocaleString()} tokens</span> */}
                     </span>
                   );
                 }}
@@ -184,7 +184,7 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
       </Card>
 
       {/* Token Balance Histogram */}
-      <Card className="col-span-3 bg-zinc-900 text-zinc-300">
+      <Card className="col-span-3 bg-zinc-900 text-zinc-300 w-full">
         <CardHeader>
           <CardTitle>Token Balance Distribution</CardTitle>
           <CardDescription>Histogram of token balances</CardDescription>
@@ -217,7 +217,7 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
       </Card>
 
       {/* user metrics */}
-      <Card className="col-span-4 bg-zinc-900 text-zinc-300">
+      <Card className="col-span-4 bg-zinc-900 text-zinc-300 w-full">
         <CardHeader>
           <CardTitle>User Metrics</CardTitle>
           <CardDescription>The DAU, WAU and MAU for the project</CardDescription>
@@ -245,7 +245,7 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
       </Card>
 
       {/* Lifetime Users */}
-      <Card className="col-span-2 bg-zinc-900 text-zinc-300">
+      <Card className="col-span-2 bg-zinc-900 text-zinc-300 w-full">
         <CardHeader>
           <CardTitle>Lifetime Users</CardTitle>
           <CardDescription>The total unique user growth</CardDescription>
@@ -271,7 +271,7 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
       </Card>
 
       {/* Area chart */}
-      <Card className="col-span-4 bg-zinc-900 text-zinc-300">
+      <Card className="col-span-4 bg-zinc-900 text-zinc-300 w-full">
         <CardHeader>
           <CardTitle>Message Activity</CardTitle>
           <CardDescription>Area chart showing messages sent by users over time</CardDescription>
@@ -307,7 +307,7 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
       </Card>
 
       {/* pie chart */}
-      <Card className="col-span-2 bg-zinc-900 text-zinc-300">
+      <Card className="col-span-2 bg-zinc-900 text-zinc-300 w-full">
         <CardHeader>
           <CardTitle>Message Distribution</CardTitle>
           <CardDescription>Pie chart of message distribution</CardDescription>
