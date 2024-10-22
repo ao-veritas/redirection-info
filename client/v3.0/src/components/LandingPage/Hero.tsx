@@ -39,7 +39,7 @@ const Hero = () => {
         text-[15px] leading-[21px] tracking-wider
         font-sans font-light opacity-75 ">First ever platform on AO and Arweave
         <span className="sm:inline block"> to enable users to</span> 
-        <span className="sm:block">Analyse, Invest and Earn
+        <span className="sm:block">Analyse, Invest and Earn{" "}
         <span className="sm:inline block">in Projects they can Trust!</span></span></h6>
         </div>
         <div className="w-fit rtlAnim mt-[30px] ml-[-60px]">
@@ -60,7 +60,7 @@ const Hero = () => {
           lg:tracking-wider tracking-tight
           py-[10.5px] bg-[#40959D]">Learn More</button>
         </Link>
-        <Link to="https://discord.gg/Ee84m9Cf">
+        <Link to="https://discord.gg/uSR7KWhx9F">
           <button className="hover:bg-[#40959d36] hover:tracking-wider rounded-[9px] 
           xl:w-[210px] sm:w-[180px] w-[120px]
           xl:text-[18px] sm:text-[15px]  text-[13.5px]
