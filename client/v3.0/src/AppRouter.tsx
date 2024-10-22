@@ -11,6 +11,7 @@ import ProjectRoute from './_pages/ProjectRoute';
 // import UserDashboard from './components/UserDashboard';
 import ComingSoon from './_pages/ComingSoon';
 import ProjectsDisplay from './_pages/ProjectsDisplay';
+import Analysis from './_pages/Analysis';
 
 const AppRouter: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const AppRouter: React.FC = () => {
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route path="/project/:processID" element={<ProjectRoute />} />
         <Route path="*" element={<ComingSoon />} />
+        <Route path='/project/:processID/analysis' element={<Analysis />}/>
       </Routes>
     </Router>
   );
