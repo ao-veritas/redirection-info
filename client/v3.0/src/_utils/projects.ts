@@ -104,7 +104,7 @@ export const projects:ProjectType[] = [
         links: {
             website: "https://redirection-info.vercel.app/",
             docs: "",
-            discord: "https://discord.gg/Ee84m9Cf",
+            discord: "https://discord.gg/uSR7KWhx9F",
             twitter: "https://x.com/Veritas_ao",
             github: "https://github.com/ao-veritas",
             telegram:"",
