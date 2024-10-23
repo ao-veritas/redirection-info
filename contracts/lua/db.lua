@@ -5,7 +5,7 @@ print('Hello AO!')
 local sqlite3 = require('lsqlite3')
 local json = require('json')
 DB = DB or sqlite3.open_memory()
-DbAdmin = DbAdmin or require('DbAdmin').new(DB)
+DbAdmin = DbAdmin or require('contracts.lua.DbAdmin').new(DB)
 
 
 function createTableData()
