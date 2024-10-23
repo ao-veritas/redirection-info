@@ -156,7 +156,7 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
         <CardContent>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart className="flex flex-col">
-              <Pie nameKey="address" data={processedTokenBalances} cx="50%" cy="50%" labelLine={false} outerRadius={"80%"} fill="#0E9C9C" dataKey="quantity" innerRadius="50%">
+              <Pie nameKey="address" data={processedTokenBalances} cx="50%" cy="50%" labelLine={false} outerRadius={"80%"} fill="#0E9C9C" dataKey="quantity" >
                 {processedTokenBalances.map((_, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
