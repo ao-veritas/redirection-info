@@ -75,9 +75,9 @@ const Analysis = () => {
     <>
       <Navbar />
       {projectWithAnalysis.length > 0 ? (
-        <main className="bg-[#111111] w-full py-[120px] flex flex-col items-center min-h-[96vh] max-w-[1800px]">
+        <main className="bg-[#111111] w-full py-[120px] flex flex-col items-center min-h-[96vh]">
           <nav
-            className="flex w-full items-center justify-start md:px-20 px-[18px] max-w-[1800px]"
+            className="flex w-full items-center justify-start md:px-20 px-[18px]"
             aria-label="Breadcrumb"
           >
             <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">

@@ -565,7 +565,7 @@ export default function Component({ pid }: any) {
                   {/* <BinaryPredictionModal /> */}
                   <div className="group cursor-pointer relative inline-block text-center">
                     <Button className="bg-white text-black hover:bg-zinc-300"> 
-                      Open Prediction Marketplace
+                      Predict
                     </Button>
                     <div className="opacity-0 w-[120px] bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-14 px-[9px] pointer-events-none">
                       <div className="min-h-[3px] min-w-[3px] rounded-full bg-black mr-[3px] inline">

@@ -91,7 +91,7 @@ const Dashboard = ({ project, messageActivity, messageDistribution, tokenBalance
   }, [sortedTokenBalances]);
 
   return (
-    <div className="flex flex-col justify-center items-center  w-[90%] lg:grid lg:grid-cols-6 gap-4">
+    <div className="flex flex-col justify-center items-center  w-[90%] lg:grid lg:grid-cols-6 gap-4 max-w-[1800px]">
       {/* project details */}
       <Card className="col-span-4 bg-zinc-900 text-zinc-300 w-full">
         <CardHeader>
