@@ -1,0 +1,13 @@
+## AoForm Configuration
+## This file is used to configure the AoForm package
+## For more information, visit https://github.com/Autonomous-Finance/aoform
+
+- name: Orbit
+  file: build/main.lua
+  scheduler: _GQ33BkPtZrqxA84vM8Zk-N2aO0toNNu_C-l-rawrBA
+  module: GYrbbe0VbHim_7Hi6zrOpHQXrSQz07XNtwCnfbFo2I0
+  tags:
+    - name: App-Name
+      value: Veritas
+    - name: Project
+      value: 0rbit
