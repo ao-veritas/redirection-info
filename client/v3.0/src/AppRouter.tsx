@@ -6,7 +6,7 @@ import HomePage from './_pages/HomePage';
 import Faucet from './_pages/Faucet';
 // import User from './_pages/User';
 import About from './_pages/About';
-import Dashboard from './_pages/Dashboard';
+// import Dashboard from './_pages/Dashboard';
 import ProjectRoute from './_pages/ProjectRoute';
 // import UserDashboard from './components/UserDashboard';
 import ComingSoon from './_pages/ComingSoon';
@@ -24,7 +24,7 @@ const AppRouter: React.FC = () => {
         <Route path="/faucet" element={<Faucet />} />
         <Route path="/projects" element={<ProjectsDisplay/>} />
         {/* <Route path="/user" element={<UserDashboard />} /> */}
-        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route path="/project/:processID" element={<ProjectRoute />} />
         <Route path="*" element={<ComingSoon />} />
         <Route path='/project/:processID/analysis' element={<Analysis />}/>
