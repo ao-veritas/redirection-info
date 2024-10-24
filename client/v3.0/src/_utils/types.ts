@@ -16,6 +16,7 @@ export type UserStakes = {
 
 export type ProjectType = {
     name: string;
+    analysis: boolean;
     processID: string;
     logoImageLink: string;
     bannerLink: string;
