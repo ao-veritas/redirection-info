@@ -6,6 +6,7 @@ import {
   ExternalLink,
   Dribbble,
   Lock,
+  ChartNoAxesCombined,
   Unlock,
 } from "lucide-react";
 import { DiscordLogoIcon } from "@radix-ui/react-icons";
@@ -15,13 +16,15 @@ import { projects } from "../_utils/projects";
 import { getAllTransactions } from "../_utils/info";
 import { useUserAoETH } from "../_utils/useAoEth";
 import { useActiveAddress } from "arweave-wallet-kit";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import stake from "../_utils/stake";
 import { humanizeDuration } from "../_utils/helpers";
 import { toast } from "sonner";
 import { Avatar, AvatarFallback, AvatarImage, Badge, Button, Card, CardContent, CardDescription, CardHeader, CardTitle, Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui";
 import { Loader } from "../components";
 import ConfettiExplosion from 'react-confetti-explosion'
+// import BinaryPredictionModal from "../components/ProjectPage/Predict";
+
 
 export default function Component({ pid }: any) {
   const saturnID: string = import.meta.env.VITE_SATURN_ID;
@@ -31,7 +34,7 @@ export default function Component({ pid }: any) {
   const [stakeLoading, setStakeLoading] = useState(false);
   const [currentTransTimestamp, setCurrentTransTimestamp] =
     useState<number>(1826424517808);
-
+  const { processID } = useParams()
   const [recievedAoETH, setRecievedAoETH] = useState(false);
   const recievedAoETHRef = useRef(recievedAoETH);
   const [projectConfirmedStake, setProjectConfirmedStake] = useState(false);
@@ -172,6 +175,7 @@ export default function Component({ pid }: any) {
       }
     });
   }, []);
+  const navigate = useNavigate();
   if (currentProject) {
     return (
       <>
@@ -267,6 +271,19 @@ export default function Component({ pid }: any) {
                   </p>
                 </div>
                 <div className="flex md:flex-col flex-row gap-3">
+                  <Button onClick={() => {
+                    navigate(`/project/${processID}/analysis`)
+                  }}
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    className="bg-[#46B1BC] text-[#eeeeee] border-none hover:bg-[#46b0bc99] hover:text-[#eeeeee]"
+                  >
+                    <span>
+                      <ChartNoAxesCombined className="mr-2 h-4 w-4" />
+                      Get Analytics
+                    </span>
+                  </Button>
                   <Button
                     onClick={() => {
                       if (currentProject.processID == saturnID) {
@@ -477,11 +494,11 @@ export default function Component({ pid }: any) {
                 <CardHeader className="text-[#eeeeee] text-[21px]">
                   <CardTitle>Project Milestones</CardTitle>
                 </CardHeader>
-                <CardContent className="text-[#eeeeeec4] px-10">
+                <CardContent className="text-[#eeeeeec4] px-10 flex justify-between">
                   <ol className="relative border-s border-gray-200">
                     {" "}
-                    {currentProject?.mileStones.length
-                      ? currentProject?.mileStones.map((milestone, index) => (
+                    {currentProject?.mileStones.length ? currentProject?.mileStones.map((milestone, index) => (
+                        <div>
                           <li key={index} className="mb-10 ms-6">
                             <span className="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-4  ring-gray-900 bg-cyan-900">
                               <svg
@@ -541,9 +558,33 @@ export default function Component({ pid }: any) {
                               "N/A"
                             </p>
                           </li>
+                        </div>
                         ))
                       : " N/A"}
                   </ol>
+                  {/* <BinaryPredictionModal /> */}
+                  <div className="group cursor-pointer relative inline-block text-center">
+                    <Button className="bg-white text-black hover:bg-zinc-300"> 
+                      Predict
+                    </Button>
+                    <div className="opacity-0 w-[120px] bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-14 px-[9px] pointer-events-none">
+                      <div className="min-h-[3px] min-w-[3px] rounded-full bg-black mr-[3px] inline">
+                        ....
+                      </div>
+                      Coming Soon
+                      <svg
+                        className="absolute text-black h-2 w-full left-0 top-full"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 255 255"
+                      >
+                        <polygon
+                          className="fill-current"
+                          points="0,0 127.5,127.5 255,0"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
