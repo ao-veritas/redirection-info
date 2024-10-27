@@ -1,4 +1,5 @@
 import { ProjectType } from "./types";
+import VeritasLogo from '../assets/SqLogoDark.svg'
 
 export const projects:ProjectType[] = [
     {
@@ -89,7 +90,7 @@ export const projects:ProjectType[] = [
             name:"Veritas",
             link:"/",
             info:"",
-            logoImageLink:"/logos/SqLogoDark.svg"
+            logoImageLink:VeritasLogo
         }],
         ownershipPercentages:[{
             name:"",
@@ -101,7 +102,7 @@ export const projects:ProjectType[] = [
         name: "Veritas",
         analysis: false,
         processID: "l13OiZyp7T5YpmOqofjHRGyCbrpllLZp4HOyfa2WLPQ",
-        logoImageLink: "https://redirection-info.vercel.app/logos/SqLogoDark.svg",
+        logoImageLink: "logos/SqLogoDark.svg",
         bannerLink:"",
         links: {
             website: "https://redirection-info.vercel.app/",
@@ -545,7 +546,7 @@ export const projects:ProjectType[] = [
         name: "SENTIO",
         analysis: false,
         processID: "processID for Sentio",
-        logoImageLink: "https://i.imgur.com/g9pcK7y.jpeg",
+        logoImageLink: "https://sentio.vercel.app/assets/logo-95vWaCvQ.png",
         bannerLink:"https://i.imgur.com/PNtsCAB.png",
         links: {
             website: "https://sentio.vercel.app",

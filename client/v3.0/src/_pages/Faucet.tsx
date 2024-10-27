@@ -20,7 +20,7 @@ export default function Faucet() {
   const [loading, setLoading] = useState(false);
 
   if (!address) {
-    <div className="text-white flex justify-center items-start h-60">
+    <div className="text-white justify-center items-start h-60 hidden md:flex">
       <ConnectButton />
     </div>;
   }
@@ -56,15 +56,15 @@ export default function Faucet() {
     <>
       <Navbar />
       <main
-        className={`flex flex-col items-center justify-start gap-12 px-20 pt-[120px] ${brandDarkBg} min-h-[100vh] w-full`}
+        className={`flex flex-col items-center justify-start gap-12 px-8 pt-[120px] ${brandDarkBg} min-h-[100vh] w-full`}
       >
         <section
           className="flex flex-col gap-[18px] items-center justify-between 
       rounded-[21px] px-[105px] py-[45px] mt-[60px]
       text-[#f1f1f1] faucetBg z-10 backdrop-blur-[1.8px] border-[1px] border-[#205156]
-      w-fit"
+      w-full"
         >
-          <h1 className="text-[60px] font-medium tracking-wider leading-[63px]">
+          <h1 className="text-[60px] font-medium tracking-wider text-center leading-[63px]">
             <span className="text-[#40959D]">$TAoEth</span> Faucet
           </h1>
           <h6 className="text-[21px] font-extralight font-sans text-center tracking-widest">
@@ -73,27 +73,27 @@ export default function Faucet() {
           </h6>
           {connected ? (
             <>
-              <div className="flex flex-col justify-start items-start bg-[#243939] px-[45px] py-[15px] rounded-[9px] text-[18px]">
-                <h4 className="text-[#46B1BC]">
+              <div className="flex flex-col justify-start items-start bg-[#243939] px-[45px] py-[15px] rounded-[9px] text-[18px] w-full">
+                <div className="text-[#46B1BC] w-full">
                   Wallet Address:{" "}
-                  <span className="text-[#f1f1f1]">
+                  <div className="text-[#f1f1f1] break-words w-full">
                     adoS8VxhDBWDi0OWHiDAnHMjj4F7CmTy7IM16xwPY0I
-                  </span>
-                </h4>
-                <h4 className="text-[#46B1BC]">
+                  </div>
+                </div>
+                <div className="text-[#46B1BC] w-full">
                   $TAoEth Balance:{" "}
-                  <span className="text-[#f1f1f1]">
+                  <div className="text-[#f1f1f1] break-words w-full">
                     {aoethBalance == null ? (
-                      <div className="animate-pulse space-y-2">
-                        <div className="bg-gray-300 h-6 w-48 rounded"></div>
+                      <div className="animate-pulse space-y-2 w-full">
+                        <div className="bg-gray-300 h-6 rounded break-words w-full md:w-48"></div>
                       </div>
                     ) : (
-                      <span className="text-[#f1f1f1] text-[24px]">
+                      <div className="text-[#f1f1f1] text-[24px] w-full break-words">
                         {aoethBalance.toFixed(2)} $tAoEth
-                      </span>
+                      </div>
                     )}
-                  </span>
-                </h4>
+                  </div>
+                </div>
                 {/* <h2 className="text-[#40959D] text-[27px] tracking-widest">$tAoEth Balance:</h2>
                  */}
               </div>
