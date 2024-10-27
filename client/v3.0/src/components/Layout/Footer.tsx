@@ -57,7 +57,7 @@ const Footer = () => {
                   {/* <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2> */}
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
                       <li className="mb-4">
-                          <Link to="https://discord.gg/Ee84m9Cf" target="_blank" className="hover:underline ">Help Center</Link>
+                          <Link to="https://discord.gg/uSR7KWhx9F" target="_blank" className="hover:underline ">Help Center</Link>
                       </li>
                       <li className="mb-4">
                           <Link to="https://hashnode.com/@Veritas-ao" target="_blank" className="hover:underline">Blogs</Link>
@@ -71,7 +71,7 @@ const Footer = () => {
                   {/* <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2> */}
                   <ul className="text-gray-500 dark:text-gray-400 font-medium">
                       <li className="mb-4">
-                          <Link to="https://discord.gg/Ee84m9Cf" target="_blank" className="hover:underline">Careers</Link>
+                          <Link to="https://discord.gg/uSR7KWhx9F" target="_blank" className="hover:underline">Careers</Link>
                       </li>
                       <li className="mb-4">
                           <Link to="/about" className="hover:underline">About Team</Link>
@@ -112,7 +112,7 @@ const Footer = () => {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <Link to="/" className="hover:underline">Veritas</Link>. All Rights Reserved.
           </span>
           <div className="flex flex-row md:gap-[36px] gap-[18px] items-center justify-between pt-[9px]">
-          <Link to="https://discord.gg/Ee84m9Cf" target="_blank"><img src="/socials/gradient/discordCTA.svg" alt="" className="w-[27px] h-[27px]"/></Link>
+          <Link to="https://discord.gg/uSR7KWhx9F" target="_blank"><img src="/socials/gradient/discordCTA.svg" alt="" className="w-[27px] h-[27px]"/></Link>
             <Link to="https://x.com/Veritas_ao" target="_blank"><img src="/socials/gradient/twitterCTA.svg" alt="" className="w-[27px] h-[27px]"/></Link>
             <Link to="https://github.com/ao-veritas" target="_blank"><img src="/socials/gradient/githubCTA.svg" alt="" className="w-[27px] h-[27px]"/></Link>
             <Link to="https://calendly.com/taveesha-agarwal/collab-calls" target="_blank"><img src="/socials/gradient/calendlyCTA.svg" alt="" className="w-[27px] h-[27px]"/></Link>
