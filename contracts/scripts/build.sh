@@ -22,7 +22,8 @@ cd build-lua
 amalg.lua -s main.lua -o ../build/main.lua \
     db utils.utils.tl-utils utils.utils.dbAdmin utils.utils.db-utils utils.globals \
     utils.constants \
-    main
+    main \
+    query parse
 
 
 # FINAL RESULT is build/main.lua

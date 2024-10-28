@@ -5,7 +5,8 @@ local record json
 	-- Workaround for not being able to union Array and Object
 	type Mixed = {string|integer:Value}
 	
-	type Value = number | string | boolean | Mixed
+	-- type Value = number | string | boolean | Mixed | {any:any}
+	type Value = {any: any}
 	
 	-- For convenience, encode takes any type and may throw an error at runtime.
 	-- You can enforce correctness yourself by specifying types on variables or records.

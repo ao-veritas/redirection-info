@@ -30,7 +30,7 @@ local function getNestedValue(obj, key)
 end
 
 -- Helper function to get table keys
-local function tableKeys(t)
+local function _tableKeys(t)
     local keys = {}
     for k in pairs(t) do
         table.insert(keys, k)
@@ -38,7 +38,7 @@ local function tableKeys(t)
     return keys
 end
 
-function getMessageActivityData(fullData, tagActionKey, actionValues)
+local function getMessageActivityData(fullData, tagActionKey, actionValues)
     local messageActivity = {}
 
     for _, item in ipairs(fullData) do
@@ -99,7 +99,7 @@ function getMessageActivityData(fullData, tagActionKey, actionValues)
     return { totalMessageActivity = result, totalMessageDistribution = totalCounts }
 end
 
-function getUserActivityData(fullData, userIdKey, tagActionKey, actions)
+local function getUserActivityData(fullData, userIdKey, userIdInTags, tagActionKey, actions)
     local userActivity = {}
 
     for _, item in ipairs(fullData) do
@@ -129,11 +129,11 @@ function getUserActivityData(fullData, userIdKey, tagActionKey, actions)
     for date, counts in pairs(userActivity) do
         local entry = {
             date = date,
-            total = #tableKeys(counts.total),
-            addresses = tableKeys(counts.addresses)
+            total = #_tableKeys(counts.total),
+            addresses = _tableKeys(counts.addresses)
         }
         for _, action in ipairs(actions) do
-            entry[action] = #tableKeys(counts[action] or {})
+            entry[action] = #_tableKeys(counts[action] or {})
         end
         table.insert(result, entry)
     end
@@ -151,7 +151,7 @@ function getUserActivityData(fullData, userIdKey, tagActionKey, actions)
                     window[user] = true
                 end
             end
-            table.insert(activeUsers, { date = data[i].date, activeUsers = #tableKeys(window) })
+            table.insert(activeUsers, { date = data[i].date, activeUsers = #_tableKeys(window) })
         end
         return activeUsers
     end
@@ -183,7 +183,7 @@ function getUserActivityData(fullData, userIdKey, tagActionKey, actions)
         if user then
             allUsers[user] = true
         end
-        uniqueUsers[date] = #tableKeys(allUsers)
+        uniqueUsers[date] = #_tableKeys(allUsers)
     end
 
     -- Convert to array of objects and sort by date

@@ -20,3 +20,5 @@ if not INIT then
     dbFunctions.createTableData()
     INIT = true
 end
+
+require("query")

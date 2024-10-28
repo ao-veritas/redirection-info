@@ -1,23 +1,29 @@
 local json = require("json")
 local utils = require("utils.utils.tl-utils")
+require("utils.globals")
 
+local enum UserIdTopLevelKey
+    "tags"
+    "recipient"
+    "owner"
+end
 -- Helper function to get nested value
-local function getNestedValue(obj: table, key: string): any
-    local keys: {string} = {}
-    for k in string.gmatch(key, "[^.]+") do
-        table.insert(keys, k)
+local function getNestedValue(obj: DataRecord, key: string, userIdTopLevelKey: UserIdTopLevelKey): string
+    
+    if userIdTopLevelKey == "tags" then
+        local valueObj: {any: any} = json.decode(obj.tags as string)
+        return valueObj[key] as string
     end
-    local value: any = obj
-    for _, k in ipairs(keys) do
-        value = value[k]
-        if k == "Tags" then
-            value = json.decode(value as string)
-        end
-        if value == nil then
-            return nil
-        end
+
+    if userIdTopLevelKey == "recipient" then
+        return obj.recipient
     end
-    return value
+
+    if userIdTopLevelKey == "owner" then
+        return obj.owner
+    end
+
+    return nil
 end
 
 -- Helper function to get table keys
@@ -32,6 +38,7 @@ end
 local record MessageActivityItem
     date: string
     total: integer
+    action_counts: {string:integer}
     distribution: {string:number}
 end
 
@@ -46,7 +53,9 @@ local record MessageActivityResult
 end
 
 local function getMessageActivityData(fullData: {table}, tagActionKey: string, actionValues: {string}): MessageActivityResult
+    
     local messageActivity: {string:{string:integer}} = {}
+    -- date -> action -> count
 
     for _, item in ipairs(fullData) do
         local date = os.date("%Y-%m-%d", item.Timestamp as number)
@@ -70,7 +79,7 @@ local function getMessageActivityData(fullData: {table}, tagActionKey: string, a
         local entry: MessageActivityItem = { date = date, total = counts.total, distribution = {} }
         for k, v in pairs(counts) do
             if k ~= "total" then
-                entry[k] = v
+                entry.action_counts[k] = v
             end
         end
         table.insert(result, entry)
@@ -87,7 +96,7 @@ local function getMessageActivityData(fullData: {table}, tagActionKey: string, a
 
     for _, item in ipairs(result) do
         for _, action in ipairs(actionValues) do
-            item.distribution[action] = item[action] / totalMessages
+            item.distribution[action] = item.action_counts[action] / totalMessages
         end
     end
 
@@ -96,7 +105,7 @@ local function getMessageActivityData(fullData: {table}, tagActionKey: string, a
     for _, action in ipairs(actionValues) do
         local count = 0
         for _, item in ipairs(result) do
-            count = count + (item[action] as number)
+            count = count + (item.action_counts[action] as integer)
         end
         table.insert(totalCounts, { name = action, count = count })
     end
@@ -107,6 +116,7 @@ end
 local record UserActivityItem
     date: string
     total: integer
+    action_counts: {string:integer}
     addresses: {string}
 end
 
@@ -133,13 +143,16 @@ local record UserActivityResult
     uniqueUsers: {UniqueUsers}
 end
 
-local function getUserActivityData(fullData: {table}, userIdKey: string, tagActionKey: string, actions: {string}): UserActivityResult
+
+
+local function getUserActivityData(fullData: {DataRecord}, userIdKey: string, userIdTopLevelKey: UserIdTopLevelKey, tagActionKey: string, actions: {string}): UserActivityResult
     local userActivity: {string:{string:{string:boolean}}} = {}
+    -- date -> action -> user -> boolean
 
     for _, item in ipairs(fullData) do
-        local user = getNestedValue(item, userIdKey) as string
-        local action = (json.decode(item.Tags as string) as table)[tagActionKey] as string
-        local date = os.date("%Y-%m-%d", item.Timestamp as number)
+        local user = getNestedValue(item, userIdKey, userIdTopLevelKey)
+        local action = (json.decode(item.tags as string) as table)[tagActionKey] as string
+        local date = os.date("%Y-%m-%d", item.timestamp as number)
 
         if not userActivity[date] then
             userActivity[date] = { total = {}, addresses = {} }
@@ -166,7 +179,7 @@ local function getUserActivityData(fullData: {table}, userIdKey: string, tagActi
             addresses = tableKeys(counts.addresses)
         }
         for _, action in ipairs(actions) do
-            entry[action] = #tableKeys(counts[action] or {})
+            entry.action_counts[action] = #tableKeys(counts[action] or {})
         end
         table.insert(result, entry)
     end
@@ -211,8 +224,8 @@ local function getUserActivityData(fullData: {table}, userIdKey: string, tagActi
     local allUsers: {string:boolean} = {}
     local uniqueUsers: {string:integer} = {}
     for _, item in ipairs(fullData) do
-        local user = getNestedValue(item, userIdKey) as string
-        local date = os.date("%Y-%m-%d", item.Timestamp as number)
+        local user = getNestedValue(item, userIdKey, userIdTopLevelKey) as string
+        local date = os.date("%Y-%m-%d", item.timestamp as number)
         if user then
             allUsers[user] = true
         end
