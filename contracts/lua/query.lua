@@ -2,9 +2,9 @@
 -- test0rbitsql - _y0cUKnoQevsE6fOGkdQPk0dM64Ps2KS3uPzm6S17e0
 
 local json = require("json")
-local db = require("db")
-local parseData = require("parse")
-_0rbitHelper = require("_0rbit")
+local db = require("contracts.lua.db")
+local parseData = require("contracts.lua.parse")
+_0rbitHelper = require("contracts.src._0rbit")
 
 
 _0RBIT = "BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ"

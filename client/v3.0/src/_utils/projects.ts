@@ -1,8 +1,10 @@
 import { ProjectType } from "./types";
+import VeritasLogo from '../assets/SqLogoDark.svg'
 
 export const projects:ProjectType[] = [
     {
         name: "Saturn",
+        analysis: false,
         processID:"rXQaiyznUgDrt7A0Nzl9OQN2QBJ3we1X3qMe2W5DBXU",
         logoImageLink:"https://wkypibie7ccprx5ujbbqddvhyotazjdchydxq6w4pd6j7hik5ipa.arweave.net/srD0BQT4hPjftEhDAY6nw6YMpGI-B3h63Hj8n50K6h4",
         bannerLink:"/saturnBanner.png",
@@ -88,7 +90,7 @@ export const projects:ProjectType[] = [
             name:"Veritas",
             link:"/",
             info:"",
-            logoImageLink:"/logos/SqLogoDark.svg"
+            logoImageLink:VeritasLogo
         }],
         ownershipPercentages:[{
             name:"",
@@ -98,8 +100,9 @@ export const projects:ProjectType[] = [
     },
     {
         name: "Veritas",
+        analysis: false,
         processID: "l13OiZyp7T5YpmOqofjHRGyCbrpllLZp4HOyfa2WLPQ",
-        logoImageLink: "https://redirection-info.vercel.app/logos/SqLogoDark.svg",
+        logoImageLink: "logos/SqLogoDark.svg",
         bannerLink:"",
         links: {
             website: "https://redirection-info.vercel.app/",
@@ -226,6 +229,7 @@ export const projects:ProjectType[] = [
     },    
     {
         name: "0rbit",
+        analysis: true,
         processID:"BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ",
   logoImageLink:"https://www.0rbit.co/logos/sqLightFill.svg",
   bannerLink:"https://www.0rbit.co/logos/ogBanner.jpeg",
@@ -316,7 +320,7 @@ export const projects:ProjectType[] = [
         //     liveLink:"",
         //     other:[""]
         // }
-    ],
+        ],
         advisorsInvestors:[{
             name:"",
             role:"",
@@ -347,6 +351,7 @@ export const projects:ProjectType[] = [
     },
     {
         name: "BetterIDEa",
+        analysis: false,
         processID: "processID for BetterIDEa",
         logoImageLink: "https://betteridea.dev/logo.png",
         bannerLink:"",
@@ -539,8 +544,9 @@ export const projects:ProjectType[] = [
     // },
     {
         name: "SENTIO",
+        analysis: false,
         processID: "processID for Sentio",
-        logoImageLink: "https://i.imgur.com/g9pcK7y.jpeg",
+        logoImageLink: "https://sentio.vercel.app/assets/logo-95vWaCvQ.png",
         bannerLink:"https://i.imgur.com/PNtsCAB.png",
         links: {
             website: "https://sentio.vercel.app",
@@ -635,6 +641,7 @@ export const projects:ProjectType[] = [
     },
     {
         name: "Astro",
+        analysis: false,
         processID: "astro",
         logoImageLink: "https://cdn.prod.website-files.com/665f3be1a0fe5f53c9a67b7b/66606e51c7daecc640734f4f_astro-logo.svg",
         bannerLink:"",
@@ -778,6 +785,7 @@ export const projects:ProjectType[] = [
     },
     {
         name: "Permaswap",
+        analysis: false,
         processID: "permaswap",
         logoImageLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAABhCAMAAAD8xk/WAAAAP1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////9Du/pqAAAAFHRSTlMAgGAg378Q70AwUJ+Qz6Bwb69/jxRAXm8AAAKRSURBVGje7djLrpswEIDhwR5fMQGSef9nrVylitoJYzxGR13wL87i5PKBHTAyaPJxK/uCVEO3ly1Cs20yJsfkTyPx6YjntgRi9C64M4cVS6Cj8Gklp+OwjCO5+VjihzXHAwWpnbOCwyjD3x1FpX1OB2P9z7v9TqcLq+DIx5UD9bRYyeGjB+9e1Blm5rQn1S7U37PHQVsZJE2v804QmHbzaSczRgG1nZUxCqjtlHrZII30POFgffFBY5m2U38DTxos2JYz1cmh4ZaGg3XdQxpvkh3DRk1bkhxko6bOSY5hvzV9mTnS6ehD5oino88cOpadzkjuyJnPnI7bogXwKT+QGsXqrNM0u4X9X/5wmDx8ik52CnxKZg9/vqQ+EMgf9F2PXMF/fQzcG8MWDLDktZ09EGZ8rztBYBJnGkdWgFV+3yli80bC24VDA95E9Y+8yvIaa6IFXr1PuPZazIutS5UXWkfWOUXlYAgUpyPeEpfeEUgg5Xp+CNJViiBm6CgP31rpoF12bOe0TsJqLxYuckzDwR9y3O1cOz9wqePpaqfz+l4UjuZG6hSO5nZQrnPEB//1SscKa/2VDorPB+NOe3PG9TvRNieHZxQOfv2Qf5GQ7Xf81428tEiMA8X81G+c49/Kg8SMxinv/cacoObT5kgueI1j6BNiOLXNo3Es9WZVDgTFrpXGcYrT0ThFsfGicbJi90Dj+C4nqh1AxahpnIdi1DTOep6xI07s2qrSO14xORoHFgWjcYqC0TjmDLPCsGPbCkYYd9q3bOfhCmcXCL6hpXfW1h7gRU5CjcIzolPL34fOZaaMODWfy9/XK74MQ8acTylvU20zSTT0Du92budqZ/0hZ7qd27md/8VJ00EJtP0CaOyoPUgAnCcAAAAASUVORK5CYII=",
         bannerLink:"",
@@ -862,6 +870,7 @@ export const projects:ProjectType[] = [
     },
     {
         name: "AoClima Option",
+        analysis: false,
         processID: "",
         logoImageLink: "https://aoc-rouge.vercel.app/Aco-logo.svg",
         bannerLink:"",
@@ -945,8 +954,9 @@ export const projects:ProjectType[] = [
     },
     {
         name: "AoVest",
+        analysis: false,
         processID: "",
-        logoImageLink: "",
+        logoImageLink: "https://framerusercontent.com/images/L3qy4ICXcxgUijV6YK9BVHbLWQ8.png",
         bannerLink:"",
         links: {
             website: "https://aovest.stream/",
@@ -1026,5 +1036,232 @@ export const projects:ProjectType[] = [
             percentage: ""
         }]
     },
-    
+    {
+        name: "Apus",
+        analysis: true,
+        processID: "vp4pxoOsilVxdsRqTmLjP86CwwUwtj1RoKeGrFVxIVk",
+        logoImageLink: "https://avatars.githubusercontent.com/u/146177720?s=400&u=b44c0ae4eb6793800a4377468ab6cb0fa44e6b80&v=4",
+        bannerLink: "",
+        links: {
+            website: "https://www.apus.network/",
+            docs: "https://apus-network.gitbook.io/apus-console-docs",
+            discord: "https://discord.com/invite/NVqpWB2m8k",
+            twitter: "https://x.com/apus_network",
+            github: "https://github.com/apuslabs",
+            telegram:"",
+            other: ["", ""]
+        },
+        team: [{
+            officialName: "Ben",
+            pseudoName: "",
+            role: "Core of Contributor",
+            imgLink: "https://www.apus.network/assets/ben-Dzj21M2H.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        {
+            officialName: "Jason",
+            pseudoName: "",
+            role: "Core Architect",
+            imgLink: "https://www.apus.network/assets/jason-C0T70zFD.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        }, {
+            officialName: "Mateo Bastidas",
+            pseudoName: "",
+            role: "Head of Dev-rel",
+            imgLink: "https://www.apus.network/assets/mateo-BJtpbOx6.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        },{
+            officialName: "Conor Thacker",
+            pseudoName: "",
+            role: "Head of Community",
+            imgLink: "https://www.apus.network/assets/conor-BenAScIP.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        },{
+            officialName: "Jax",
+            pseudoName: "",
+            role: "Core Developer",
+            imgLink: "https://www.apus.network/assets/jax-V1ovJirc.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        },{
+            officialName: "Phoebe",
+            pseudoName: "",
+            role: "Core BD",
+            imgLink: "https://www.apus.network/assets/phoebe-DL9F5_fz.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        }],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "Apus Network is building towards a decentralized, trustless GPU network dedicated to providing reliable, efficient, and low-cost computational power for AI training and inference.",
+        oneLiner: "Trustless GPU Network for AI on AO",
+        token: {
+            name: "Apus",
+            ticker: "APUS",
+            processId: "al1xXXnWnfJD8qyZJvttVGq60z1VPGn4M5y6uCcMBUM",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide:"",
+        projectOrigin:"",
+        useCases: [
+        //     {
+        //     name:"",
+        //     info:"",
+        //     liveLink:"",
+        //     other:[""]
+        // }
+        ],
+        advisorsInvestors:[{
+            name:"",
+            role:"",
+            moreInfo:"",
+            amountIfAny:[""],
+        }],
+        mileStones: [{
+            goal: "POC: Edge AI Inference & Decentralized GPU markets",
+            date: "Q4 2023",
+            proof: "",
+            status: ""
+        }, {
+            goal: "Launch Seed Round",
+            date: "Q1 2024",
+            proof: "",
+            status: ""
+        },{
+            goal: "Design trustless GPU Network on AO",
+            date: "Q2 2024",
+            proof: "",
+            status: ""
+        }, {
+            goal: "AI Competition Pool Test-Net",
+            date: "Q3 2024",
+            proof: "",
+            status: ""
+        }, {
+            goal: "TGE Deterministic GPU of AO extension",
+            date: "Q4 2024",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [
+            // {
+            // name: "",
+            // link: "",
+            // info: "",
+            // logoImageLink:""
+            // }
+        ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    },
+    {
+        name: "Outcome",
+        analysis: true,
+        processID: "Dgs1OEsExsPRVcbe_3buCGf0suVKUFwMJFddqMhywbY",
+        logoImageLink: "https://www.outcome.gg/_next/image?url=%2FOutcomeLogoBlack.png&w=96&q=75",
+        bannerLink: "",
+        links: {
+            website: "https://www.outcome.gg/",
+            docs: "",
+            discord: "",
+            twitter: "https://x.com/outcome_gg",
+            github: "",
+            telegram:"",
+            other: ["", ""]
+        },
+        team: [],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "Outcøme is built on ao Computer to enable individuals to predict outcomes of games, stats, and a bunch of other things.",
+        oneLiner: "Can you predict the AO future?",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "Dgs1OEsExsPRVcbe_3buCGf0suVKUFwMJFddqMhywbY",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide:"",
+        projectOrigin:"",
+        useCases: [
+        //     {
+        //     name:"",
+        //     info:"",
+        //     liveLink:"",
+        //     other:[""]
+        // }
+        ],
+        advisorsInvestors:[{
+            name:"",
+            role:"",
+            moreInfo:"",
+            amountIfAny:[""],
+        }],
+        mileStones: [],
+        mediaMentions: [""],
+        collaborations: [
+            // {
+            // name: "",
+            // link: "",
+            // info: "",
+            // logoImageLink:""
+            // }
+        ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    } 
 ]

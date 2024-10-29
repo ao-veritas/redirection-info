@@ -109,26 +109,11 @@ const ProjectRoute = () => {
                         </svg>
                         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
                           <div className="group cursor-pointer relative inline-block text-center">
-                            <span className="ms-1 md:text-[18px] text-[15px] font-medium md:ms-2 text-[#244549]">
-                              OnChain Analysis
-                            </span>
-                            <div className="md:block hidden opacity-0 w-28 bg-[#244549] text-[#46B1BC] text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-14 px-[9px] pointer-events-none">
-                              <div className="min-h-[3px] min-w-[3px] rounded-full bg-[#46B1BC] mr-[3px] inline">
-                                ....
-                              </div>
-                              Coming Soon
-                              <svg
-                                className="absolute text-[#244549] h-2 w-full left-0 top-full"
-                                x="0px"
-                                y="0px"
-                                viewBox="0 0 255 255"
-                              >
-                                <polygon
-                                  className="fill-current"
-                                  points="0,0 127.5,127.5 255,0"
-                                />
-                              </svg>
-                            </div>
+                            <Link to={`/project/${processID}/analysis`}>
+                              <span className="ms-1 md:text-[18px] text-[15px] font-medium md:ms-2 text-[#244549]">
+                                OnChain Analysis
+                              </span>
+                            </Link>
                           </div>
                         </div>
                       </div>

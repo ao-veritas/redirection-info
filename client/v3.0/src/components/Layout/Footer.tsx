@@ -24,7 +24,7 @@ const Footer = () => {
                         <div className="relative sm:max-w-xl sm:mx-auto">
                           <div className="group cursor-pointer relative inline-block text-center">
                             <span className="text-gray-500 dark:text-gray-400 font-medium">
-                            Analysis Dashboard
+                            Documentation
                             </span>
                             <div className="opacity-0 w-[120px] bg-[#244549] text-[#46B1BC] text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-14 px-[9px] pointer-events-none">
                               <div className="min-h-[3px] min-w-[3px] rounded-full bg-[#46B1BC] mr-[3px] inline">

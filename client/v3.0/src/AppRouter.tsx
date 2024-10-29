@@ -9,9 +9,10 @@ import About from "./_pages/About";
 // import Dashboard from './_pages/Dashboard';
 import ProjectRoute from "./_pages/ProjectRoute";
 // import UserDashboard from './components/UserDashboard';
-import ComingSoon from "./_pages/ComingSoon";
-import ProjectsDisplay from "./_pages/ProjectsDisplay";
+import ComingSoon from './_pages/ComingSoon';
+import ProjectsDisplay from './_pages/ProjectsDisplay';
 import ManageProcess from "./_pages/ManageProcess";
+import Analysis from './_pages/Analysis';
 
 const AppRouter: React.FC = () => {
   return (
@@ -35,6 +36,7 @@ const AppRouter: React.FC = () => {
         <Route path="/project/:processID" element={<ProjectRoute />} />
         <Route path="/manage" element={<ManageProcess />} />
         <Route path="*" element={<ComingSoon />} />
+        <Route path='/project/:processID/analysis' element={<Analysis />}/>
       </Routes>
     </Router>
   );
