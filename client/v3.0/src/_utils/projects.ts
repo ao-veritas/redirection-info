@@ -3,57 +3,82 @@ import VeritasLogo from '../assets/SqLogoDark.svg'
 
 export const projects:ProjectType[] = [
     {
-        name: "Saturn",
-        analysis: false,
-        processID:"rXQaiyznUgDrt7A0Nzl9OQN2QBJ3we1X3qMe2W5DBXU",
-        logoImageLink:"https://wkypibie7ccprx5ujbbqddvhyotazjdchydxq6w4pd6j7hik5ipa.arweave.net/srD0BQT4hPjftEhDAY6nw6YMpGI-B3h63Hj8n50K6h4",
-        bannerLink:"/saturnBanner.png",
+        name: "0rbit",
+        analysis: true,
+        processID:"BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ",
+  logoImageLink:"https://www.0rbit.co/logos/sqLightFill.svg",
+  bannerLink:"https://www.0rbit.co/logos/ogBanner.jpeg",
         links: {
-            website: "/",
-            docs:"/",
-            discord: "https://discord.gg/MTP7BQgr",
-            twitter: "https://x.com/Veritas_ao",
-            github: "https://github.com/fundars/platform2.0",
+            website: "https://0rbit.co/",
+            docs:"https://docs.0rbit.co/",
+            discord: "https://discord.gg/JVSjqaKJgV",
+            twitter: "https://twitter.com/0rbitco",
+            github: "https://github.com/0rbit-co",
             telegram:"",
-            other: ["",""]
+            other: ["https://www.playground.0rbit.co/","https://mirror.xyz/0x26B11B188E9E69b2426FD6111302E721F423020E"]
         },
         team: [{
-            officialName:"Alice Johnson",
-            pseudoName:"JohnDaughter",
-            role:"CEO",
-            imgLink:"https://jh2ukzgb546squzma2zxtkr6ckignjy7c6thm7xhe43aj7q3norq.arweave.net/SfVFZMHvPShTLAazeao-EpBmpx8XpnZ-5yc2BP4ba6M",
+            officialName:"Yash Garg",
+            pseudoName:"megabyte",
+            role:"Co-Founder",
+            imgLink:"https://0rbit.co/team/megabyte.png",
+            links:{
+                github:"https://github.com/megabyte0x",
+                twitter:"https://x.com/megabyte0x?t=WZYKcJAvN-CM7a6yU4lPNQ&s=09",
+                dribble:"",
+                discord:"",
+                other:["",""],
+            },
+        },
+        {
+            officialName:"Ayush Agrawal",
+            pseudoName:"lucifer0x17",
+            role:"Co-Founder",
+            imgLink:"https://0rbit.co/team/lucifer.png",
             links:{
                 discord:"",
-                github:"",
-                twitter:"",
+                github:"https://github.com/Lucifer0x17",
+                twitter:"https://x.com/Lucifer0x17?t=fH5LRms3xy2hSPLJbNubaA&s=09",
                 dribble:"",
                 other:["",""],
             },
         },
         {
-            officialName:"Bob Smith",
-            pseudoName:"CryptoSmith",
-            role:"Co-Founder",
-            imgLink:"https://3v7icsuojvbggeifpyk6avvv5pz4vueyaj3kmzu65xvf5msqlgaq.arweave.net/3X6BSo5NQmMRBX4V4Fa16_PK0JgCdqZmnu3qXrJQWYE",
+            officialName:"Manishi Bhatnagar",
+            pseudoName:"",
+            role:"UI/ UX Designer",
+            imgLink:"https://0rbit.co/team/manishi.png",
             links:{
                 discord:"",
                 github:"",
-                twitter:"",
-                dribble:"",
+                twitter:"https://x.com/0xManishi?t=FKn7XBJwlIXwJR-f4KGkzw&s=09",
+                dribble:"https://dribbble.com/0xManishi",
                 other:["",""],
             },
         },
-       ],
+        {
+            officialName:"Sarthak Shah",
+            pseudoName:"",
+            role:"Engineer",
+            imgLink:"https://0rbit.co/team/sarthak.png",
+            links:{
+                discord:"",
+                github:"https://github.com/Not-Sarthak",
+                twitter:"https://x.com/0xSarthak13?t=nvsUz9hxhq2hQO25wr8Rtw&s=09",
+                dribble:"",
+                other:["",""],
+            },
+        }],
         exchangeInfo: {
             cooldownPeriod: 10,
             aoethRewardRate: 60
           },
-        description: "The Decentralized Dummy Project Functionality of Veritas. Lorem Ipsum Dolor Sit amet.",
-        oneLiner: "Decentralized Dummy Placeholder Project",
+        description: "The Decentralized Oracle Network on AO for accessing any off-chain data.",
+        oneLiner: "Decentralized Oracle Network on Arweave",
         token: {
-            name:"Sat",
-            ticker:"SAT",
-            processId:"lrTtKXMhdmMSi8ZfTsdSX24Xpm9FAo47CRHe82HZ7XA",
+            name:"0rbt",
+            ticker:"0RBT",
+            processId:"BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc",
             denomination:"",
             totalSupply:"",
             tokenomics:{
@@ -64,13 +89,13 @@ export const projects:ProjectType[] = [
         gettingStartedGuide:"",
         projectOrigin:"",
         useCases: [
-            {
-            name:"Dummy Staking for Veritas",
-            info:"",
-            liveLink:"",
-            other:[""]
-        }
-    ],
+        //     {
+        //     name:"",
+        //     info:"",
+        //     liveLink:"",
+        //     other:[""]
+        // }
+        ],
         advisorsInvestors:[{
             name:"",
             role:"",
@@ -86,12 +111,13 @@ export const projects:ProjectType[] = [
         // }
     ],
         mediaMentions:[""],
-        collaborations:[{
-            name:"Veritas",
-            link:"/",
-            info:"",
-            logoImageLink:VeritasLogo
-        }],
+        collaborations:[
+        //     {
+        //     name:"",
+        //     link:"",
+        //     info:""
+        // }
+    ],
         ownershipPercentages:[{
             name:"",
             role:"",
@@ -102,7 +128,7 @@ export const projects:ProjectType[] = [
         name: "Veritas",
         analysis: false,
         processID: "l13OiZyp7T5YpmOqofjHRGyCbrpllLZp4HOyfa2WLPQ",
-        logoImageLink: "logos/SqLogoDark.svg",
+        logoImageLink: "https://pbs.twimg.com/profile_images/1835382616351965184/Y6TXCCub_400x400.jpg",
         bannerLink:"",
         links: {
             website: "https://redirection-info.vercel.app/",
@@ -226,84 +252,59 @@ export const projects:ProjectType[] = [
             role: "",
             percentage: ""
         }]
-    },    
+    },
     {
-        name: "0rbit",
-        analysis: true,
-        processID:"BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ",
-  logoImageLink:"https://www.0rbit.co/logos/sqLightFill.svg",
-  bannerLink:"https://www.0rbit.co/logos/ogBanner.jpeg",
+        name: "Saturn",
+        analysis: false,
+        processID:"rXQaiyznUgDrt7A0Nzl9OQN2QBJ3we1X3qMe2W5DBXU",
+        logoImageLink:"https://wkypibie7ccprx5ujbbqddvhyotazjdchydxq6w4pd6j7hik5ipa.arweave.net/srD0BQT4hPjftEhDAY6nw6YMpGI-B3h63Hj8n50K6h4",
+        bannerLink:"/saturnBanner.png",
         links: {
-            website: "https://0rbit.co/",
-            docs:"https://docs.0rbit.co/",
-            discord: "https://discord.gg/JVSjqaKJgV",
-            twitter: "https://twitter.com/0rbitco",
-            github: "https://github.com/0rbit-co",
+            website: "/",
+            docs:"/",
+            discord: "https://discord.gg/MTP7BQgr",
+            twitter: "https://x.com/Veritas_ao",
+            github: "https://github.com/fundars/platform2.0",
             telegram:"",
-            other: ["https://www.playground.0rbit.co/","https://mirror.xyz/0x26B11B188E9E69b2426FD6111302E721F423020E"]
+            other: ["",""]
         },
         team: [{
-            officialName:"Yash Garg",
-            pseudoName:"megabyte",
-            role:"Co-Founder",
-            imgLink:"https://0rbit.co/team/megabyte.png",
-            links:{
-                github:"https://github.com/megabyte0x",
-                twitter:"https://x.com/megabyte0x?t=WZYKcJAvN-CM7a6yU4lPNQ&s=09",
-                dribble:"",
-                discord:"",
-                other:["",""],
-            },
-        },
-        {
-            officialName:"Ayush Agrawal",
-            pseudoName:"lucifer0x17",
-            role:"Co-Founder",
-            imgLink:"https://0rbit.co/team/lucifer.png",
-            links:{
-                discord:"",
-                github:"https://github.com/Lucifer0x17",
-                twitter:"https://x.com/Lucifer0x17?t=fH5LRms3xy2hSPLJbNubaA&s=09",
-                dribble:"",
-                other:["",""],
-            },
-        },
-        {
-            officialName:"Manishi Bhatnagar",
-            pseudoName:"",
-            role:"UI/ UX Designer",
-            imgLink:"https://0rbit.co/team/manishi.png",
+            officialName:"Alice Johnson",
+            pseudoName:"JohnDaughter",
+            role:"CEO",
+            imgLink:"https://jh2ukzgb546squzma2zxtkr6ckignjy7c6thm7xhe43aj7q3norq.arweave.net/SfVFZMHvPShTLAazeao-EpBmpx8XpnZ-5yc2BP4ba6M",
             links:{
                 discord:"",
                 github:"",
-                twitter:"https://x.com/0xManishi?t=FKn7XBJwlIXwJR-f4KGkzw&s=09",
-                dribble:"https://dribbble.com/0xManishi",
+                twitter:"",
+                dribble:"",
                 other:["",""],
             },
         },
         {
-            officialName:"Sarthak Shah",
-            pseudoName:"",
-            role:"Engineer",
-            imgLink:"https://0rbit.co/team/sarthak.png",
+            officialName:"Bob Smith",
+            pseudoName:"CryptoSmith",
+            role:"Co-Founder",
+            imgLink:"https://3v7icsuojvbggeifpyk6avvv5pz4vueyaj3kmzu65xvf5msqlgaq.arweave.net/3X6BSo5NQmMRBX4V4Fa16_PK0JgCdqZmnu3qXrJQWYE",
             links:{
                 discord:"",
-                github:"https://github.com/Not-Sarthak",
-                twitter:"https://x.com/0xSarthak13?t=nvsUz9hxhq2hQO25wr8Rtw&s=09",
+                github:"",
+                twitter:"",
                 dribble:"",
                 other:["",""],
             },
-        }],
+        },
+       ],
         exchangeInfo: {
             cooldownPeriod: 10,
             aoethRewardRate: 60
           },
-        description: "The Decentralized Oracle Network on AO for accessing any off-chain data.",
-        oneLiner: "Decentralized Oracle Network on Arweave",
+        description: "The Decentralized Dummy Project Functionality of Veritas. Lorem Ipsum Dolor Sit amet.",
+        oneLiner: "Decentralized Dummy Placeholder Project",
         token: {
-            name:"0rbt",
-            ticker:"0RBT",
-            processId:"BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc",
+            name:"Sat",
+            ticker:"SAT",
+            processId:"lrTtKXMhdmMSi8ZfTsdSX24Xpm9FAo47CRHe82HZ7XA",
             denomination:"",
             totalSupply:"",
             tokenomics:{
@@ -314,13 +315,13 @@ export const projects:ProjectType[] = [
         gettingStartedGuide:"",
         projectOrigin:"",
         useCases: [
-        //     {
-        //     name:"",
-        //     info:"",
-        //     liveLink:"",
-        //     other:[""]
-        // }
-        ],
+            {
+            name:"Dummy Staking for Veritas",
+            info:"",
+            liveLink:"",
+            other:[""]
+        }
+    ],
         advisorsInvestors:[{
             name:"",
             role:"",
@@ -336,19 +337,18 @@ export const projects:ProjectType[] = [
         // }
     ],
         mediaMentions:[""],
-        collaborations:[
-        //     {
-        //     name:"",
-        //     link:"",
-        //     info:""
-        // }
-    ],
+        collaborations:[{
+            name:"Veritas",
+            link:"/",
+            info:"",
+            logoImageLink:VeritasLogo
+        }],
         ownershipPercentages:[{
             name:"",
             role:"",
             percentage:""
         }]
-    },
+    },    
     {
         name: "BetterIDEa",
         analysis: false,
@@ -467,6 +467,71 @@ export const projects:ProjectType[] = [
           },
         ],
     },
+    {
+        name: "Outcome",
+        analysis: true,
+        processID: "Dgs1OEsExsPRVcbe_3buCGf0suVKUFwMJFddqMhywbY",
+        logoImageLink: "https://www.outcome.gg/_next/image?url=%2FOutcomeLogoBlack.png&w=96&q=75",
+        bannerLink: "",
+        links: {
+            website: "https://www.outcome.gg/",
+            docs: "",
+            discord: "",
+            twitter: "https://x.com/outcome_gg",
+            github: "",
+            telegram:"",
+            other: ["", ""]
+        },
+        team: [],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "Outcøme is built on ao Computer to enable individuals to predict outcomes of games, stats, and a bunch of other things.",
+        oneLiner: "Can you predict the AO future?",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "Dgs1OEsExsPRVcbe_3buCGf0suVKUFwMJFddqMhywbY",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide:"",
+        projectOrigin:"",
+        useCases: [
+        //     {
+        //     name:"",
+        //     info:"",
+        //     liveLink:"",
+        //     other:[""]
+        // }
+        ],
+        advisorsInvestors:[{
+            name:"",
+            role:"",
+            moreInfo:"",
+            amountIfAny:[""],
+        }],
+        mileStones: [],
+        mediaMentions: [""],
+        collaborations: [
+            // {
+            // name: "",
+            // link: "",
+            // info: "",
+            // logoImageLink:""
+            // }
+        ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    }, 
     // {
     //     name: "Pixel Gaming",
     //     processID:"processID for Pixel Gaming",
@@ -542,103 +607,6 @@ export const projects:ProjectType[] = [
     //         percentage:""
     //     }]
     // },
-    {
-        name: "SENTIO",
-        analysis: false,
-        processID: "processID for Sentio",
-        logoImageLink: "https://sentio.vercel.app/assets/logo-95vWaCvQ.png",
-        bannerLink:"https://i.imgur.com/PNtsCAB.png",
-        links: {
-            website: "https://sentio.vercel.app",
-            docs: "",
-            discord: "",
-            twitter: "https://x.com/sentio_AR",
-            github: "https://github.com/haard18/Sentio",
-            telegram:"",
-            other: ["", ""]
-        },
-        team: [{
-            officialName: "Krish Soni",
-            pseudoName: "K-STAR",
-            role: "Founder & Developer",
-            imgLink: "",
-            links: {
-                discord:"",
-                github: "https://github.com/krishvsoni",
-                twitter: "https://twitter.com/krishvsoni",
-                dribble: "",
-                other: ["https://instagram.com/krishvsoni", ""],
-            },
-        },{
-                officialName: "Haard Solanki",
-                pseudoName: "Hardy",
-                role: "Founder & Developer",
-                imgLink: "",
-                links: {
-                    discord:"",
-                    github: "https://github.com/haard18",
-                    twitter: "https://twitter.com/solanki_haard",
-                    dribble: "",
-                    other: ["https://instagram.com/haard.solanki", ""],
-                },
-        }],
-        exchangeInfo: {
-            cooldownPeriod: 0,
-            aoethRewardRate: 0,
-          },
-        description: "End To End Analysis for Code, Process and Messages on AO with customizations and User Friendly Setup with sentinel Support to monitor and eliminate threats",
-        oneLiner: "You Write We Monitor! Sentinel security for AO Processes ",
-        token: {
-            name: "",
-            ticker: "Sentio",
-            processId: "",
-            denomination: "",
-            totalSupply: "",
-            tokenomics: {
-                info: "",
-                linkToBlogorPaper: ""
-            }
-        },
-        gettingStartedGuide: "",
-        projectOrigin: "",
-        useCases: [
-        //     {
-        //     name: "",
-        //     info: "",
-        //     liveLink: "",
-        //     other: [""]
-        // }
-    ],
-        advisorsInvestors: [
-        //     {
-        //     name: "",
-        //     role: "",
-        //     moreInfo: "",
-        //     amountIfAny: [""],
-        // }
-    ],
-        mileStones: [{
-            goal: "To monitor and track messages coming to our Arweave Wallet and give records to respective users who have connected their Arweave Wallet, identify potential threats and suspicious activities in the process, provide CRON reports analyzed by AI for similar threats with easy access via email, and identify vulnerabilities in your LUA code prior to deployment on AO.future scaling to eth bridges and other token bridges",
-            date: "",
-            proof: "",
-            status: "Upcoming"
-        }],
-        mediaMentions: [""],
-        collaborations: [
-        //     {
-        //     name: "",
-        //     link: "",
-        //     info: "",
-        //     logoImageLink:""
-
-        // }
-    ],
-        ownershipPercentages: [{
-            name: "",
-            role: "",
-            percentage: ""
-        }]
-    },
     {
         name: "Astro",
         analysis: false,
@@ -784,6 +752,169 @@ export const projects:ProjectType[] = [
         }]
     },
     {
+        name: "Apus",
+        analysis: true,
+        processID: "vp4pxoOsilVxdsRqTmLjP86CwwUwtj1RoKeGrFVxIVk",
+        logoImageLink: "https://avatars.githubusercontent.com/u/146177720?s=400&u=b44c0ae4eb6793800a4377468ab6cb0fa44e6b80&v=4",
+        bannerLink: "",
+        links: {
+            website: "https://www.apus.network/",
+            docs: "https://apus-network.gitbook.io/apus-console-docs",
+            discord: "https://discord.com/invite/NVqpWB2m8k",
+            twitter: "https://x.com/apus_network",
+            github: "https://github.com/apuslabs",
+            telegram:"",
+            other: ["", ""]
+        },
+        team: [{
+            officialName: "Ben",
+            pseudoName: "",
+            role: "Core of Contributor",
+            imgLink: "https://www.apus.network/assets/ben-Dzj21M2H.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        {
+            officialName: "Jason",
+            pseudoName: "",
+            role: "Core Architect",
+            imgLink: "https://www.apus.network/assets/jason-C0T70zFD.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        }, {
+            officialName: "Mateo Bastidas",
+            pseudoName: "",
+            role: "Head of Dev-rel",
+            imgLink: "https://www.apus.network/assets/mateo-BJtpbOx6.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        },{
+            officialName: "Conor Thacker",
+            pseudoName: "",
+            role: "Head of Community",
+            imgLink: "https://www.apus.network/assets/conor-BenAScIP.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        },{
+            officialName: "Jax",
+            pseudoName: "",
+            role: "Core Developer",
+            imgLink: "https://www.apus.network/assets/jax-V1ovJirc.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        },{
+            officialName: "Phoebe",
+            pseudoName: "",
+            role: "Core BD",
+            imgLink: "https://www.apus.network/assets/phoebe-DL9F5_fz.png",
+            links: {
+                discord:"",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            }
+        }],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "Apus Network is building towards a decentralized, trustless GPU network dedicated to providing reliable, efficient, and low-cost computational power for AI training and inference.",
+        oneLiner: "Trustless GPU Network for AI on AO",
+        token: {
+            name: "Apus",
+            ticker: "APUS",
+            processId: "al1xXXnWnfJD8qyZJvttVGq60z1VPGn4M5y6uCcMBUM",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide:"",
+        projectOrigin:"",
+        useCases: [
+        //     {
+        //     name:"",
+        //     info:"",
+        //     liveLink:"",
+        //     other:[""]
+        // }
+        ],
+        advisorsInvestors:[{
+            name:"",
+            role:"",
+            moreInfo:"",
+            amountIfAny:[""],
+        }],
+        mileStones: [{
+            goal: "POC: Edge AI Inference & Decentralized GPU markets",
+            date: "Q4 2023",
+            proof: "",
+            status: ""
+        }, {
+            goal: "Launch Seed Round",
+            date: "Q1 2024",
+            proof: "",
+            status: ""
+        },{
+            goal: "Design trustless GPU Network on AO",
+            date: "Q2 2024",
+            proof: "",
+            status: ""
+        }, {
+            goal: "AI Competition Pool Test-Net",
+            date: "Q3 2024",
+            proof: "",
+            status: ""
+        }, {
+            goal: "TGE Deterministic GPU of AO extension",
+            date: "Q4 2024",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [
+            // {
+            // name: "",
+            // link: "",
+            // info: "",
+            // logoImageLink:""
+            // }
+        ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    },
+    {
         name: "Permaswap",
         analysis: false,
         processID: "permaswap",
@@ -861,6 +992,103 @@ export const projects:ProjectType[] = [
             logoImageLink:""
     
         }
+    ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }]
+    },
+    {
+        name: "SENTIO",
+        analysis: false,
+        processID: "processID for Sentio",
+        logoImageLink: "https://pbs.twimg.com/profile_images/1858185514966495232/2rE20c4K_400x400.jpg",
+        bannerLink:"https://i.imgur.com/PNtsCAB.png",
+        links: {
+            website: "https://sentio.vercel.app",
+            docs: "",
+            discord: "",
+            twitter: "https://x.com/sentio_AR",
+            github: "https://github.com/haard18/Sentio",
+            telegram:"",
+            other: ["", ""]
+        },
+        team: [{
+            officialName: "Krish Soni",
+            pseudoName: "K-STAR",
+            role: "Founder & Developer",
+            imgLink: "",
+            links: {
+                discord:"",
+                github: "https://github.com/krishvsoni",
+                twitter: "https://twitter.com/krishvsoni",
+                dribble: "",
+                other: ["https://instagram.com/krishvsoni", ""],
+            },
+        },{
+                officialName: "Haard Solanki",
+                pseudoName: "Hardy",
+                role: "Founder & Developer",
+                imgLink: "",
+                links: {
+                    discord:"",
+                    github: "https://github.com/haard18",
+                    twitter: "https://twitter.com/solanki_haard",
+                    dribble: "",
+                    other: ["https://instagram.com/haard.solanki", ""],
+                },
+        }],
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0,
+          },
+        description: "End To End Analysis for Code, Process and Messages on AO with customizations and User Friendly Setup with sentinel Support to monitor and eliminate threats",
+        oneLiner: "You Write We Monitor! Sentinel security for AO Processes ",
+        token: {
+            name: "",
+            ticker: "Sentio",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [
+        //     {
+        //     name: "",
+        //     info: "",
+        //     liveLink: "",
+        //     other: [""]
+        // }
+    ],
+        advisorsInvestors: [
+        //     {
+        //     name: "",
+        //     role: "",
+        //     moreInfo: "",
+        //     amountIfAny: [""],
+        // }
+    ],
+        mileStones: [{
+            goal: "To monitor and track messages coming to our Arweave Wallet and give records to respective users who have connected their Arweave Wallet, identify potential threats and suspicious activities in the process, provide CRON reports analyzed by AI for similar threats with easy access via email, and identify vulnerabilities in your LUA code prior to deployment on AO.future scaling to eth bridges and other token bridges",
+            date: "",
+            proof: "",
+            status: "Upcoming"
+        }],
+        mediaMentions: [""],
+        collaborations: [
+        //     {
+        //     name: "",
+        //     link: "",
+        //     info: "",
+        //     logoImageLink:""
+
+        // }
     ],
         ownershipPercentages: [{
             name: "",
@@ -1036,232 +1264,4 @@ export const projects:ProjectType[] = [
             percentage: ""
         }]
     },
-    {
-        name: "Apus",
-        analysis: true,
-        processID: "vp4pxoOsilVxdsRqTmLjP86CwwUwtj1RoKeGrFVxIVk",
-        logoImageLink: "https://avatars.githubusercontent.com/u/146177720?s=400&u=b44c0ae4eb6793800a4377468ab6cb0fa44e6b80&v=4",
-        bannerLink: "",
-        links: {
-            website: "https://www.apus.network/",
-            docs: "https://apus-network.gitbook.io/apus-console-docs",
-            discord: "https://discord.com/invite/NVqpWB2m8k",
-            twitter: "https://x.com/apus_network",
-            github: "https://github.com/apuslabs",
-            telegram:"",
-            other: ["", ""]
-        },
-        team: [{
-            officialName: "Ben",
-            pseudoName: "",
-            role: "Core of Contributor",
-            imgLink: "https://www.apus.network/assets/ben-Dzj21M2H.png",
-            links: {
-                discord:"",
-                github: "",
-                twitter: "",
-                dribble: "",
-                other: ["", ""],
-            },
-        },
-        {
-            officialName: "Jason",
-            pseudoName: "",
-            role: "Core Architect",
-            imgLink: "https://www.apus.network/assets/jason-C0T70zFD.png",
-            links: {
-                discord:"",
-                github: "",
-                twitter: "",
-                dribble: "",
-                other: ["", ""],
-            }
-        }, {
-            officialName: "Mateo Bastidas",
-            pseudoName: "",
-            role: "Head of Dev-rel",
-            imgLink: "https://www.apus.network/assets/mateo-BJtpbOx6.png",
-            links: {
-                discord:"",
-                github: "",
-                twitter: "",
-                dribble: "",
-                other: ["", ""],
-            }
-        },{
-            officialName: "Conor Thacker",
-            pseudoName: "",
-            role: "Head of Community",
-            imgLink: "https://www.apus.network/assets/conor-BenAScIP.png",
-            links: {
-                discord:"",
-                github: "",
-                twitter: "",
-                dribble: "",
-                other: ["", ""],
-            }
-        },{
-            officialName: "Jax",
-            pseudoName: "",
-            role: "Core Developer",
-            imgLink: "https://www.apus.network/assets/jax-V1ovJirc.png",
-            links: {
-                discord:"",
-                github: "",
-                twitter: "",
-                dribble: "",
-                other: ["", ""],
-            }
-        },{
-            officialName: "Phoebe",
-            pseudoName: "",
-            role: "Core BD",
-            imgLink: "https://www.apus.network/assets/phoebe-DL9F5_fz.png",
-            links: {
-                discord:"",
-                github: "",
-                twitter: "",
-                dribble: "",
-                other: ["", ""],
-            }
-        }],
-        exchangeInfo: {
-            cooldownPeriod: 0,
-            aoethRewardRate: 0,
-          },
-        description: "Apus Network is building towards a decentralized, trustless GPU network dedicated to providing reliable, efficient, and low-cost computational power for AI training and inference.",
-        oneLiner: "Trustless GPU Network for AI on AO",
-        token: {
-            name: "Apus",
-            ticker: "APUS",
-            processId: "al1xXXnWnfJD8qyZJvttVGq60z1VPGn4M5y6uCcMBUM",
-            denomination: "",
-            totalSupply: "",
-            tokenomics: {
-                info: "",
-                linkToBlogorPaper: ""
-            }
-        },
-        gettingStartedGuide:"",
-        projectOrigin:"",
-        useCases: [
-        //     {
-        //     name:"",
-        //     info:"",
-        //     liveLink:"",
-        //     other:[""]
-        // }
-        ],
-        advisorsInvestors:[{
-            name:"",
-            role:"",
-            moreInfo:"",
-            amountIfAny:[""],
-        }],
-        mileStones: [{
-            goal: "POC: Edge AI Inference & Decentralized GPU markets",
-            date: "Q4 2023",
-            proof: "",
-            status: ""
-        }, {
-            goal: "Launch Seed Round",
-            date: "Q1 2024",
-            proof: "",
-            status: ""
-        },{
-            goal: "Design trustless GPU Network on AO",
-            date: "Q2 2024",
-            proof: "",
-            status: ""
-        }, {
-            goal: "AI Competition Pool Test-Net",
-            date: "Q3 2024",
-            proof: "",
-            status: ""
-        }, {
-            goal: "TGE Deterministic GPU of AO extension",
-            date: "Q4 2024",
-            proof: "",
-            status: ""
-        }],
-        mediaMentions: [""],
-        collaborations: [
-            // {
-            // name: "",
-            // link: "",
-            // info: "",
-            // logoImageLink:""
-            // }
-        ],
-        ownershipPercentages: [{
-            name: "",
-            role: "",
-            percentage: ""
-        }]
-    },
-    {
-        name: "Outcome",
-        analysis: true,
-        processID: "Dgs1OEsExsPRVcbe_3buCGf0suVKUFwMJFddqMhywbY",
-        logoImageLink: "https://www.outcome.gg/_next/image?url=%2FOutcomeLogoBlack.png&w=96&q=75",
-        bannerLink: "",
-        links: {
-            website: "https://www.outcome.gg/",
-            docs: "",
-            discord: "",
-            twitter: "https://x.com/outcome_gg",
-            github: "",
-            telegram:"",
-            other: ["", ""]
-        },
-        team: [],
-        exchangeInfo: {
-            cooldownPeriod: 0,
-            aoethRewardRate: 0,
-          },
-        description: "Outcøme is built on ao Computer to enable individuals to predict outcomes of games, stats, and a bunch of other things.",
-        oneLiner: "Can you predict the AO future?",
-        token: {
-            name: "",
-            ticker: "",
-            processId: "Dgs1OEsExsPRVcbe_3buCGf0suVKUFwMJFddqMhywbY",
-            denomination: "",
-            totalSupply: "",
-            tokenomics: {
-                info: "",
-                linkToBlogorPaper: ""
-            }
-        },
-        gettingStartedGuide:"",
-        projectOrigin:"",
-        useCases: [
-        //     {
-        //     name:"",
-        //     info:"",
-        //     liveLink:"",
-        //     other:[""]
-        // }
-        ],
-        advisorsInvestors:[{
-            name:"",
-            role:"",
-            moreInfo:"",
-            amountIfAny:[""],
-        }],
-        mileStones: [],
-        mediaMentions: [""],
-        collaborations: [
-            // {
-            // name: "",
-            // link: "",
-            // info: "",
-            // logoImageLink:""
-            // }
-        ],
-        ownershipPercentages: [{
-            name: "",
-            role: "",
-            percentage: ""
-        }]
-    } 
 ]
