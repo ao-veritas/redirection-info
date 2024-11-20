@@ -38,14 +38,14 @@ const TeamView = () => {
      info="Founder"
      last={false}
    />
-   <TeamCard
+   {/* <TeamCard
      img={"https://ykxdc44ycigwbzizbvfquofna2yx2tkn3e6fx5zjltzbjfpbeqcq.arweave.net/wq4xc5gSDWDlGQ1LCjitBrF9TU3ZPFv3KVzyFJXhJAU/team/parth.png"}
      pname="parth Shah"
      github="https://github.com/parthks"
      twitter="https://x.com/1human_in/"
      info="Smart Contract Developer"
      last={false}
-   />
+   /> */}
    <TeamCard
      img={"/chaitanya.jpg"}
      pname="Chaitanya Bajpai"
