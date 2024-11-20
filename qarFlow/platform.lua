@@ -232,11 +232,9 @@ Handlers.add(
     Handlers.utils.hasMatchingTag("X-Action", "UnStake"),
     function(msg)
         print("Unstaking process initiated.")
-
         local tags = msg.Tags
         local unstakeQuantity = bint(tags.Quantity) -- Quantity to unstake
         local userID = msg.Sender
-
         -- Check if the user exists and retrieve the current staked amount
         local user = sql_run([[SELECT TotalStaked FROM Stakers WHERE UserID = ?;]], userID)
 
