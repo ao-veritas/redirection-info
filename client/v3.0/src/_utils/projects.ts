@@ -1003,7 +1003,7 @@ export const projects:ProjectType[] = [
         name: "SENTIO",
         analysis: false,
         processID: "processID for Sentio",
-        logoImageLink: "https://pbs.twimg.com/profile_images/1858185514966495232/2rE20c4K_400x400.jpg",
+        logoImageLink: "https://i.imgur.com/wmU7NZ4.png",
         bannerLink:"https://i.imgur.com/PNtsCAB.png",
         links: {
             website: "https://sentio.vercel.app",
