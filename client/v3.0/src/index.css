@@ -10,6 +10,13 @@
   background: #111111;
 }
 
+.maintenanceBg{
+  background-image: url('../public/under.png'); /* Replace with your image URL */
+  background-repeat: repeat-y;
+  background-size: auto; /* Keeps the image at its original size */
+  background-position: center; /* Centers the image horizontally */
+}
+
 .featCardBg{
   background: radial-gradient(circle at 100% 100%, rgba(255,255,255,0) 0, rgba(255,255,255,0) 7px, transparent 7px) 0% 0%/8px 8px no-repeat,
   radial-gradient(circle at 0 100%, rgba(255,255,255,0) 0, rgba(255,255,255,0) 7px, transparent 7px) 100% 0%/8px 8px no-repeat,

@@ -60,13 +60,19 @@ export default function Navbar() {
             >
               Analysis Dashboards
             </Link>{" "} */}
-            <Link
+            {/* <Link
               className={`hover:text-[#40959D] hover:underline underline-offset-[3px]
           ${path[1] == "faucet" ? `${brandSecondaryText} underline` : brandLightText}`}
               to="/faucet"
             >
               Faucet
-            </Link>{" "}
+            </Link>{" "} */}
+                        <h3
+              className={`hover:cursor-not-allowed underline-offset-[3px]
+          ${path[1] == "faucet" ? `${brandSecondaryText} underline` : brandLightText}`}
+            >
+              Faucet
+            </h3>{" "}
           </div>
              
           <div className="lg:flex hidden bg-white flex-row justify-between items-center rounded-[10px] xl:scale-100 scale-75 xl:mx-0 mx-[-39px]">
