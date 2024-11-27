@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./_pages/HomePage";
 // import RegisterProject from './_pages/RegisterProject';
 // import Saturn from './_pages/Saturn';
-import Faucet from "./_pages/Faucet";
+// import Faucet from "./_pages/Faucet";
 // import User from './_pages/User';
 import About from "./_pages/About";
 // import Dashboard from './_pages/Dashboard';
@@ -13,6 +13,7 @@ import ComingSoon from './_pages/ComingSoon';
 import ProjectsDisplay from './_pages/ProjectsDisplay';
 import ManageProcess from "./_pages/ManageProcess";
 import Analysis from './_pages/Analysis';
+import UnderConstruction from "./_pages/UnderConstruction";
 
 const AppRouter: React.FC = () => {
   return (
@@ -29,7 +30,8 @@ const AppRouter: React.FC = () => {
         {/* <Route path="/register" element={<RegisterProject />} /> */}
         {/* <Route path="/saturn" element={<Saturn />} /> */}
         <Route path="/about" element={<About />} />
-        <Route path="/faucet" element={<Faucet />} />
+        {/* <Route path="/faucet" element={<Faucet />} /> */}
+        <Route path="/faucet" element={<UnderConstruction/>}/>
         <Route path="/projects" element={<ProjectsDisplay />} />
         {/* <Route path="/user" element={<UserDashboard />} /> */}
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
