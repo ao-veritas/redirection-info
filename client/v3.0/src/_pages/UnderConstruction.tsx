@@ -16,7 +16,6 @@ const UnderConstruction = () => {
      Join <a href="https://discord.com/invite/uSR7KWhx9F" target="__blank" className="inline hover:underline bg-[#0D9C9C] px-[6px] rounded-sm py-[3px] hover:cursor-pointer">discord</a> to stay updated</h6></div>
       <Footer/>
   </main>
-  {/* <BackgroundBeams/> */}
   </>
   )
 }
