@@ -3,14 +3,17 @@ local json = require("json")
 base64 = require(".base64")
 sqlite3 = require("lsqlite3")
 db = db or sqlite3.open_memory()
-UnstakeDelay = UnstakeDelay or 670
 local bint = require('.bint')(256)
 Staked = Staked or 0
-ToDistribute = 55407801418
-PToken = "34jmjvIwlz_GvNElXe1yVW_dcQl7Xs1rscfHM8tfrlE"
-QAR = "2GJ6V2TnJw0YplnSqEjSDFwILYopWSFGTGrDxS_vCCk"
 
-
+Config = {
+    UNSTAKE_DELAY = 670,
+    TO_DISTRIBUTE = 55407801418,
+    TOKENS = {
+        PTOKEN = "34jmjvIwlz_GvNElXe1yVW_dcQl7Xs1rscfHM8tfrlE",
+        QAR = "2GJ6V2TnJw0YplnSqEjSDFwILYopWSFGTGrDxS_vCCk"
+    },
+}
 
 -- CREATE TABLE IF NOT EXISTS BridgedTokens(
 --     TokenID TEXT,
@@ -32,38 +35,46 @@ QAR = "2GJ6V2TnJw0YplnSqEjSDFwILYopWSFGTGrDxS_vCCk"
 -- DROP TABLE IF EXISTS Transactions;
 -- DROP TABLE IF EXISTS CronTransactions;
 
-db:exec(
-    [[
+db:exec([[
+        PRAGMA foreign_keys = ON;
         DROP TABLE IF EXISTS Stakers;
         DROP TABLE IF EXISTS Transactions;
-        DROP TABLE IF EXISTS CronTransactions;
+        DROP TABLE IF EXISTS CronTransactions; 
         CREATE TABLE IF NOT EXISTS Stakers (
-            UserID TEXT,
-            TotalStaked DEFAULT 0,
+            UserID TEXT NOT NULL,
+            TotalStaked TEXT DEFAULT '0',
             UnstakeAt INTEGER,
             PRIMARY KEY (UserID)
         );
+        
         CREATE TABLE IF NOT EXISTS Transactions (
-            Timestamp TEXT, 
-            TransID TEXT,
-            SenderID TEXT,
-            RecieverID TEXT,
-            TokenID TEXT,
-            Quantity TEXT,
-            Status TEXT,
-            Type TEXT
+            TransID TEXT PRIMARY KEY,
+            Timestamp TEXT NOT NULL, 
+            SenderID TEXT NOT NULL,
+            RecieverID TEXT NOT NULL,
+            TokenID TEXT NOT NULL,
+            Quantity TEXT NOT NULL,
+            Status TEXT NOT NULL,
+            Type TEXT NOT NULL
         );
+        
+        CREATE INDEX IF NOT EXISTS idx_transactions_sender ON Transactions(SenderID);
+        CREATE INDEX IF NOT EXISTS idx_transactions_receiver ON Transactions(RecieverID);
+        CREATE INDEX IF NOT EXISTS idx_transactions_status ON Transactions(Status);
+        
         CREATE TABLE IF NOT EXISTS CronTransactions (
-            Timestamp TEXT, 
-            TransID TEXT,
-            UserID TEXT,
-            TokenID TEXT,
-            Quantity TEXT,
-            Status TEXT,
-            Type TEXT
+            TransID TEXT PRIMARY KEY,
+            Timestamp TEXT NOT NULL, 
+            UserID TEXT NOT NULL,
+            TokenID TEXT NOT NULL,
+            Quantity TEXT NOT NULL,
+            Status TEXT NOT NULL,
+            Type TEXT NOT NULL
         );
-    ]]
-)
+        
+        CREATE INDEX IF NOT EXISTS idx_cron_transactions_user ON CronTransactions(UserID);
+        CREATE INDEX IF NOT EXISTS idx_cron_transactions_status ON CronTransactions(Status);
+    ]])
 
 local utils = {
     add = function (a,b) 
@@ -115,44 +126,44 @@ Handlers.add(
     "Stake",
     Handlers.utils.hasMatchingTag("X-Action", "Stake"),
     function(msg)
+        if msg.Action ~= "Credit-Notice" or msg.From ~= Config.TOKENS.QAR then
+            print("❌ Invalid token source or action")
+            return
+        end
         -- Check if recieved from bridged tokens list or not
-        if msg.Action == "Credit-Notice" and msg.From == QAR then
             local tags = msg.Tags
             local newQuantity = bint(tags.Quantity) -- New quantity to add
             local height = tonumber(msg['Block-Height'])
             
-            -- Check if the user already exists
-            local exists = sql_run([[SELECT EXISTS (SELECT 1 FROM Stakers WHERE UserID = ?) AS value_exists;]], msg.Sender);
-            
-            -- Iterate over the result to get the existence flag
-            for _, row in ipairs(exists) do
-                if row.value_exists > 0 then
-                    print("a")
-                    print("User exists, updating total staked.")
-                    print(tags.Sender)
-                    -- Fetch the current total staked for this user
-                    local current = sql_run([[SELECT TotalStaked FROM Stakers WHERE UserID = ?;]], tags.Sender);
+            -- Check if user exists using a single query
+            local user = sql_run([[
+                SELECT TotalStaked 
+                FROM Stakers 
+                WHERE UserID = ?;
+            ]], msg.Sender)
 
-                    -- Extract current total staked value
-                    local currentQuantity = bint(current[1].TotalStaked)
-
-                    -- Add the new quantity to the existing total
-                    local updatedQuantity = currentQuantity + newQuantity
-
-                    -- Update the table with the new total and unstake timestamp
-                    sql_write(
-                        [[UPDATE Stakers SET TotalStaked = ?, UnstakeAt = ? WHERE UserID = ?]],
-                        tostring(updatedQuantity), height + UnstakeDelay, msg.Sender
-                    )
-                else
-                    print("User does not exist, adding new entry.")
-
-                    -- Insert a new row for the user
-                    sql_write(
-                        [[INSERT INTO Stakers (UserID, TotalStaked, UnstakeAt) VALUES (?, ?, ?)]],
-                        msg.Sender, tostring(newQuantity), height + UnstakeDelay
-                    )
-                end
+            if #user > 0 then
+                -- Update existing user
+                local updatedQuantity = utils.add(user[1].TotalStaked, tostring(newQuantity))
+                
+                sql_write(
+                    [[UPDATE Stakers 
+                      SET TotalStaked = ?, 
+                          UnstakeAt = ? 
+                      WHERE UserID = ?]],
+                    updatedQuantity,
+                    height + Config.UNSTAKE_DELAY,
+                    msg.Sender
+                )
+            else
+                -- Insert new user
+                sql_write(
+                    [[INSERT INTO Stakers (UserID, TotalStaked, UnstakeAt) 
+                      VALUES (?, ?, ?)]],
+                    msg.Sender,
+                    tostring(newQuantity),
+                    height + Config.UNSTAKE_DELAY
+                )
             end
 
             -- Log the transaction
@@ -164,9 +175,8 @@ Handlers.add(
             )
 
             -- Increment the global staked amount
-            Staked = Staked + tonumber(tags.Quantity)
+            Staked = utils.add(Staked, tags.Quantity)
             print("Successfully staked " .. tags.Quantity)
-        end
     end
 )
 
@@ -175,12 +185,16 @@ Handlers.add(
     "Cron",
     Handlers.utils.hasMatchingTag("Action", "Cron"),
     function(msg)
+        if tonumber(Staked) <= 0 then
+            print("❌ No tokens staked")
+            return
+        end
         -- Total staked in the contract
         local total_staked = Staked
         print("Total staked: " .. total_staked)
         
         -- Total tokens to distribute
-        local to_distribute = ToDistribute
+        local to_distribute = Config.TO_DISTRIBUTE
         print("To distribute: " .. to_distribute)
         
         -- Fetch all stakers
@@ -197,7 +211,7 @@ Handlers.add(
             
             -- Send tokens based on the calculated distribution
             ao.send({
-                Target = PToken,
+                Target = Config.TOKENS.PTOKEN,
                 Action = "Transfer",
                 Quantity = tostring(user_distribution), -- Quantity as integer
                 Recipient = staker.UserID,
@@ -215,7 +229,7 @@ Handlers.add(
     function(msg)
         print("1")
         -- Check if the message is a debit notification from `ptoken`
-        if msg.Action == "Debit-Notice" and msg.From == PToken then
+        if msg.Action == "Debit-Notice" and msg.From == Config.TOKENS.PTOKEN then
             print("3")
             -- Extract required details from the message and tags
             local timestamp = tostring(msg.Timestamp)
@@ -248,11 +262,27 @@ Handlers.add(
         local tags = msg.Tags
         local unstakeQuantity = bint(tags.Quantity) -- Quantity to unstake
         local userID = msg.From
+
+        -- Validate quantity
+        if unstakeQuantity <= 0 then
+            print("❌ Invalid unstake amount")
+            return
+        end
+
         -- Check if the user exists and retrieve the current staked amount
-        local user = sql_run([[SELECT TotalStaked FROM Stakers WHERE UserID = ?;]], userID)
+        local user = sql_run([[
+            SELECT TotalStaked, UnstakeAt 
+            FROM Stakers 
+            WHERE UserID = ?
+        ]], userID)
 
         if #user == 0 then
             print("User not found. Cannot unstake.")
+            return
+        end
+
+        if tonumber(user[1].UnstakeAt) > tonumber(msg['Block-Height']) then
+            print("Tokens still locked")
             return
         end
 
@@ -267,7 +297,7 @@ Handlers.add(
         -- Perform the transfer back to the user
         print("Initiating transfer...")
         Send({
-            Target = QAR,
+            Target = Config.TOKENS.QAR,
             Action = "Transfer",
             Quantity = tostring(unstakeQuantity),
             Recipient = userID,
@@ -286,7 +316,7 @@ Handlers.add(
         end
 
         -- Update the global staked variable
-        Staked = Staked - tonumber(tags.Quantity)
+        Staked = utils.subtract(Staked, tags.Quantity)
         print("Successfully unstaked " .. tags.Quantity)
     end
 )
@@ -298,7 +328,7 @@ Handlers.add(
         print("Unstake Debit Notification handler triggered.")
 
         -- Ensure the message is a debit notification and comes from the correct QAR
-        if msg.Action == "Debit-Notice" and msg.From == QAR then
+        if msg.Action == "Debit-Notice" and msg.From == Config.TOKENS.QAR then
             print("Processing debit notification for unstake.")
 
             -- Extract details from the message and tags
