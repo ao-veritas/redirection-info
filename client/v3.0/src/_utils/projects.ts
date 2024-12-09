@@ -532,81 +532,1043 @@ export const projects:ProjectType[] = [
             percentage: ""
         }]
     }, 
-    // {
-    //     name: "Pixel Gaming",
-    //     processID:"processID for Pixel Gaming",
-    //     logoImageLink:"https://drive.google.com/file/d/172Owr-YwsgGZREo3q6tLiNdeE6Xm0hpA/view?usp=sharing",
-    //     bannerLink:"",
-    //     links: {
-    //         website: "https://www.pixelgaming.us/",
-    //         docs:"",
-    //         discord: "",
-    //         twitter: "https://x.com/pixelgamingao",
-    //         github: "https://github.com/Panther-Lab/arweave",
-    //         telegram:"",
-    //         other: ["",""]
-    //     },
-    //     team: [{
-    //         officialName:"Pawan AK",
-    //         pseudoName:"",
-    //         role:"Backend Developer , Community Opp",
-    //         imgLink:"",
-    //         links:{
-    //             github:"https://github.com/pawanak",
-    //             twitter:"https://x.com/pawan__ak",
-    //             dribble:"",
-    //             other:["",""],
-    //         },
-    //     }],
-    //     exchangeInfo: {
-    //         cooldownPeriod: 0,
-    //         aoethRewardRate: 0,
-    //       },
-    //     description: "Gaming platform on AO  Play games to earn real rewards in our Play2Earn ecosystem, and if you're a Unity developer, create games and keep 80% of the revenue. Join us to play, earn, and develop in a secure, decentralized environment!",
-    //     oneLiner: "Discover the Future of Gaming on Arweave",
-    //     token: {
-    //         name:"",
-    //         ticker:"",
-    //         processId:"5f9UIOFAKmf8kTmiTg_9ScuE330l6kdmu3zUO7Yv_68",
-    //         denomination:"",
-    //         totalSupply:"",
-    //         tokenomics:{
-    //             info:"",
-    //             linkToBlogorPaper:""
-    //         }
-    //     },
-    //     gettingStartedGuide:"",
-    //     projectOrigin:"",
-    //     useCases: [{
-    //         name:"",
-    //         info:"",
-    //         liveLink:"",
-    //         other:[""]
-    //     }],
-    //     advisorsInvestors:[{
-    //         name:"",
-    //         role:"",
-    //         moreInfo:"",
-    //         amountIfAny:[""],
-    //     }],
-    //     mileStones:[{
-    //         goal:"",
-    //         date:"",
-    //         proof:"",
-    //         status:""
-    //     }],
-    //     mediaMentions:[""],
-    //     collaborations:[{
-    //         name:"",
-    //         link:"",
-    //         info:""
-    //     }],
-    //     ownershipPercentages:[{
-    //         name:"",
-    //         role:"",
-    //         percentage:""
-    //     }]
-    // },
+    {
+        name: "Community Labs",
+        processID: "communityLabs",
+        logoImageLink: "https://cdn.prod.website-files.com/66a95bb074e6f8f96d7b59a9/66c4e4b2dfe1f08711cbca3f_CL-Black-Text.svg",
+        links: {
+            telegram: "",
+            website: "https://www.communitylabs.com",
+            docs: "",
+            discord: "https://discord.com/invite/GqxX2vtwRj",
+            twitter: "https://x.com/CommunityLabs",
+            github: "https://github.com/labscommunity",
+            other: ["https://www.linkedin.com/company/communitylabs1/mycompany/", "https://www.instagram.com/communitylabsco/"]
+        },
+        team: [{
+            officialName: "Tate Berenbaum",
+            pseudoName: "",
+            role: "Founder & CEO",
+            imgLink: "https://cdn.prod.website-files.com/66c607043f775347e75460f6/66e84d25e9734769c3ac9d40_Placeholder%20Image.avif",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        {
+            officialName: "Kyla Witte",
+            pseudoName: "",
+            role: "Chief Operating Officer",
+            imgLink: "https://cdn.prod.website-files.com/66c607043f775347e75460f6/66e9c6a3df81abf88305ddae_image%20(1)-p-500.jpg",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        {
+            officialName: "Matthew DiRienzo",
+            pseudoName: "",
+            role: "Chief Product Officer",
+            imgLink: "https://cdn.prod.website-files.com/66c607043f775347e75460f6/66e84d35d08afca4efce936a_Placeholder%20Image-2-p-500.jpg",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        {
+            officialName: "Jeff Marsilio",
+            pseudoName: "",
+            role: "Chief Business Officer",
+            imgLink: "https://cdn.prod.website-files.com/66c607043f775347e75460f6/66e84d3e1cb4ae9fdcf92419_Placeholder%20Image-3-p-500.jpg",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        {
+            officialName: "Ashlyn Pugh",
+            pseudoName: "",
+            role: "Chief of Staff",
+            imgLink: "https://cdn.prod.website-files.com/66c607043f775347e75460f6/66e84d2dedf43a332bd774f7_Placeholder%20Image-1-p-500.avif",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        {
+            officialName: "Fayaz Usmani",
+            pseudoName: "",
+            role: "Head of Design",
+            imgLink: "https://cdn.prod.website-files.com/66c607043f775347e75460f6/66ea20bd2b2a9f233a55f281_fayaz2-p-500.jpg",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        {
+            officialName: "Matias Parij",
+            pseudoName: "",
+            role: "Head of Engineering",
+            imgLink: "https://cdn.prod.website-files.com/66c607043f775347e75460f6/66e9eab42fab4c05e86eaa7f_matias-p-500.jpg",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        },
+        ],
+        description: "Community Labs is uniquely placed at the center of the Arweave & AO ecosystem to build foundational tools and infrastructure. Our goal is to create innovative solutions to pain points faced by developers and users alike. Through our venture studio, we provide founders and founding teams with the resources they need to identify product ideas and the ability to create, develop, and scale products from inception to mass adoption.",
+        oneLiner: "Community Labs fuels the people and technologies redefining the decentralized future.",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [{
+            name: "",
+            info: "",
+            liveLink: "",
+            other: [""]
+        }],
+        advisorsInvestors: [
+            {
+                name: "Lightspeed Venture Partners",
+                role: "Lead Investor",
+                moreInfo: "Venture",
+                amountIfAny: [""],
+            },
+            {
+                name: "Blockchain Capital ",
+                role: "",
+                moreInfo: "Venture",
+                amountIfAny: [""],
+            },
+            {
+                name: "Distributed Global",
+                role: "",
+                moreInfo: "Venture",
+                amountIfAny: [""],
+            },
+            {
+                name: "Brain Captial Crypto",
+                role: "",
+                moreInfo: "Venture",
+                amountIfAny: [""],
+            },
+            {
+                name: "Arweave",
+                role: "",
+                moreInfo: "Corporation",
+                amountIfAny: [""],
+            },
+        ],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [{
+            logoImageLink: "",
+            name: "",
+            link: "",
+            info: ""
+        }],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    },   
+    {
+        name: "Forward Research",
+        processID: "ForwardResearch",
+        logoImageLink: "https://forward.arweave.dev/imgs/logo.png",
+        links: {
+            telegram: "",
+            website: "https://fwd.g8way.io/",
+            docs: "https://forward.arweave.dev/",
+            discord: "",
+            twitter: "https://twitter.com/fwdresearch",
+            github: "",
+            other: ["", ""]
+        },
+        team: [{
+            officialName: "Sam Williams",
+            pseudoName: "",
+            role: "Founder & CEO",
+            imgLink: "https://miro.medium.com/v2/resize:fit:1278/1*9ZPfD-Q6_BmBOK9xy5y3lg.png",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "https://x.com/samecwilliams",
+                dribble: "",
+                other: ["https://sam.arweave.dev/", ""],
+            },
+        }],
+        description: "Forward Research is a leading research and development incubator for the Arweave ecosystem. Supporting the best builders and founders focused on creating an entirely new class of web services on Arweave that provably respect users rights. Offering an environment tailored to help focus on what matters most: building, from zero to market fit.",
+        oneLiner: "1 We are on a mission to make cyberspace freer and fairer for everyone.",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [{
+            name: "",
+            info: "",
+            liveLink: "",
+            other: [""]
+        }],
+        advisorsInvestors: [{
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [{
+            logoImageLink: "",
+            name: "",
+            link: "",
+            info: ""
+        }],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    },
+    {
+        name: "Autonomous Fianance",
+        processID: "AutonomousFianance",
+        logoImageLink: "https://pbs.twimg.com/profile_images/1777516120498462721/Dx5DxPNC_400x400.jpg",
+        links: {
+            telegram: "",
+            website: "https://www.autonomous.finance/",
+            docs: "https://docs.autonomous.finance/",
+            discord: "https://discord.gg/AK6C2PPWDc",
+            twitter: "https://twitter.com/autonomous_af",
+            github: "https://github.com/Autonomous-Finance",
+            other: ["https://www.autonomous.finance/research/en-US", ""]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        }],
+        description: "Autonomous Finance is an organization focused on research, innovation, and development of AI-powered DeFi on AO. We build novel primitives, platforms, and tools powered by AI agents to provide autonomous, signal-driven financial services within AO's trusted execution environment.",
+        oneLiner: "Autonomous Finance is an organization focused on research, innovation, and development of AI-powered DeFi on AO, the hyper-parallel computer.",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "https://docs.autonomous.finance/learn/concepts/products-overview",
+        projectOrigin: "",
+        useCases: [{
+            name: "CoinBurn",
+            info: "CoinBurn is a streamlined utility designed to track tokens sent to a designated burner address (0000000000000000000000000000000000000000000) that are permanently removed from circulation. This tool provides a straightforward way to monitor and verify burned tokens, ensuring transparency and ease of access for users and applications. By querying the CoinBurner interface, users can quickly determine the total amount of tokens burned for a specific asset by simply providing the contract address. This eliminates the need to sift through extensive transaction histories, saving time and simplifying the process. While CoinBurner focuses primarily on tracking and querying burned tokens, it also offers a minimalistic frontend for burning tokens directly by sending them to the burn address.",
+            liveLink: "https://coinburn.arweave.net/",
+            other: [""]
+        },
+        {
+            name: "Botega",
+            info: "Botega is a cutting-edge decentralized exchange (DEX) designed to prioritize and integrate autonomous agents as first-class participants. Operating fully permissionless on the ARNS botega (accessible via botega.ar.io, botega.arweave.net, etc.), it offers a robust, innovative trading environment. Botega supports sophisticated order types including trailing stop loss, dollar-cost averaging (DCA), limit orders, and more, each functioning as independent processes structured as simple autonomous agents. Additionally, Botega's AMMs (Automated Market Makers) are architected as autonomous agents, enabling dynamic and flexible liquidity reallocation.",
+            liveLink: "https://botega.arweave.net/",
+            other: [""]
+        },
+        {
+            name: "AO Link",
+            info: "ao.link serves as a message explorer for the ao Network, offering functionalities similar to block explorers in conventional blockchain systems. It includes message compute capabilities, graphical visualization of message links for clarity, real-time message streaming for up-to-date information, and a list of linked messages for organized navigation. Users can also view their token balances and messages inboxes. This tool provides a professional and efficient way to interact with and analyze the ao Network's structure and activity.",
+            liveLink: "https://ao.link/",
+            other: [""]
+        },
+        {
+            name: "DataOS",
+            info: "DataOS is a protocol developed atop the ao Network, leveraging it for computing power and Arweave for data storage, creating a synergistic foundation for its operations. As a ContentFI protocol, it employs autonomous AI agents to source and regenerate content derivatives, aiming to foster engagement and fulfill the intent of consumers. Through this innovative approach, DataOS not only enhances content relevance and accessibility but also establishes a rewarding mechanism for content creators.",
+            liveLink: "https://dataos.so/",
+            other: [""]
+        },
+
+        ],
+        advisorsInvestors: [{
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [{
+            logoImageLink: "",
+            name: "",
+            link: "",
+            info: ""
+        }],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    },
+    {
+        name: "Permaswap",
+        processID: "Permaswap",
+        logoImageLink: "https://www.permaswap.network/assets/logo4-1ed9846f.png",
+        links: {
+            telegram: "",
+            website: "https://www.permaswap.network/#/",
+            docs: "",
+            discord: "https://discord.gg/BTs4Zud2vk",
+            twitter: "https://x.com/Permaswap",
+            github: "https://github.com/permadao/permaswap",
+            other: ["https://t.me/PermaDao_ar/5699", "https://www.notion.so/PermaSwap-WIKI-EN-485cd6623f954902b61775e4f1a86717"]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        }],
+        description: "Permaswap Network adopts AMM technology and is a completely decentralized distributed P2P trading network. It has unlimited scalability and can effectively prevent MEV attacks. The network will be operated as a DAO and will evolve gradually in four stages, gradually transitioning from limited node coordination management to multi-node community governance.",
+        oneLiner: "FusionFi Portal, A Unified Financial Protocol on Permaweb",
+        token: {
+            name: "HALO",
+            ticker: "HALO",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: "https://mirror.xyz/permaswap.eth/kdg0iXx1jB-vXYEc_WEAeTNX_sGjv8BXksHxcFdoKjo"
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [{
+            name: "",
+            info: "",
+            liveLink: "",
+            other: [""]
+        }],
+        advisorsInvestors: [{
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [{
+            logoImageLink: "",
+            name: "",
+            link: "",
+            info: ""
+        }],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    },
+    {
+        name: "BazAR",
+        processID: "BazAR",
+        logoImageLink: "https://g8way.io/6uXyeweSXggXYm6_bX2r4HrsE8Z3alWgvhwAwt3tky4",
+        links: {
+            telegram: "",
+            website: "https://bazar.arweave.net/",
+            docs: "https://bazar.arweave.net/#/docs/",
+            discord: "https://discord.gg/weavers",
+            twitter: "https://x.com/OurBazAR",
+            github: "https://github.com/permaweb/bazar",
+            other: ["https://obj7clfpkxjplizvuipqfygky7hrbijslyt6jivutx2e2qojf2ka.g8way.io/cFPxLK9V0vWjNaIfAuDKx88QoTJeJ-SitJ30TUHJLpQ?", ""]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        }],
+        description: "The BazAR Marketplace enables buying and selling of Atomic Assets on Arweave. Using an Arweave.app or ArConnect wallet, anyone can share and trade Atomic Assets on the permaweb with the $U token!",
+        oneLiner: "buying and selling of Atomic Assets on Arweave",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [{
+            name: "",
+            info: "",
+            liveLink: "",
+            other: [""]
+        }],
+        advisorsInvestors: [{
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [{
+            logoImageLink: "",
+            name: "",
+            link: "",
+            info: ""
+        }],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    },
+    {
+        name: "Dexi",
+        processID: "Dexi",
+        logoImageLink: "",
+        links: {
+            telegram: "",
+            website: "https://dexi.arweave.dev/",
+            docs: "https://discord.gg/AK6C2PPWDc",
+            discord: "",
+            twitter: "https://twitter.com/autonomous_af",
+            github: "https://github.com/Autonomous-Finance",
+            other: ["https://www.autonomous.finance/research/en-US/dexi", ""]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        }],
+        description: "Dexi is an application on the AO network that autonomously identifies, collects, and aggregates diverse financial data from various events within the AO network. This data spans asset prices, token swaps, liquidity fluctuations, and token asset characteristics like smart contract details. The platform is built on a network of autonomous agents and responsive components. Dexi’s terminal is hosted on the Arweave network, upholding its fully decentralized, permissionless nature.",
+        oneLiner: "",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [{
+            name: "Real-Time Data for Web Users",
+            info: "Dexi provides immediate access to financial data and analytics on its website, helping traders and analysts make informed decisions quickly. This is facilitated via read-only dry run transactions.",
+            liveLink: "",
+            other: [""]
+        },
+        {
+            name: "Data Subscription for Automated Agents",
+            info: "Other applications or automated trading bots can subscribe to receive continuous data updates from Dexi, enabling them to respond instantly to market changes.",
+            liveLink: "",
+            other: [""]
+        }
+        ],
+        advisorsInvestors: [{
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [{
+            logoImageLink: "",
+            name: "",
+            link: "",
+            info: ""
+        }],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    },
+    {
+        name: "arconnect",
+        processID: "arconnect",
+        logoImageLink: "https://www.arconnect.io/_next/image?url=%2Flogo.png&w=640&q=75",
+        links: {
+            telegram: "",
+            website: "https://www.arconnect.io/",
+            docs: "https://docs.arconnect.io/",
+            discord: "https://www.arconnect.io/discord",
+            twitter: "https://www.arconnect.io/twitter",
+            github: "https://www.arconnect.io/github",
+            other: ["https://www.arconnect.io/download", ""]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        }],
+        description: "A non-custodial Arweave and AO native wallet with extensive features all in your favorite browser and mobile device",
+        oneLiner: "Your gateway to Arweave and AO",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: ""
+            }
+        },
+        gettingStartedGuide: "https://docs.arconnect.io/",
+        projectOrigin: "",
+        useCases: [{
+            name: "Manage assets View your activity",
+            info: "View Arweave & aoComputer token balances and NFTs across multiple wallets and seamlessly switch between accounts. Oversee real-time on chain transaction history all in 1-click.",
+            liveLink: "https://www.arconnect.io/#:~:text=View%20all-,Install%20now,-For%20browser",
+            other: [""]
+        },
+        {
+            name: "Send & Receive Tokens with ease",
+            info: "Powerful Arweave and aoComputer token management with an easy-to-use interface. All wallet data is backed up by the secure browser extension storage API keeping your assets safe.",
+            liveLink: "https://www.arconnect.io/#:~:text=View%20all-,Install%20now,-For%20browser",
+            other: [""]
+        }
+        ],
+        advisorsInvestors: [{
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [{
+            logoImageLink: "",
+            name: "Bark",
+            link: "https://bark.arweave.dev",
+            info: "Bark is the AO Computer's first decentralized exchange."
+        },
+        {
+            name: "Protocol.Land",
+            link: "https://protocol.land/",
+            info: "Protocol.Land is a decentralized home for decentralized codebases",
+            logoImageLink: ""
+        },
+        {
+            name: "Astro",
+            link: "https://astrousd.com/",
+            info: "Astro introduces USDA as the first overcollateralized stablecoin on AO.",
+            logoImageLink: ""
+        },
+
+        ],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    },
+    {
+        name: "Everpay",
+        processID: "Everpay",
+        logoImageLink: "https://www.everpay.io/img/everpay-small.818c6617.svg",
+        links: {
+            telegram: "",
+            website: "https://www.everpay.io/",
+            docs: "https://docs.everpay.io/en/",
+            discord: "https://discord.gg/keMNQZY9p4",
+            twitter: "https://twitter.com/everPayHQ",
+            github: "https://github.com/everFinance",
+            other: ["https://ever.vision/#/", "https://news.ever.vision/"]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        }],
+        description: "Real-time Arrival Unlike traditional blockchains where transfers have a wait time in order to be packaged, everPay transactions are verified and cached by everPay servers making it that assets arrive in real-time. There is no need to wait for transactions to be packaged, and the server guarantees that transactions are sequentially uploaded to the chain within minutes. everPay protocol follows the SCP (Storage-based consensus paradigm), There is no gas fee required, storing all everPay transactions via Arweave, with one million transactions for one dollar. At this stage users transfer assets, completely free of charge.",
+        oneLiner: "Real-time financial protocol for the blockchain",
+        token: {
+            name: "",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+
+            tokenomics: {
+                info: "The paper indicates that everPay will develop a token governance model in the future. At the early stage, everPay uses a DAO joined by established organizations. No detailed token offering plan is provided as they focus on infrastructure and ecological construction first.",
+                linkToBlogorPaper: "https://mirror.xyz/everpay.eth/V1mucZp4JAG7j3PnZiL-RcnDBc1VIxBTp2QREqiCIQ"
+            },
+        },
+        gettingStartedGuide: "https://docs.everpay.io/en/docs/guide/server-api/intro",
+        projectOrigin: "everFinance",
+        useCases: [
+            {
+                name: "Real-time Payment",
+                info: "Provides nearly instant transfer experience similar to traditional payment providers, with verification within milliseconds",
+                liveLink: "",
+                other: [""]
+            },
+            {
+                name: "Cross-chain Token Transfer",
+                info: "Native cross-chain functionality allowing token transfers between different blockchains, starting with Ethereum and Arweave",
+                liveLink: "",
+                other: [""]
+            },
+            {
+                name: "Smart Account",
+                info: "Supports both blockchain and internet accounts with enhanced security through hardware device binding and biometric technology",
+                liveLink: "",
+                other: [""]
+            },
+            {
+                name: "Swap",
+                info: "Decentralized token swaps using bundle transactions and aswap transactions",
+                liveLink: "",
+                other: [""]
+            },
+            {
+                name: "Financial Management",
+                info: "Cross-chain aggregated financial management services with reduced costs through off-chain computation",
+                liveLink: "",
+                other: [""]
+            }
+        ],
+        advisorsInvestors: [{
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""]
+        }],
+        mileStones: [
+            {
+                goal: "Support bundle opAction and decentralized token swaps",
+                date: "2021",
+                proof: "",
+                status: ""
+            },
+            {
+                goal: "Internet account system, payment opActions (aswap, timelock), integration of more blockchains",
+                date: "2022",
+                proof: "",
+                status: ""
+            },
+            {
+                goal: "Aggregated wealth management services, Fiat payment and OTC",
+                date: "2023",
+                proof: "",
+                status: ""
+            }
+        ],
+        mediaMentions: [""],
+        collaborations: [
+            {
+                name: "Community Labs",
+                link: "",
+                info: "",
+                logoImageLink: ""
+            }
+        ],
+        ownershipPercentages: [
+            {
+                name: "",
+                role: "",
+                percentage: ""
+            }
+        ],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    }, 
+    {
+        name: "ar.io",
+        processID: "ario",
+        logoImageLink: "https://ario.arweave.dev/wp-content/uploads/2022/02/ar-io-FINAL-LOGO-SHADOW-1024x525.png",
+        links: {
+            telegram: "",
+            website: "https://ario.arweave.dev/index.html",
+            docs: "",
+            discord: "https://discord.gg/4VHQrAc8BU",
+            twitter: "https://twitter.com/ar_io_network",
+            github: "",
+            other: ["https://ario.arweave.dev/arns-pilot/index.html", ""]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        }],
+        description: "the incentivized and decentralized gateway to the permaweb",
+        oneLiner: "the incentivized and decentralized gateway to the permaweb",
+        token: {
+            name: "ArNS",
+            ticker: "",
+            processId: "",
+            denomination: "",
+            totalSupply: "",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: "https://ario.arweave.dev/arns-pilot/index.html"
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [{
+            name: "Incentivizes data seeding, serving and indexing",
+            info: "Incentivizes data seeding, serving and indexing",
+            liveLink: "",
+            other: [""]
+        },
+        {
+            name: "Optimize price discovery and quality of service choice",
+            info: "Optimizes price discovery and quality of service choice",
+            liveLink: "",
+            other: [""]
+        },
+        {
+            name: "Customizable fiat / crypto payment integration",
+            info: "Customizable fiat / crypto payment integration",
+            liveLink: "",
+            other: [""]
+        },
+        {
+            name: "Supports fee sponsorship and subsidies",
+            info: "Supports fee sponsorship and subsidies",
+            liveLink: "",
+            other: [""]
+        }
+        ],
+        advisorsInvestors: [{
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [{
+            logoImageLink: "",
+            name: "",
+            link: "",
+            info: ""
+        }],
+        ownershipPercentages: [{
+            name: "",
+            role: "",
+            percentage: ""
+        }],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    },
+    {
+        name: "arns",
+        processID: "arns",
+        logoImageLink: "https://avatars.githubusercontent.com/u/95701273?s=200&v=4",
+        links: {
+            telegram: "",
+            website: "https://arns.app/#/?search=",
+            docs: "https://docs.ar.io/arns",
+            discord: "https://discord.com/invite/HGG52EtTc2",
+            twitter: "",
+            github: "https://github.com/ar-io/",
+            other: ["", ""]
+        },
+        team: [{
+            officialName: "",
+            pseudoName: "",
+            role: "",
+            imgLink: "",
+            links: {
+                discord: "",
+                github: "",
+                twitter: "",
+                dribble: "",
+                other: ["", ""],
+            },
+        }],
+        description: "ArNS names are censorship-resistant domain names for permaweb dApps, web pages, data, and identities.",
+        oneLiner: "Arweave Name System",
+        token: {
+            name: "IO",
+            ticker: "ɸ",
+            processId: "",
+            denomination: "IO",
+            totalSupply: "1,000,000,000",
+            tokenomics: {
+                info: "",
+                linkToBlogorPaper: "https://stmnnh3s5hfbfaxxskvhx3d4l5vkbdxnep34ginzy5bsrlzzxxha.arweave.net/lNjWn3LpyhKC95Kqe-x8X2qgju0j98MhucdDKK85vc4"
+            }
+        },
+        gettingStartedGuide: "",
+        projectOrigin: "",
+        useCases: [{
+            name: "",
+            liveLink: "",
+            other: [""],
+            info: ""
+        },
+
+        ],
+        advisorsInvestors: [{
+            name: "",
+            role: "",
+            moreInfo: "",
+            amountIfAny: [""],
+        }],
+        mileStones: [{
+            goal: "",
+            date: "",
+            proof: "",
+            status: ""
+        }],
+        mediaMentions: [""],
+        collaborations: [{
+            logoImageLink: "",
+            name: "",
+            link: "",
+            info: ""
+        }],
+        ownershipPercentages: [{
+            name: "Core Team",
+            role: "174,600,000",
+            percentage: "17.46"
+        },
+        {
+            name: "Advisors",
+            role: "22,600,000",
+            percentage: "2.26"
+        },
+
+        {
+            name: "Backers",
+            role: "267,000,000 ",
+            percentage: "26.70"
+        },
+
+        {
+            name: "Community Distribution",
+            role: "175,000,000",
+            percentage: "17.50"
+        },
+
+        {
+            name: "Initial Protocol Reward Balance",
+            role: "50,000,000",
+            percentage: "5.00"
+        },
+
+        {
+            name: "Foundation",
+            role: "100,000,000 ",
+            percentage: "10.00"
+        },
+
+        {
+            name: "Ecosystem and Strategic Partnerships",
+            role: "210,800,000",
+            percentage: "21.08"
+        },
+
+
+        ],
+        analysis: false,
+        bannerLink: "",
+        exchangeInfo: {
+            cooldownPeriod: 0,
+            aoethRewardRate: 0
+        }
+    },
     {
         name: "Astro",
         analysis: false,
