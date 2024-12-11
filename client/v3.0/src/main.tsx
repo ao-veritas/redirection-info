@@ -7,7 +7,10 @@ import ReactGA from "react-ga4";
 
 
 ReactGA.initialize("G-6EB5E3GYRN'"); // Replace with your Measurement ID
-
+ReactGA.send({
+  hitType: "pageview",
+  page: window.location.pathname,
+});
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

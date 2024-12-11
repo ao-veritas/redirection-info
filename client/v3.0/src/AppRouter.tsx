@@ -17,11 +17,7 @@ import Analysis from './_pages/Analysis';
 import UnderConstruction from "./_pages/UnderConstruction";
 
 const AppRouter: React.FC = () => {
-  const location = useLocation();
 
-  useEffect(() => {
-      ReactGA.send({ hitType: "pageview", page: location.pathname });
-  }, [location]);
   return (
     <Router>
       <Routes>
