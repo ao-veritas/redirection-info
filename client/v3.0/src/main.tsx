@@ -6,7 +6,7 @@ import AppRouter from './AppRouter';
 import ReactGA from "react-ga4";
 
 
-ReactGA.initialize("G-6EB5E3GYRN'"); // Replace with your Measurement ID
+ReactGA.initialize("G-6EB5E3GYRN");
 ReactGA.send({
   hitType: "pageview",
   page: window.location.pathname,
