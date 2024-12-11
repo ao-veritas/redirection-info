@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')!).render(
             dataLayer.push(arguments);
           }
           gtag('js', new Date());
-          gtag('config', 'G-JGF465EZHY');
+          gtag('config', 'G-6EB5E3GYRN');
         `}
       </script>
     </Helmet>
