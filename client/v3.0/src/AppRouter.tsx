@@ -1,6 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./_pages/HomePage";
+import ReactGA from "react-ga4";
 // import RegisterProject from './_pages/RegisterProject';
 // import Saturn from './_pages/Saturn';
 // import Faucet from "./_pages/Faucet";
@@ -16,6 +17,11 @@ import Analysis from './_pages/Analysis';
 import UnderConstruction from "./_pages/UnderConstruction";
 
 const AppRouter: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+      ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
   return (
     <Router>
       <Routes>

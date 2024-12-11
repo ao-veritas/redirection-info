@@ -38,6 +38,7 @@
     "react-confetti": "^6.1.0",
     "react-confetti-explosion": "^2.1.2",
     "react-dom": "^18.3.1",
+    "react-ga4": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.27.0",
     "recharts": "^2.12.7",
