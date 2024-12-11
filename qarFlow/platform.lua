@@ -37,9 +37,7 @@ Config = {
 
 db:exec([[
         PRAGMA foreign_keys = ON;
-        DROP TABLE IF EXISTS Stakers;
-        DROP TABLE IF EXISTS Transactions;
-        DROP TABLE IF EXISTS CronTransactions; 
+
         CREATE TABLE IF NOT EXISTS Stakers (
             UserID TEXT NOT NULL,
             TotalStaked TEXT DEFAULT '0',
@@ -351,5 +349,47 @@ Handlers.add(
         else
             print("No action taken: Not a debit notification from the correct QAR.")
         end
+    end
+)
+
+function getUserStakeInfo(userId)
+    return sql_run([[
+        SELECT s.TotalStaked, s.UnstakeAt
+        FROM Stakers s
+        WHERE s.UserID = ?;
+    ]], userId)
+end
+
+-- Add new handler for stake queries
+Handlers.add(
+    "QueryUserStake",
+    Handlers.utils.hasMatchingTag("Action", "QueryStake"),
+    function(msg)
+        if not msg.Tags.userId then
+            print("❌ No user ID provided")
+            return
+        end
+
+        local userStakes = getUserStakeInfo(msg.Tags.userId)
+        
+        -- Prepare response
+        local response = {
+            userId = msg.Tags.userId,
+            contractId = ao.id,  -- Current contract's ID
+            stakeInfo = {
+                totalStaked = userStakes[1] and userStakes[1].TotalStaked or "0",
+                unstakeAt = userStakes[1] and userStakes[1].UnstakeAt or 0
+            }
+        }
+
+        -- Send response back to requester
+        ao.send({
+            Target = msg.From,
+            Action = "StakeUpdate",
+                userId = msg.Tags.userId,
+                currentStake = response.stakeInfo.totalStaked,
+        })
+        
+        print("Sent stake info for user: " .. msg.Tags.userId)
     end
 )
