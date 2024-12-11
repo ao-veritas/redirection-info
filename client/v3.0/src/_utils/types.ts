@@ -14,8 +14,27 @@ export type UserStakes = {
     ProjectID: string;
   };
 
-export type ProjectType = {
+  export enum CategoryEnum {
+    Infrastructure = "Infrastructure",
+    DeveloperTools = "Developer Tools",
+    Defi = "Defi",
+    Labs = "Labs",
+    Wallet = "Wallet",
+    AI = "AI",
+    Investment = "Investment",
+    Bridge = "Bridge",
+    Community = "Community",
+    CreatorEconomy = "Creator Economy",
+    NFT = "NFT",
+    Memecoin = "Memecoin",
+    Social = "Social",
+    Game = "Game",
+    BlockExplorer = "Block Explorer",
+  }
+
+  export type Project = {
     name: string;
+    category: CategoryEnum;
     analysis: boolean;
     processID: string;
     logoImageLink: string;
@@ -92,4 +111,11 @@ export type ProjectType = {
       percentage: string;
     }[];
   };
+  
+  export type CategorizedProjects = {
+    category: CategoryEnum;
+    projects: Project[];
+  };
+  
+  export type CategorizedProjectsArray = CategorizedProjects[];
   
