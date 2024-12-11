@@ -1,10 +1,19 @@
-import { ProjectType } from "./types";
+import { CategoryEnum, Project } from "./types";
 import VeritasLogo from '../assets/SqLogoDark.svg'
-
-export const projects: ProjectType[] = [
+// export const categories =[
+//     'Infrastructure', 'Developer Tools',
+//     'Defi',           'Labs',
+//     'Wallet',         'AI',
+//     'Investment',     'Bridge',
+//     'Community',      'Creator Economy',
+//     'NFT',            'Memecoin',
+//     'Social',         'Game',
+//     'Block Explorer'
+//   ]
+export const projects: Project[] = [
     {
         name: "0rbit",
-        category: "Infrastructure",
+        category: CategoryEnum.Infrastructure,
         analysis: true,
         processID: "BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ",
         logoImageLink: "https://www.0rbit.co/logos/sqLightFill.svg",
@@ -127,7 +136,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "Veritas",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "l13OiZyp7T5YpmOqofjHRGyCbrpllLZp4HOyfa2WLPQ",
         logoImageLink: "https://pbs.twimg.com/profile_images/1835382616351965184/Y6TXCCub_400x400.jpg",
@@ -257,7 +266,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "Saturn",
-        category: "",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "rXQaiyznUgDrt7A0Nzl9OQN2QBJ3we1X3qMe2W5DBXU",
         logoImageLink: "https://wkypibie7ccprx5ujbbqddvhyotazjdchydxq6w4pd6j7hik5ipa.arweave.net/srD0BQT4hPjftEhDAY6nw6YMpGI-B3h63Hj8n50K6h4",
@@ -354,7 +363,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "BetterIDEa",
-        category: "Developer Tools",
+        category: CategoryEnum.DeveloperTools,
         analysis: false,
         processID: "processID for BetterIDEa",
         logoImageLink: "https://betteridea.dev/logo.png",
@@ -473,7 +482,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "Outcome",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: true,
         processID: "Dgs1OEsExsPRVcbe_3buCGf0suVKUFwMJFddqMhywbY",
         logoImageLink: "https://www.outcome.gg/_next/image?url=%2FOutcomeLogoBlack.png&w=96&q=75",
@@ -614,9 +623,9 @@ export const projects: ProjectType[] = [
     // },
     {
         name: "Community Labs",
-        category: "Labs",
+        category: CategoryEnum.Labs,
         processID: "communityLabs",
-        logoImageLink: "https://cdn.prod.website-files.com/66a95bb074e6f8f96d7b59a9/66c4e4b2dfe1f08711cbca3f_CL-Black-Text.svg",
+        logoImageLink: "https://cdn.prod.website-files.com/66a95bb074e6f8f96d7b59a9/66cccaecde96e7b46c1a2330_Webclip.png",
         links: {
             telegram: "",
             website: "https://www.communitylabs.com",
@@ -798,7 +807,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "Forward Research",
-        category: "Labs",
+        category: CategoryEnum.Labs,
         processID: "ForwardResearch",
         logoImageLink: "https://pbs.twimg.com/profile_images/1658890940856270848/5cNnfaY__400x400.jpg",
         // logoImageLink: "https://forward.arweave.dev/imgs/logo.png",
@@ -877,8 +886,8 @@ export const projects: ProjectType[] = [
         }
     },
     {
-        name: "Autonomous Fianance",
-        category: "Infrastructure",
+        name: "Autonomous Finance",
+        category: CategoryEnum.Infrastructure,
         processID: "AutonomousFianance",
         logoImageLink: "https://pbs.twimg.com/profile_images/1777516120498462721/Dx5DxPNC_400x400.jpg",
         links: {
@@ -978,9 +987,9 @@ export const projects: ProjectType[] = [
 
     {
         name: "BazAR",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         processID: "BazAR",
-        logoImageLink: "https://g8way.io/6uXyeweSXggXYm6_bX2r4HrsE8Z3alWgvhwAwt3tky4",
+        logoImageLink: "https://bazar.arweave.net/favicon.svg",
         links: {
             telegram: "",
             website: "https://bazar.arweave.net/",
@@ -1057,7 +1066,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "Dexi",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         processID: "Dexi",
         logoImageLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAn1BMVEUYGRo+NTorKCs0LjKphpbruc6AZ3NPQ0kdHh8lIyWZeoinhpTjs8dGPEHVqLuPcn9yXmfQpLe/n62Oe4RjWF3ZsMGcgYy2laSGbHjFnK0cHB28vb1jY2Q9PT7gzNRiUVkjJCXd3d0tLi+4uLl2dnegoaHs7Ow/QEH19fVtbW7HyMiwsLDPz89SUlOnp6f///9JSkuHh4iQkZEzNDWWl5dXq7AqAAABCUlEQVR4AWIgGQAaG6ssi2EYhqaQPGZ+ZWbu/tc2cVIPkz4s6VwnVtSfiKZTHZfYbP6OLJaU0tVUGKXr5QbRbEu5dlPbUNB2p5HNXpOFMlw9yH488XG+iLxHtpPsCr6/iXxHxiR7aA96W9zFvS2yO7T1fUGeClRlv6IXZEe+xxbknZ6GKYNl35wn+SjX84UHJvmqMII5j2X7/BBmEvDhp1kaiCUrD/OCPyrh06rmI25AKW+pSDUpWnxXF/xox9fbvPfJUFTEsPDnr/JcmHn7DaoMYWb+DSsr6XX4mcBpqXlefUKmMcfoGr3IWMfgfe28PpliG3mfbriZERt1XxtxYL5/hLgCueRfegG9JxcIWMWBnAAAAABJRU5ErkJggg==",
         links: {
@@ -1143,7 +1152,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "arconnect",
-        category: "Wallet",
+        category: CategoryEnum.Wallet,
         processID: "arconnect",
         logoImageLink: "https://www.arconnect.io/_next/image?url=%2Flogo.png&w=640&q=75",
         links: {
@@ -1243,9 +1252,9 @@ export const projects: ProjectType[] = [
     },
     {
         name: "Everpay",
-        category: "Infrastructure",
+        category: CategoryEnum.Infrastructure,
         processID: "Everpay",
-        logoImageLink: "https://www.everpay.io/img/everpay-small.818c6617.svg",
+        logoImageLink: "https://www.everpay.io/favicon.png",
         links: {
             telegram: "",
             website: "https://www.everpay.io/",
@@ -1367,7 +1376,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "ar.io",
-        category: "Infrastructure",
+        category: CategoryEnum.Infrastructure,
         processID: "ario",
         logoImageLink: "https://ario.arweave.dev/wp-content/uploads/2022/02/ar-io-FINAL-LOGO-SHADOW-1024x525.png",
         links: {
@@ -1465,7 +1474,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "arns",
-        category: "Infrastructure",
+        category: CategoryEnum.Infrastructure,
         processID: "arns",
         logoImageLink: "https://avatars.githubusercontent.com/u/95701273?s=200&v=4",
         links: {
@@ -1584,10 +1593,10 @@ export const projects: ProjectType[] = [
     },
     {
         name: "Astro",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "astro",
-        logoImageLink: "https://cdn.prod.website-files.com/665f3be1a0fe5f53c9a67b7b/66606e51c7daecc640734f4f_astro-logo.svg",
+        logoImageLink: "https://cdn.prod.website-files.com/665f3be1a0fe5f53c9a67b7b/6661cd708b59653cbf1094c9_Webclip.png",
         bannerLink: "",
         links: {
             website: " https://www.astrousd.com/ ",
@@ -1729,7 +1738,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "Apus",
-        category: "AI",
+        category: CategoryEnum.AI,
         analysis: true,
         processID: "vp4pxoOsilVxdsRqTmLjP86CwwUwtj1RoKeGrFVxIVk",
         logoImageLink: "https://avatars.githubusercontent.com/u/146177720?s=400&u=b44c0ae4eb6793800a4377468ab6cb0fa44e6b80&v=4",
@@ -1893,7 +1902,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "Permaswap",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "permaswap",
         logoImageLink: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAABhCAMAAAD8xk/WAAAAP1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////9Du/pqAAAAFHRSTlMAgGAg378Q70AwUJ+Qz6Bwb69/jxRAXm8AAAKRSURBVGje7djLrpswEIDhwR5fMQGSef9nrVylitoJYzxGR13wL87i5PKBHTAyaPJxK/uCVEO3ly1Cs20yJsfkTyPx6YjntgRi9C64M4cVS6Cj8Gklp+OwjCO5+VjihzXHAwWpnbOCwyjD3x1FpX1OB2P9z7v9TqcLq+DIx5UD9bRYyeGjB+9e1Blm5rQn1S7U37PHQVsZJE2v804QmHbzaSczRgG1nZUxCqjtlHrZII30POFgffFBY5m2U38DTxos2JYz1cmh4ZaGg3XdQxpvkh3DRk1bkhxko6bOSY5hvzV9mTnS6ehD5oino88cOpadzkjuyJnPnI7bogXwKT+QGsXqrNM0u4X9X/5wmDx8ik52CnxKZg9/vqQ+EMgf9F2PXMF/fQzcG8MWDLDktZ09EGZ8rztBYBJnGkdWgFV+3yli80bC24VDA95E9Y+8yvIaa6IFXr1PuPZazIutS5UXWkfWOUXlYAgUpyPeEpfeEUgg5Xp+CNJViiBm6CgP31rpoF12bOe0TsJqLxYuckzDwR9y3O1cOz9wqePpaqfz+l4UjuZG6hSO5nZQrnPEB//1SscKa/2VDorPB+NOe3PG9TvRNieHZxQOfv2Qf5GQ7Xf81428tEiMA8X81G+c49/Kg8SMxinv/cacoObT5kgueI1j6BNiOLXNo3Es9WZVDgTFrpXGcYrT0ThFsfGicbJi90Dj+C4nqh1AxahpnIdi1DTOep6xI07s2qrSO14xORoHFgWjcYqC0TjmDLPCsGPbCkYYd9q3bOfhCmcXCL6hpXfW1h7gRU5CjcIzolPL34fOZaaMODWfy9/XK74MQ8acTylvU20zSTT0Du92budqZ/0hZ7qd27md/8VJ00EJtP0CaOyoPUgAnCcAAAAASUVORK5CYII=",
@@ -1979,7 +1988,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "SENTIO",
-        category: "Developer Tools",
+        category: CategoryEnum.DeveloperTools,
         analysis: false,
         processID: "processID for Sentio",
         logoImageLink: "https://i.imgur.com/wmU7NZ4.png",
@@ -2077,7 +2086,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "AoClima Option",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "aoclima",
         logoImageLink: "https://aoc-rouge.vercel.app/Aco-logo.svg",
@@ -2162,7 +2171,7 @@ export const projects: ProjectType[] = [
     },
     {
         name: "AoVest",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "",
         logoImageLink: "https://framerusercontent.com/images/L3qy4ICXcxgUijV6YK9BVHbLWQ8.png",
@@ -2251,7 +2260,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Aolotto",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "aolotto",
         logoImageLink: "https://docs.aolotto.com/~gitbook/image?url=https%3A%2F%2F632649932-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FWWmCSvEP25hXbkY0uqAH%252Ficon%252FvpD0dGwh5txOfj8Uzd0B%252Fpure_pattern.png%3Falt%3Dmedia%26token%3D741bcf0a-0487-409d-a07d-8301c60b837b&width=32&dpr=1&quality=100&sign=9607fccd&sv=2",
@@ -2351,7 +2360,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "bark",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "bark",
         logoImageLink: "https://bark.arweave.dev/",
@@ -2437,7 +2446,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Convergent",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "convergent",
         logoImageLink: "https://convergent.vercel.app/Convergent-Logo.png",
@@ -2552,10 +2561,10 @@ export const projects: ProjectType[] = [
 
     {
         name: "Arweave SCP Ventures",
-        category: "Investment",
+        category: CategoryEnum.Investment,
         analysis: false,
         processID: "scp",
-        logoImageLink: "https://arscp.ventures/img/arscp_logo_black.6831aad5.png",
+        logoImageLink: "https://arscp.ventures/favicon.png",
         bannerLink: "",
         links: {
             website: "https://arscp.ventures/",
@@ -2638,7 +2647,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "ao Ventures",
-        category: "Investment",
+        category: CategoryEnum.Investment,
         analysis: false,
         processID: "aoventures",
         logoImageLink: "https://pbs.twimg.com/profile_images/1778168124967120896/XUi29oqd_400x400.png",
@@ -2724,10 +2733,10 @@ export const projects: ProjectType[] = [
 
     {
         name: "AO Web Wallet",
-        category: "Wallet",
+        category: CategoryEnum.Wallet,
         analysis: false,
         processID: "aowebwallet",
-        logoImageLink: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzExLjU4IDI0MC45MiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+CiAgICA8Zz4KICAgICAgPHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjAgMjQwLjQ1IDgwLjIgMjQwLjQ1IDk2LjU3IDE5Ni4xOSA1OS43NCAxMjAuNzkgMCAyNDAuNDUiLz4KICAgICAgPHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjEyMy41NyAxLjEyIDk2LjU3IDYyLjYgMTgwLjg2IDI0MC40NSAyNDEuNTggMjQwLjQ1IDIxMi43NyAxODAuNjIgMTIzLjU3IDEuMTIiLz4KICAgICAgPHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9Ijc4NS4wMSA0Ni44NSA4MjEuODQgMTIyLjI2IDg4MS41OCAyLjU5IDgwMS4zOCAyLjU5IDc4NS4wMSA0Ni44NSIvPgogICAgICA8cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNDcyIDEuMTIgNTAwLjggNjAuOTYgNTkwIDI0MC40NSA2MTcuMDEgMTc4Ljk4IDUzMi43MiAxLjEyIDQ3MiAxLjEyIi8+CiAgICAgIDxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI3MTMuMzQgMS41OSA3MTMuNTggMS4xMiA2MzMuMzggMS4xMiA2MTcuMDEgNDUuMzggNjUzLjg0IDEyMC43OSA2ODIuNjQgNjMuMSA3NzEgMjQwLjkyIDc5OC4wMSAxNzkuNDUgNzEzLjcyIDEuNTkgNzEzLjM0IDEuNTkiLz4KICAgICAgPHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjEyMzEuMzggMi41OSAxMjE1LjAxIDQ2Ljg1IDEyNTEuODQgMTIyLjI2IDEzMTEuNTggMi41OSAxMjMxLjM4IDIuNTkiLz4KICAgICAgPHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjkwMiAxLjEyIDkzMC44IDYwLjk2IDEwMjAgMjQwLjQ1IDEwNDcuMDEgMTc4Ljk4IDk2Mi43MiAxLjEyIDkwMiAxLjEyIi8+CiAgICAgIDxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIxMTQzLjM0IDEuNTkgMTE0My41OCAxLjEyIDEwNjMuMzggMS4xMiAxMDQ3LjAxIDQ1LjM4IDEwODMuODQgMTIwLjc5IDExMTIuNjQgNjMuMSAxMjAxIDI0MC45MiAxMjI4LjAxIDE3OS40NSAxMTQzLjcyIDEuNTkgMTE0My4zNCAxLjU5Ii8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTM2MS44LDBjLTY2LjQsMC0xMjAuMjMsNTMuODMtMTIwLjIzLDEyMC4yM3M1My44MywxMjAuMjMsMTIwLjIzLDEyMC4yMywxMjAuMjMtNTMuODMsMTIwLjIzLTEyMC4yM1M0MjguMiwwLDM2MS44LDBabTAsMTkzLjI2Yy00MC4zNCwwLTczLjAzLTMyLjctNzMuMDMtNzMuMDNzMzIuNy03My4wMyw3My4wMy03My4wMyw3My4wMywzMi43LDczLjAzLDczLjAzLTMyLjcsNzMuMDMtNzMuMDMsNzMuMDNaIi8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4=",
+        logoImageLink: "https://aoww.net/images/favicon-512x512.png",
         bannerLink: "",
         links: {
             website: "https://aoww.net/",
@@ -2878,7 +2887,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Othent",
-        category: "Wallet",
+        category: CategoryEnum.Wallet,
         analysis: false,
         processID: "othent",
         logoImageLink: "https://avatars.githubusercontent.com/u/118553412?s=200&v=4",
@@ -2991,10 +3000,10 @@ export const projects: ProjectType[] = [
 
     {
         name: "Anyone Protocol",
-        category: "Infrastructure",
+        category: CategoryEnum.Infrastructure,
         analysis: false,
         processID: "anyone",
-        logoImageLink: "https://cdn.prod.website-files.com/64940c3f30cff496b018e020/66670f6a96a5272881ad1462_anyone-wordmark-logo.svg",
+        logoImageLink: "https://docs.anyone.io/~gitbook/image?url=https%3A%2F%2F3849121521-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FSDtTViT7t45iXUBMLe4l%252Fsites%252Fsite_cLnW8%252Ficon%252Fa0R6zscopv1ahpZn57Rc%252FATOR%2520MONO%25203.png%3Falt%3Dmedia%26token%3Dff87475b-1474-4dbc-bd2f-faf24afbfa89&width=32&dpr=2&quality=100&sign=aac42cfb&sv=2",
         bannerLink: "",
         links: {
             website: "https://www.anyone.io/",
@@ -3089,11 +3098,11 @@ export const projects: ProjectType[] = [
 
     {
         name: "LiquidOps",
-        category: "Defi",
+        category: CategoryEnum.Defi,
         analysis: false,
         processID: "liquidops",
-        logoImageLink: "https://cdn.prod.website-files.com/668045d81418e5698357a4b2/66c6624369c345174b43914e_Logo%20Primary_LiquidOps.svg",
-        bannerLink: "",
+        logoImageLink: "https://cdn.prod.website-files.com/668045d81418e5698357a4b2/66c66291f2275f94e0136d29_Webclip.png",
+        bannerLink: "https://cdn.prod.website-files.com/668045d81418e5698357a4b2/66c662c6146bc82146977c77_Opengraph%20Img.jpg",
         links: {
             website: "https://www.liquidops.io/",
             docs: "",
@@ -3191,10 +3200,10 @@ export const projects: ProjectType[] = [
 
     {
         name: "WeaveVM",
-        category: "Infrastructure",
+        category: CategoryEnum.Infrastructure,
         analysis: false,
         processID: "weavevm",
-        logoImageLink: "https://www.wvm.dev/logo/weavevm.svg",
+        logoImageLink: "https://www.wvm.dev/favicon.ico",
         bannerLink: "",
         links: {
             website: "https://www.wvm.dev/",
@@ -3402,7 +3411,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Liteseed",
-        category: "Developer Tools",
+        category: CategoryEnum.DeveloperTools,
         analysis: false,
         processID: "liteseed",
         logoImageLink: "https://liteseed.xyz/images/icon.webp",
@@ -3489,7 +3498,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Protocol Land",
-        category: "Developer Tools",
+        category: CategoryEnum.DeveloperTools,
         analysis: false,
         processID: "protocolland",
         logoImageLink: "https://pbs.twimg.com/profile_images/1858825222142529536/PBFjc3Uo_400x400.jpg",
@@ -3599,10 +3608,10 @@ export const projects: ProjectType[] = [
 
     {
         name: "AOX",
-        category: "Bridge",
+        category: CategoryEnum.Bridge,
         analysis: false,
         processID: "aox",
-        logoImageLink: "https://aox.arweave.net/assets/header-logo-0bfbf159.png",
+        logoImageLink: "https://aox.arweave.net/favicon-dark.png",
         bannerLink: "",
         links: {
             website: "https://aox.arweave.net/#/",
@@ -3697,10 +3706,10 @@ export const projects: ProjectType[] = [
 
     {
         name: "Quantum",
-        category: "Bridge",
+        category: CategoryEnum.Bridge,
         analysis: false,
         processID: "quantum",
-        logoImageLink: "https://cdn.prod.website-files.com/6690496aaf262323d4a4ba1f/66b2703ef0c6343b5ffff442_quantum.svg",
+        logoImageLink: "https://cdn.prod.website-files.com/6690496aaf262323d4a4ba1f/6696e927236e99d109093f2a_Webclip.png",
         bannerLink: "",
         links: {
             website: "https://quantum.astrousd.com/",
@@ -3807,7 +3816,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Permadao",
-        category: "Community",
+        category: CategoryEnum.Community,
         analysis: false,
         processID: "Permadao",
         logoImageLink: "https://avatars.githubusercontent.com/u/122953514?s=200&v=4",
@@ -3893,7 +3902,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "AO Computer Club",
-        category: "Community",
+        category: CategoryEnum.Community,
         analysis: false,
         processID: "aocomputerclub",
         logoImageLink: "https://pbs.twimg.com/profile_images/1757175667450621952/PtB2bb0-_400x400.jpg",
@@ -3979,7 +3988,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Weavers",
-        category: "Community",
+        category: CategoryEnum.Community,
         analysis: false,
         processID: "onlyweavers",
         logoImageLink: "https://pbs.twimg.com/profile_images/1823767838823182336/ewYUK9HU_400x400.png",
@@ -4065,7 +4074,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Only Arweave",
-        category: "Community",
+        category: CategoryEnum.Community,
         analysis: false,
         processID: "arweave",
         logoImageLink: "https://pbs.twimg.com/profile_images/1235596780047339521/oRt6SiEN_400x400.jpg",
@@ -4151,7 +4160,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "odysee",
-        category: "Creator Economy",
+        category: CategoryEnum.CreatorEconomy,
         analysis: false,
         processID: "odysee",
         logoImageLink: "https://pbs.twimg.com/profile_images/1299848979207696385/7DlBlMYH_400x400.jpg",
@@ -4238,7 +4247,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "solarplex",
-        category: "Creator Economy",
+        category: CategoryEnum.CreatorEconomy,
         analysis: false,
         processID: "solarplex",
         logoImageLink: "https://www.alchemy.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Falchemy-website%2Fimage%2Fupload%2Fv1694675985%2Fdapp-store%2Fdapp-logos%2FSolarplex.png&w=256&q=75",
@@ -4324,7 +4333,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "DumDumz",
-        category: "NFT",
+        category: CategoryEnum.NFT,
         analysis: false,
         processID: "dumdumz",
         logoImageLink: "https://dumdumz.xyz/images/profile/Jonny_Ringo_nft.png",
@@ -4439,10 +4448,10 @@ export const projects: ProjectType[] = [
 
     {
         name: "MekaHuman",
-        category: "NFT",
+        category: CategoryEnum.NFT,
         analysis: false,
         processID: "mekahuman",
-        logoImageLink: "https://arweave.net/467QjaTFNK-zpXx7Y2fG0QEzFPZjE0BCoXSdjz32Evg",
+        logoImageLink: "https://djv7c3mya7wpbo6q7t2477mc5asjd4arlkiieqi5oxoq7b73s3nq.arweave.net/GmvxbZgH7PC70Pz1z_2C6CSR8BFakIJBHXXdD4f7lts",
         bannerLink: "",
         links: {
             website: "https://mekahuman.ar.io",
@@ -4526,7 +4535,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "DataOS",
-        category: "AI",
+        category: CategoryEnum.AI,
         analysis: false,
         processID: "dataos",
         logoImageLink: "https://stats.dataos.so/dataos_gray.svg",
@@ -4612,7 +4621,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Trunk",
-        category: "Memecoin",
+        category: CategoryEnum.Memecoin,
         analysis: false,
         processID: "trunk",
         logoImageLink: "https://arweave.net/hqg-Em9DdYHYmMysyVi8LuTGF8IF_F7ZacgjYiSpj0k",
@@ -4705,10 +4714,10 @@ export const projects: ProjectType[] = [
 
     {
         name: "Typr",
-        category: "Social",
+        category: CategoryEnum.Social,
         analysis: false,
         processID: "typr",
-        logoImageLink: "https://www.typr.day/logo.png",
+        logoImageLink: "https://www.typr.day/favicon.png",
         bannerLink: "",
         links: {
             website: "https://www.typr.day/",
@@ -4791,7 +4800,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "DecentraMind",
-        category: "Social",
+        category: CategoryEnum.Social,
         analysis: false,
         processID: "decentramind",
         logoImageLink: "https://pbs.twimg.com/profile_images/1806545056436043776/XgEzPPcz_400x400.jpg",
@@ -4845,7 +4854,7 @@ export const projects: ProjectType[] = [
                 other: [""]
             },
             {
-                name: "Community",
+                name: CategoryEnum.Community,
                 info: "Create your community",
                 liveLink: "https://decentramind.gitbook.io/decentramind/tutorials-for-communities/how-to-create-a-community",
                 other: [""]
@@ -4889,7 +4898,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Atomic Notes",
-        category: "Social",
+        category: CategoryEnum.Social,
         analysis: false,
         processID: "atomicnotes",
         logoImageLink: "https://note.ar.io/icon.png",
@@ -5005,7 +5014,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "llamaland",
-        category: "Game",
+        category: CategoryEnum.Game,
         analysis: false,
         processID: "llamaland",
         logoImageLink: "https://llamaland.arweave.dev/assets/branding/LLAMA_coin_large.png",
@@ -5092,7 +5101,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "ao Builders",
-        category: "Game",
+        category: CategoryEnum.Game,
         analysis: false,
         processID: "aobuilders",
         logoImageLink: "https://aobuilders.space/wp-content/uploads/2024/05/cropped-AO_builders_logo_black-1.png",
@@ -5235,7 +5244,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "Satoshi's Palace",
-        category: "Game",
+        category: CategoryEnum.Game,
         analysis: false,
         processID: "satoshispalace",
         logoImageLink: "https://framerusercontent.com/images/GLo91iBvS59sboDvWgDGvlDyLY.png?scale-down-to=512",
@@ -5358,7 +5367,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "ao Link",
-        category: "Block Explorer",
+        category: CategoryEnum.BlockExplorer,
         analysis: false,
         processID: "aolink",
         logoImageLink: "https://www.ao.link/ao.svg",
@@ -5481,7 +5490,7 @@ export const projects: ProjectType[] = [
 
     {
         name: "View Block",
-        category: "Block Explorer",
+        category: CategoryEnum.BlockExplorer,
         analysis: false,
         processID: "viewblock",
         logoImageLink: "https://blog.viewblock.io/content/images/2022/07/android-chrome-512x512.png",

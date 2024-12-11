@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { DiscordLogoIcon } from "@radix-ui/react-icons";
 import { useEffect, useRef, useState } from "react";
-import { ProjectType } from "../_utils/types";
+import { Project } from "../_utils/types";
 import { projects } from "../_utils/projects";
 import { getAllTransactions } from "../_utils/info";
 import { useUserAoETH } from "../_utils/useAoEth";
@@ -167,7 +167,7 @@ export default function Component({ pid }: any) {
     console.log("this it", flag);
     return flag;
   };
-  const [currentProject, setCurrentProject] = useState<ProjectType>();
+  const [currentProject, setCurrentProject] = useState<Project>();
   useEffect(() => {
     projects.map((project) => {
       if (project.processID == pid) {
@@ -323,7 +323,7 @@ export default function Component({ pid }: any) {
           </Card>
 
           <Tabs defaultValue="team">
-            <TabsList className="grid w-full sm:grid-cols-4 grid-cols-2 sm:gap-6 bg-[#161616] text-[#eeeeee] tracking-wider font-thin">
+            <TabsList className="sm:h-12 h-24 grid w-full sm:grid-cols-4 grid-cols-2 sm:gap-6 bg-[#161616] text-[#eeeeee] tracking-wider font-thin">
               <TabsTrigger value="team">Team</TabsTrigger>
               <TabsTrigger value="token">Token</TabsTrigger>
               <TabsTrigger value="milestones">Milestones</TabsTrigger>
