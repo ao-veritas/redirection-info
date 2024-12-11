@@ -1,9 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Helmet } from 'react-helmet';
 import './index.css';
 import { ArweaveWalletKit } from 'arweave-wallet-kit';
 import AppRouter from './AppRouter';
+import { Helmet } from 'react-helmet';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
