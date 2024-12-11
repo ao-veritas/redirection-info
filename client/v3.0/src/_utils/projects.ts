@@ -2173,7 +2173,7 @@ export const projects: Project[] = [
         name: "AoVest",
         category: CategoryEnum.Defi,
         analysis: false,
-        processID: "",
+        processID: "aovest",
         logoImageLink: "https://framerusercontent.com/images/L3qy4ICXcxgUijV6YK9BVHbLWQ8.png",
         bannerLink: "",
         links: {
