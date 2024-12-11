@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./_pages/HomePage";
-import ReactGA from "react-ga4";
 // import RegisterProject from './_pages/RegisterProject';
 // import Saturn from './_pages/Saturn';
 // import Faucet from "./_pages/Faucet";
