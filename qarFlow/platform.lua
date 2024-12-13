@@ -7,8 +7,8 @@ local bint = require('.bint')(256)
 Staked = Staked or 0
 
 Config = {
-    UNSTAKE_DELAY = 670,
-    TO_DISTRIBUTE = 55407801418,
+    UNSTAKE_DELAY = 3,
+    TOTAL_SUPPLY = 3150000,
     TOKENS = {
         PTOKEN = "34jmjvIwlz_GvNElXe1yVW_dcQl7Xs1rscfHM8tfrlE",
         QAR = "2GJ6V2TnJw0YplnSqEjSDFwILYopWSFGTGrDxS_vCCk"
@@ -37,7 +37,6 @@ Config = {
 
 db:exec([[
         PRAGMA foreign_keys = ON;
-
         CREATE TABLE IF NOT EXISTS Stakers (
             UserID TEXT NOT NULL,
             TotalStaked TEXT DEFAULT '0',
@@ -81,7 +80,7 @@ local utils = {
     subtract = function (a,b)
       return tostring(bint(a) - bint(b))
     end
-  }
+  }--cron
 
 function sql_run(query, ...)
     print("enter sql run")
@@ -192,7 +191,7 @@ Handlers.add(
         print("Total staked: " .. total_staked)
         
         -- Total tokens to distribute
-        local to_distribute = Config.TO_DISTRIBUTE
+        local to_distribute = math.floor(Config.TOTAL_SUPPLY * 0.0031)
         print("To distribute: " .. to_distribute)
         
         -- Fetch all stakers
@@ -206,7 +205,7 @@ Handlers.add(
             local user_distribution = math.floor(to_distribute * user_percentage) -- Round down to avoid decimals
             
             print("Before sending: " .. staker.UserID .. " " .. user_distribution)
-            
+            print(Config.TOKENS.PTOKEN)
             -- Send tokens based on the calculated distribution
             ao.send({
                 Target = Config.TOKENS.PTOKEN,
@@ -237,6 +236,8 @@ Handlers.add(
             local quantity = msg.Tags.Quantity
             local status = "fulfilled"
             local type = "ctu"
+            Config.TOTAL_SUPPLY = Config.TOTAL_SUPPLY - tonumber(quantity)
+            print("total in debit" .. tonumber(quantity))
             -- Insert the transaction into the Transactions table
             sql_write(
                 [[INSERT INTO CronTransactions (Timestamp, TransID, UserID, TokenID, Quantity, Status, Type)
@@ -391,5 +392,49 @@ Handlers.add(
         })
         
         print("Sent stake info for user: " .. msg.Tags.userId)
+    end
+)
+
+-- Add these handlers to your existing Lua contract
+
+-- Handler for getting latest transactions
+Handlers.add(
+    "QueryTransactions",
+    Handlers.utils.hasMatchingTag("Action", "QueryTransactions"),
+    function(msg)
+        local limit = msg.Tags.limit or 10  -- Default to 10 transactions
+        
+        local transactions = sql_run([[
+            SELECT * FROM Transactions 
+            ORDER BY Timestamp DESC 
+            LIMIT ?;
+        ]], limit)
+        
+        ao.send({
+            Target = msg.From,
+            Action = "TransactionsUpdate",
+            Data = json.encode(transactions)
+        })
+    end
+)
+
+-- Handler for getting latest cron transactions
+Handlers.add(
+    "QueryCronTransactions",
+    Handlers.utils.hasMatchingTag("Action", "QueryCronTransactions"),
+    function(msg)
+        local limit = msg.Tags.limit or 10  -- Default to 10 transactions
+        
+        local transactions = sql_run([[
+            SELECT * FROM CronTransactions 
+            ORDER BY Timestamp DESC 
+            LIMIT ?;
+        ]], limit)
+        
+        ao.send({
+            Target = msg.From,
+            Action = "CronTransactionsUpdate",
+            Data = json.encode(transactions)
+        })
     end
 )
