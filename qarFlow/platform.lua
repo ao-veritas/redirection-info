@@ -382,6 +382,7 @@ Handlers.add(
                 unstakeAt = userStakes[1] and userStakes[1].UnstakeAt or 0
             }
         }
+        
 
         -- Send response back to requester
         ao.send({
@@ -430,11 +431,20 @@ Handlers.add(
             ORDER BY Timestamp DESC 
             LIMIT ?;
         ]], limit)
-        
+       Handlers.utils.reply(json.encode(transactions))(msg) 
         ao.send({
             Target = msg.From,
             Action = "CronTransactionsUpdate",
             Data = json.encode(transactions)
         })
+    end
+)
+
+Handlers.add(
+    "StakersInfo",
+    Handlers.utils.hasMatchingTag("Action", "StakersInfo"),
+    function (msg)
+        local stakers = sql_run([[SELECT * FROM Stakers;]])
+        Handlers.utils.reply(json.encode(stakers))(msg)
     end
 )
