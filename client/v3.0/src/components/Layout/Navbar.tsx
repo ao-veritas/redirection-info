@@ -120,7 +120,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      {/* PHONE */}
+      {/* PHONE  */}
       <nav
         className={`flex flex-row lg:hidden justify-between items-start px-[21px] py-[21px] fadeIn fixed w-full z-50 
         ${
