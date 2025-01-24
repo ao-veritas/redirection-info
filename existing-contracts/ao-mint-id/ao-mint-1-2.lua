@@ -81,7 +81,7 @@ local function _load()
     return dbAdmin
 end
 _G.package.loaded['@rakis/DbAdmin'] = _load()
-return "DbAdmin Installed."
+-- return "DbAdmin Installed."
 
 
 

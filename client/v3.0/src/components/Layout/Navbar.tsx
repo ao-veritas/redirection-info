@@ -1,4 +1,4 @@
-import { ConnectButton, useConnection } from "arweave-wallet-kit";
+// import { ConnectButton, useConnection } from "arweave-wallet-kit";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
@@ -14,7 +14,7 @@ export default function Navbar() {
   // let path = window.location.hash.split("#");
   const path = location.pathname.split("/");
   // const address = useActiveAddress();
-  const { connected } = useConnection();
+  // const { connected } = useConnection();
   // console.log(path[1])
   // const validPaths = ["about", "profile", "faucet", "project", "addProject", ""];
   // let pageTitle = validPaths.includes(path[1]?.toLowerCase()) ? path[1] : "Home";
