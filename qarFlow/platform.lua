@@ -13,6 +13,7 @@ Config = {
         PTOKEN = "34jmjvIwlz_GvNElXe1yVW_dcQl7Xs1rscfHM8tfrlE",
         QAR = "2GJ6V2TnJw0YplnSqEjSDFwILYopWSFGTGrDxS_vCCk"
     },
+    USER_CONTRACT = "r8S7mt2hXdtdIev_Q-TQAN9nck7v0stfJ3MfZRwAYGk"
 }
 
 -- CREATE TABLE IF NOT EXISTS BridgedTokens(
@@ -22,7 +23,7 @@ Config = {
 -- FOREIGN KEY (BridgedTokenID) REFERENCES BridgedTokens(TokenID)
 
 -- CREATE TABLE IF NOT EXISTS CronTransactions (
---     Timestamp TEXT, 
+--     Timestamp TEXT,
 --     TransID TEXT,
 --     UserID TEXT,
 --     TokenID TEXT,
@@ -43,10 +44,10 @@ db:exec([[
             UnstakeAt INTEGER,
             PRIMARY KEY (UserID)
         );
-        
+
         CREATE TABLE IF NOT EXISTS Transactions (
             TransID TEXT PRIMARY KEY,
-            Timestamp TEXT NOT NULL, 
+            Timestamp TEXT NOT NULL,
             SenderID TEXT NOT NULL,
             RecieverID TEXT NOT NULL,
             TokenID TEXT NOT NULL,
@@ -54,33 +55,33 @@ db:exec([[
             Status TEXT NOT NULL,
             Type TEXT NOT NULL
         );
-        
+
         CREATE INDEX IF NOT EXISTS idx_transactions_sender ON Transactions(SenderID);
         CREATE INDEX IF NOT EXISTS idx_transactions_receiver ON Transactions(RecieverID);
         CREATE INDEX IF NOT EXISTS idx_transactions_status ON Transactions(Status);
-        
+
         CREATE TABLE IF NOT EXISTS CronTransactions (
             TransID TEXT PRIMARY KEY,
-            Timestamp TEXT NOT NULL, 
+            Timestamp TEXT NOT NULL,
             UserID TEXT NOT NULL,
             TokenID TEXT NOT NULL,
             Quantity TEXT NOT NULL,
             Status TEXT NOT NULL,
             Type TEXT NOT NULL
         );
-        
+
         CREATE INDEX IF NOT EXISTS idx_cron_transactions_user ON CronTransactions(UserID);
         CREATE INDEX IF NOT EXISTS idx_cron_transactions_status ON CronTransactions(Status);
     ]])
 
 local utils = {
-    add = function (a,b) 
-      return tostring(bint(a) + bint(b))
+    add = function(a, b)
+        return tostring(bint(a) + bint(b))
     end,
-    subtract = function (a,b)
-      return tostring(bint(a) - bint(b))
+    subtract = function(a, b)
+        return tostring(bint(a) - bint(b))
     end
-  }--cron
+} --cron
 
 function sql_run(query, ...)
     print("enter sql run")
@@ -118,7 +119,6 @@ function sql_write(query, ...)
     return db:changes()
 end
 
-
 Handlers.add(
     "Stake",
     Handlers.utils.hasMatchingTag("X-Action", "Stake"),
@@ -128,52 +128,60 @@ Handlers.add(
             return
         end
         -- Check if recieved from bridged tokens list or not
-            local tags = msg.Tags
-            local newQuantity = bint(tags.Quantity) -- New quantity to add
-            local height = tonumber(msg['Block-Height'])
-            
-            -- Check if user exists using a single query
-            local user = sql_run([[
-                SELECT TotalStaked 
-                FROM Stakers 
+        local tags = msg.Tags
+        local newQuantity = bint(tags.Quantity) -- New quantity to add
+        local height = tonumber(msg['Block-Height'])
+
+        -- Check if user exists using a single query
+        local user = sql_run([[
+                SELECT TotalStaked
+                FROM Stakers
                 WHERE UserID = ?;
             ]], msg.Sender)
 
-            if #user > 0 then
-                -- Update existing user
-                local updatedQuantity = utils.add(user[1].TotalStaked, tostring(newQuantity))
-                
-                sql_write(
-                    [[UPDATE Stakers 
-                      SET TotalStaked = ?, 
-                          UnstakeAt = ? 
-                      WHERE UserID = ?]],
-                    updatedQuantity,
-                    height + Config.UNSTAKE_DELAY,
-                    msg.Sender
-                )
-            else
-                -- Insert new user
-                sql_write(
-                    [[INSERT INTO Stakers (UserID, TotalStaked, UnstakeAt) 
-                      VALUES (?, ?, ?)]],
-                    msg.Sender,
-                    tostring(newQuantity),
-                    height + Config.UNSTAKE_DELAY
-                )
-            end
+        if #user > 0 then
+            -- Update existing user
+            local updatedQuantity = utils.add(user[1].TotalStaked, tostring(newQuantity))
 
-            -- Log the transaction
             sql_write(
-                [[INSERT INTO Transactions (Timestamp, TransID, SenderID, RecieverID, TokenID, Quantity, Status, Type)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)]],
-                tostring(msg.Timestamp), msg.Id, tags.Sender, ao.id, msg.From,
-                tostring(tags.Quantity), "fulfilled", "utc"
+                [[UPDATE Stakers
+                      SET TotalStaked = ?,
+                          UnstakeAt = ?
+                      WHERE UserID = ?]],
+                updatedQuantity,
+                height + Config.UNSTAKE_DELAY,
+                msg.Sender
             )
+        else
+            -- Insert new user
+            sql_write(
+                [[INSERT INTO Stakers (UserID, TotalStaked, UnstakeAt)
+                      VALUES (?, ?, ?)]],
+                msg.Sender,
+                tostring(newQuantity),
+                height + Config.UNSTAKE_DELAY
+            )
+            ao.send({
+                Target = Config.USER_CONTRACT ,
+                Action = "add-user",
+                address = msg.Sender,
+                name =
+                "Placeholder Name",
+                bio = "Hi im a new user on the permaweb"
+            })
+        end
 
-            -- Increment the global staked amount
-            Staked = utils.add(Staked, tags.Quantity)
-            print("Successfully staked " .. tags.Quantity)
+        -- Log the transaction
+        sql_write(
+            [[INSERT INTO Transactions (Timestamp, TransID, SenderID, RecieverID, TokenID, Quantity, Status, Type)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)]],
+            tostring(msg.Timestamp), msg.Id, tags.Sender, ao.id, msg.From,
+            tostring(tags.Quantity), "fulfilled", "utc"
+        )
+
+        -- Increment the global staked amount
+        Staked = utils.add(Staked, tags.Quantity)
+        print("Successfully staked " .. tags.Quantity)
     end
 )
 
@@ -189,21 +197,21 @@ Handlers.add(
         -- Total staked in the contract
         local total_staked = Staked
         print("Total staked: " .. total_staked)
-        
+
         -- Total tokens to distribute
         local to_distribute = math.floor(Config.TOTAL_SUPPLY * 0.0031)
         print("To distribute: " .. to_distribute)
-        
+
         -- Fetch all stakers
         local stakers = sql_run([[SELECT * FROM Stakers]]);
-        
+
         -- Calculate and distribute tokens based on each user's percentage
         for _, staker in ipairs(stakers) do
             print("In stakers loop")
             local user_stake = tonumber(staker.TotalStaked)
             local user_percentage = user_stake / total_staked
             local user_distribution = math.floor(to_distribute * user_percentage) -- Round down to avoid decimals
-            
+
             print("Before sending: " .. staker.UserID .. " " .. user_distribution)
             print(Config.TOKENS.PTOKEN)
             -- Send tokens based on the calculated distribution
@@ -214,7 +222,7 @@ Handlers.add(
                 Recipient = staker.UserID,
                 ["X-Action"] = "PtokenDistribute"
             })
-            
+
             print("Sent " .. user_distribution .. " tokens to UserID: " .. staker.UserID)
         end
     end
@@ -232,7 +240,7 @@ Handlers.add(
             local timestamp = tostring(msg.Timestamp)
             local trans_id = msg.Id
             local user_id = msg.Tags.Recipient
-            local token_id = msg.From  -- The token ID being debited (from ptoken)
+            local token_id = msg.From -- The token ID being debited (from ptoken)
             local quantity = msg.Tags.Quantity
             local status = "fulfilled"
             local type = "ctu"
@@ -270,8 +278,8 @@ Handlers.add(
 
         -- Check if the user exists and retrieve the current staked amount
         local user = sql_run([[
-            SELECT TotalStaked, UnstakeAt 
-            FROM Stakers 
+            SELECT TotalStaked, UnstakeAt
+            FROM Stakers
             WHERE UserID = ?
         ]], userID)
 
@@ -334,7 +342,7 @@ Handlers.add(
             local timestamp = tostring(msg.Timestamp)
             local trans_id = msg.Id
             local user_id = msg.Tags.Recipient
-            local token_id = msg.From  -- The token ID being debited (from QAR)
+            local token_id = msg.From -- The token ID being debited (from QAR)
             local quantity = msg.Tags.Quantity
             local status = "fulfilled"
             local type = "ctu"
@@ -372,26 +380,26 @@ Handlers.add(
         end
 
         local userStakes = getUserStakeInfo(msg.Tags.userId)
-        
+
         -- Prepare response
         local response = {
             userId = msg.Tags.userId,
-            contractId = ao.id,  -- Current contract's ID
+            contractId = ao.id, -- Current contract's ID
             stakeInfo = {
                 totalStaked = userStakes[1] and userStakes[1].TotalStaked or "0",
                 unstakeAt = userStakes[1] and userStakes[1].UnstakeAt or 0
             }
         }
-        
+
 
         -- Send response back to requester
         ao.send({
             Target = msg.From,
             Action = "StakeUpdate",
-                userId = msg.Tags.userId,
-                currentStake = response.stakeInfo.totalStaked,
+            userId = msg.Tags.userId,
+            currentStake = response.stakeInfo.totalStaked,
         })
-        
+
         print("Sent stake info for user: " .. msg.Tags.userId)
     end
 )
@@ -403,14 +411,14 @@ Handlers.add(
     "QueryTransactions",
     Handlers.utils.hasMatchingTag("Action", "QueryTransactions"),
     function(msg)
-        local limit = msg.Tags.limit or 10  -- Default to 10 transactions
-        
+        local limit = msg.Tags.limit or 10 -- Default to 10 transactions
+
         local transactions = sql_run([[
-            SELECT * FROM Transactions 
-            ORDER BY Timestamp DESC 
+            SELECT * FROM Transactions
+            ORDER BY Timestamp DESC
             LIMIT ?;
         ]], limit)
-        
+
         ao.send({
             Target = msg.From,
             Action = "TransactionsUpdate",
@@ -424,14 +432,14 @@ Handlers.add(
     "QueryCronTransactions",
     Handlers.utils.hasMatchingTag("Action", "QueryCronTransactions"),
     function(msg)
-        local limit = msg.Tags.limit or 10  -- Default to 10 transactions
-        
+        local limit = msg.Tags.limit or 10 -- Default to 10 transactions
+
         local transactions = sql_run([[
-            SELECT * FROM CronTransactions 
-            ORDER BY Timestamp DESC 
+            SELECT * FROM CronTransactions
+            ORDER BY Timestamp DESC
             LIMIT ?;
         ]], limit)
-       Handlers.utils.reply(json.encode(transactions))(msg) 
+        Handlers.utils.reply(json.encode(transactions))(msg)
         ao.send({
             Target = msg.From,
             Action = "CronTransactionsUpdate",
@@ -443,7 +451,7 @@ Handlers.add(
 Handlers.add(
     "StakersInfo",
     Handlers.utils.hasMatchingTag("Action", "StakersInfo"),
-    function (msg)
+    function(msg)
         local stakers = sql_run([[SELECT * FROM Stakers;]])
         Handlers.utils.reply(json.encode(stakers))(msg)
     end
