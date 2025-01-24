@@ -106,7 +106,7 @@ export default function Navbar() {
               </Link>
             )} */}
             {/* <ConnectButton accent="rgb(14, 156, 156)" /> */}
-            <Link to="/" target="_blank">
+            <a href="https://veritas-ao.app" target="_blank">
               <button
                 className="hover:bg-[#40959da0] rounded-[9px] 
           xl:w-[210px] sm:w-[180px] w-[120px]
@@ -116,7 +116,7 @@ export default function Navbar() {
               >
                 Go To Dapp
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </nav>
