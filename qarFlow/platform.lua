@@ -37,6 +37,9 @@ Config = {
 -- DROP TABLE IF EXISTS CronTransactions;
 
 db:exec([[
+DROP TABLE IF EXISTS Stakers;
+DROP TABLE IF EXISTS Transactions;
+DROP TABLE IF EXISTS CronTransactions;
         PRAGMA foreign_keys = ON;
         CREATE TABLE IF NOT EXISTS Stakers (
             UserID TEXT NOT NULL,
@@ -194,6 +197,10 @@ Handlers.add(
             print("❌ No tokens staked")
             return
         end
+        ao.send({
+            Target = Config.USER_CONTRACT,
+            Action = "Update-UserStakes"
+        })
         -- Total staked in the contract
         local total_staked = Staked
         print("Total staked: " .. total_staked)
@@ -378,9 +385,8 @@ Handlers.add(
             print("❌ No user ID provided")
             return
         end
-
+print("QueryUserStake")
         local userStakes = getUserStakeInfo(msg.Tags.userId)
-
         -- Prepare response
         local response = {
             userId = msg.Tags.userId,
